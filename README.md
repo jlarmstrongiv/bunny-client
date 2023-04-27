@@ -26,7 +26,7 @@ For purchasing instructions, please create a github discussion with your contact
 
 ## Motivation
 
-Provide a TypeScript API client with no dependencies.
+Provide a TypeScript API Client for BunnyCDN with no dependencies.
 
 ## Documentation
 
