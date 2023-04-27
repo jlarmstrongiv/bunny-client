@@ -23,7 +23,6 @@ jobs:
         run: npm ci --audit=false --include=dev --include=optional --include=peer
 
       - name: Build package 🏗️
-        working-directory: ./packages/core
         run: npm run build
 
       - name: Publish package on NPM 📦
