@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "lib": ["dom", "ES2017"],
+    "allowJs": false,
+    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsxImportSource": "react",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "removeComments": false,
+    "skipLibCheck": false,
+    "strict": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.cts", "src/**/*.mts", "src/**/*.tsx"]
+}

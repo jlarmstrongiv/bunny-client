@@ -1,0 +1,46 @@
+{
+  "name": "bunny-net",
+  "version": "0.0.1",
+  "private": false,
+  "description": "TypeScript API Client for BunnyCDN 🐰",
+  "keywords": [
+    "BunnyCDN",
+    "bunny.net",
+    "bunny",
+    "cdn",
+    "typescript",
+    "api"
+  ],
+  "homepage": "https://github.com/jlarmstrongiv/bunny-net/blob/main/README.md",
+  "bugs": "https://github.com/jlarmstrongiv/bunny-net/issues",
+  "repository": "https://github.com/jlarmstrongiv/bunny-net.git",
+  "license": "CC BY-NC-SA 4.0",
+  "author": "John L. Armstrong IV",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "source": "src/index.tsx",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup-node"
+  },
+  "devDependencies": {
+    "tsup": "6.7.0",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.26.1"
+  }
+}
