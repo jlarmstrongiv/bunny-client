@@ -1,0 +1,21 @@
+{
+  "Id": 270284,
+  "UserId": "c2fbdbcf-0961-4a89-b818-edf3ad7456e3",
+  "Name": "example-storage-0",
+  "Password": "5f46c1a0-7be8-4659-897529acb638-e696-4158",
+  "DateModified": "2023-04-28T02:23:47.7909075Z",
+  "Deleted": false,
+  "StorageUsed": 0,
+  "FilesStored": 0,
+  "Region": "NY",
+  "ReplicationRegions": [],
+  "PullZones": null,
+  "ReadOnlyPassword": "bfcbda9b-4749-4a5e-b25e7650a6a8-63db-4848",
+  "Rewrite404To200": false,
+  "Custom404FilePath": null,
+  "StorageHostname": "ny.storage.bunnycdn.com",
+  "ZoneTier": 0,
+  "ReplicationChangeInProgress": false,
+  "PriceOverride": 0,
+  "Discount": 0
+}

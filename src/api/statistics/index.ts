@@ -8,7 +8,7 @@ import {
 
 const statisticsRouter = u.router({
   [getStatisticsEndpoints["getStatistics"]]: getStatistics,
-  [getStatisticsEndpoints["/statistics"]]: getStatistics,
+  [getStatisticsEndpoints["GET /statistics"]]: getStatistics,
 });
 
 /**
@@ -31,7 +31,7 @@ export function createStatisticsClient(defaultRequestInit: RequestInit = {}) {
     async (path, input) => {
       switch (path) {
         case getStatisticsEndpoints["getStatistics"]:
-        case getStatisticsEndpoints["/statistics"]:
+        case getStatisticsEndpoints["GET /statistics"]:
           return getStatisticsClient(defaultRequestInit, input);
         default:
           throw new Error(

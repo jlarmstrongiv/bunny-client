@@ -1,0 +1,28 @@
+{
+  "Items": [
+    {
+      "Id": 270299,
+      "UserId": "c2fbdbcf-0961-4a89-b818-edf3ad7456e3",
+      "Name": "api-example-0",
+      "Password": "1fda3e44-d76f-46bd-9a1f9112aa12-8093-41c7",
+      "DateModified": "2023-04-28T03:14:58",
+      "Deleted": false,
+      "StorageUsed": 0,
+      "FilesStored": 0,
+      "Region": "NY",
+      "ReplicationRegions": ["DE"],
+      "PullZones": null,
+      "ReadOnlyPassword": "1107d54d-59af-4c1e-b19f5abbb5ca-b879-4bee",
+      "Rewrite404To200": false,
+      "Custom404FilePath": null,
+      "StorageHostname": "ny.storage.bunnycdn.com",
+      "ZoneTier": 0,
+      "ReplicationChangeInProgress": false,
+      "PriceOverride": 0,
+      "Discount": 0
+    }
+  ],
+  "CurrentPage": 1,
+  "TotalItems": 1,
+  "HasMoreItems": false
+}

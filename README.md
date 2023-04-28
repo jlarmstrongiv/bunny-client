@@ -43,8 +43,8 @@ This package aims to provide a matching TypeScript API Client for the bunny.net 
 - 🏗️ Region
   - 🏗️ Region List
 - 🏗️ Storage Zone
-  - 🏗️ List Storage Zones
-  - 🏗️ Add Storage Zone
+  - ✅ List Storage Zones
+  - ✅ Add Storage Zone
   - 🏗️ Check the Storage Zone Availability
   - 🏗️ Get Storage Zone
   - 🏗️ Update Storage Zone

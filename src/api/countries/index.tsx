@@ -8,7 +8,7 @@ import {
 
 const countriesRouter = u.router({
   [getCountryListEndpoints["getCountryList"]]: getCountryList,
-  [getCountryListEndpoints["/country"]]: getCountryList,
+  [getCountryListEndpoints["GET /country"]]: getCountryList,
 });
 
 /**
@@ -31,7 +31,7 @@ export function createCountriesClient(defaultRequestInit: RequestInit = {}) {
     async (path, input) => {
       switch (path) {
         case getCountryListEndpoints["getCountryList"]:
-        case getCountryListEndpoints["/country"]:
+        case getCountryListEndpoints["GET /country"]:
           return getCountryListClient(defaultRequestInit, input);
         default:
           throw new Error(

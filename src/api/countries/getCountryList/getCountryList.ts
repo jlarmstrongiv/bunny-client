@@ -9,12 +9,12 @@ export interface Country {
    */
   Name: string;
   /**
-   * two-digit [ISO country code](https://web.archive.org/web/20230427223803/https://www.nationsonline.org/oneworld/country_code_list.htm)
+   * country two-digit [ISO country code](https://web.archive.org/web/20230427223803/https://www.nationsonline.org/oneworld/country_code_list.htm)
    * @example "GB"
    */
   IsoCode: string;
   /**
-   * is part of the [European Union](https://web.archive.org/web/20230427223937/https://en.wikipedia.org/wiki/European_Union)
+   * country is part of the [European Union](https://web.archive.org/web/20230427223937/https://en.wikipedia.org/wiki/European_Union)
    * @example false
    */
   IsEU: boolean;
@@ -29,7 +29,7 @@ export interface Country {
    */
   FlagUrl: string;
   /**
-   * [Points of Presence]() [list](https://bunny.net/network/) of abbreviations
+   * country [Points of Presence](https://web.archive.org/web/20230427225159/https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/) [list](https://web.archive.org/web/20230427225239/https://bunny.net/network/) of abbreviations
    * @example "NY"
    */
   PopList: string[];
@@ -38,7 +38,7 @@ export interface Country {
 export interface GetCountryListRequest {
   /**
    * user-specific API Access Key
-   * @example cb1a7c68-89a0-462a-9495-13ebd7366cfe
+   * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
   AccessKey?: string;
 }
@@ -59,7 +59,7 @@ const options: RequestInit = {
 
 export const getCountryListEndpoints = {
   getCountryList: "getCountryList",
-  "/country": "/country",
+  "GET /country": "GET /country",
 } as const;
 
 export async function getCountryListClient(
