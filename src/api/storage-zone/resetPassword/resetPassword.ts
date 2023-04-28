@@ -9,7 +9,7 @@ export interface resetPasswordRequest {
    */
   AccessKey?: string;
   /**
-   * storage zone id
+   * The ID of the storage zone that should have the password reset
    * @example 270299
    */
   id: number;

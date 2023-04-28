@@ -9,7 +9,7 @@ export interface resetReadOnlyPasswordRequest {
    */
   AccessKey?: string;
   /**
-   * storage zone id
+   * The ID of the storage zone that should have the read-only password reset
    * @example 270299
    */
   id: number;

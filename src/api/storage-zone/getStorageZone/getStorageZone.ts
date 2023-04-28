@@ -10,7 +10,7 @@ export interface getStorageZoneRequest {
    */
   AccessKey?: string;
   /**
-   * storage zone id
+   * The ID of the Storage Zone that should be returned
    * @example 270299
    */
   id: number;

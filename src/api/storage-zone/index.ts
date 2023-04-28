@@ -11,6 +11,11 @@ import {
   addStorageZoneEndpoints,
 } from "./addStorageZone";
 import {
+  checkTheStorageZoneAvailability,
+  checkTheStorageZoneAvailabilityClient,
+  checkTheStorageZoneAvailabilityEndpoints,
+} from "./checkTheStorageZoneAvailability";
+import {
   getStorageZone,
   getStorageZoneClient,
   getStorageZoneEndpoints,
@@ -36,6 +41,11 @@ const storageZoneRouter = u.router({
   [listStorageZonesEndpoints["GET /storagezone"]]: listStorageZones,
   [addStorageZoneEndpoints["addStorageZone"]]: addStorageZone,
   [addStorageZoneEndpoints["POST /storagezone"]]: addStorageZone,
+  [checkTheStorageZoneAvailabilityEndpoints["checkTheStorageZoneAvailability"]]:
+    checkTheStorageZoneAvailability,
+  [checkTheStorageZoneAvailabilityEndpoints[
+    "POST /storagezone/checkavailability"
+  ]]: checkTheStorageZoneAvailability,
   [getStorageZoneEndpoints["getStorageZone"]]: getStorageZone,
   [getStorageZoneEndpoints["GET /storagezone/:id"]]: getStorageZone,
   [deleteStorageZoneEndpoints["deleteStorageZone"]]: deleteStorageZone,
@@ -79,6 +89,16 @@ export function createStorageZoneClient(defaultRequestInit: RequestInit = {}) {
         case addStorageZoneEndpoints["addStorageZone"]:
         case addStorageZoneEndpoints["POST /storagezone"]:
           return addStorageZoneClient(defaultRequestInit, input);
+        case checkTheStorageZoneAvailabilityEndpoints[
+          "checkTheStorageZoneAvailability"
+        ]:
+        case checkTheStorageZoneAvailabilityEndpoints[
+          "POST /storagezone/checkavailability"
+        ]:
+          return checkTheStorageZoneAvailabilityClient(
+            defaultRequestInit,
+            input
+          );
         case getStorageZoneEndpoints["getStorageZone"]:
         case getStorageZoneEndpoints["GET /storagezone/:id"]:
           return getStorageZoneClient(defaultRequestInit, input);

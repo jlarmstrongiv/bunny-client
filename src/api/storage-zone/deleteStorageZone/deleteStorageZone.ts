@@ -9,7 +9,7 @@ export interface deleteStorageZoneRequest {
    */
   AccessKey?: string;
   /**
-   * storage zone id
+   * The Storage Zone ID that should be deleted
    * @example 270299
    */
   id: number;
