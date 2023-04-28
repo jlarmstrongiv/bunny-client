@@ -15,7 +15,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "removeComments": false,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "strict": true
   },
   "include": ["src/**/*.ts", "src/**/*.cts", "src/**/*.mts", "src/**/*.tsx"]

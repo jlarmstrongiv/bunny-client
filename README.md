@@ -38,8 +38,20 @@ This package aims to provide a matching TypeScript API Client for the bunny.net 
 
 - ✅ Countries
   - ✅ Get Country List
-- 🏗️ Statistics
-  - 🏗️ Get Statistics
+- ✅ Statistics
+  - ✅ Get Statistics
+- 🏗️ Region
+  - 🏗️ Region List
+- 🏗️ Storage Zone
+  - 🏗️ List Storage Zones
+  - 🏗️ Add Storage Zone
+  - 🏗️ Check the Storage Zone Availability
+  - 🏗️ Get Storage Zone
+  - 🏗️ Update Storage Zone
+  - 🏗️ Delete Storage Zone
+  - 🏗️ Get Storage Zone Statistics
+  - 🏗️ Reset Password
+  - 🏗️ Reset Read-Only Password
 
 ## Quick start
 
@@ -52,8 +64,6 @@ This package aims to provide a matching TypeScript API Client for the bunny.net 
 ```shell
 npm install bunny-net
 ```
-
-The `fetch` API must be available in the global scope, which is the default in modern browsers ([96.61%](https://caniuse.com/fetch) of users) and Node.js versions [18+](https://nodejs.org/en/blog/announcements/v18-release-announce).
 
 ### Account Access Key
 
