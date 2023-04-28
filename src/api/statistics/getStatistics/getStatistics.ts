@@ -69,7 +69,7 @@ export const getStatistics = u
   .output<GetStatisticsResponse>();
 
 const url = "https://api.bunny.net/statistics";
-const options = {
+const options: RequestInit = {
   method: "GET",
   headers: {
     accept: "application/json",

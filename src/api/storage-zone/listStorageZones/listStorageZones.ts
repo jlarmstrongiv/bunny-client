@@ -58,7 +58,7 @@ export const listStorageZones = u
   .output<listStorageZonesResponse>();
 
 const url = "https://api.bunny.net/storagezone";
-const options = {
+const options: RequestInit = {
   method: "GET",
   headers: {
     accept: "application/json",

@@ -26,7 +26,7 @@ export const checkTheStorageZoneAvailability = u
   .output<checkTheStorageZoneAvailabilityResponse>();
 
 const url = "https://api.bunny.net/storagezone/checkavailability";
-const options = {
+const options: RequestInit = {
   method: "POST",
   headers: {
     accept: "application/json",

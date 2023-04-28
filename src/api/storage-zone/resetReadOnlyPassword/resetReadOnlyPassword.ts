@@ -22,7 +22,7 @@ export const resetReadOnlyPassword = u
   .output<resetReadOnlyPasswordResponse>();
 
 const url = "https://api.bunny.net/storagezone/resetReadOnlyPassword";
-const options = {
+const options: RequestInit = {
   method: "POST",
 };
 

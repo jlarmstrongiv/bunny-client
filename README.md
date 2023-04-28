@@ -68,6 +68,9 @@ This package aims to provide a matching TypeScript API Client for the bunny.net 
 <!-- https://app.quicktype.io/?l=ts -->
 <!-- https://transform.tools/json-to-typescript -->
 
+<!-- avoiding zod due to performance concerns -->
+<!-- https://github.com/colinhacks/zod/issues/205 -->
+
 ### Installation
 
 ```shell

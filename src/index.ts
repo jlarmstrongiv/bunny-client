@@ -1,2 +1,7 @@
 export { FetchError } from "./utilities";
-export { createCountriesClient } from "./api";
+export {
+  createCountriesClient,
+  createStatisticsClient,
+  createStorageZoneClient,
+  createRegionClient,
+} from "./api";
