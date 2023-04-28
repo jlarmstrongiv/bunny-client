@@ -34,7 +34,20 @@ See the official API documentation at [https://docs.bunny.net/docs](https://docs
 
 This package aims to provide a matching TypeScript API Client for the bunny.net API.
 
-## Installation
+### Supported APIs
+
+- ✅ Countries
+  - ✅ Get Country List
+- 🏗️ Statistics
+  - 🏗️ Get Statistics
+
+## Quick start
+
+<!-- types -->
+<!-- https://app.quicktype.io/?l=ts -->
+<!-- https://transform.tools/json-to-typescript -->
+
+### Installation
 
 ```shell
 npm install bunny-net
@@ -42,7 +55,21 @@ npm install bunny-net
 
 The `fetch` API must be available in the global scope, which is the default in modern browsers ([96.61%](https://caniuse.com/fetch) of users) and Node.js versions [18+](https://nodejs.org/en/blog/announcements/v18-release-announce).
 
-### Quick start
+### Account Access Key
+
+<!-- https://www.jhanley.com/blog/bunny-net-account-and-api-keys/ -->
+
+<!-- some api keys cannot be created with an entity, such as zones -->
+
+Get your API Access Key from [https://panel.bunny.net/account](https://panel.bunny.net/account)
+
+API Access Key example:
+
+```
+cb1a7c68-89a0-462a-9495-13ebd7366cfe
+```
+
+### Client
 
 Coming soon!
 

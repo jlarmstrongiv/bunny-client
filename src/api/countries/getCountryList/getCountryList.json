@@ -1,0 +1,2014 @@
+[
+  {
+    "Name": "Afghanistan",
+    "IsoCode": "AF",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/af.png",
+    "PopList": []
+  },
+  {
+    "Name": "Åland Islands",
+    "IsoCode": "AX",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ax.png",
+    "PopList": []
+  },
+  {
+    "Name": "Albania",
+    "IsoCode": "AL",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/al.png",
+    "PopList": []
+  },
+  {
+    "Name": "Algeria",
+    "IsoCode": "DZ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/dz.png",
+    "PopList": []
+  },
+  {
+    "Name": "American Samoa",
+    "IsoCode": "AS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/as.png",
+    "PopList": []
+  },
+  {
+    "Name": "Andorra",
+    "IsoCode": "AD",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ad.png",
+    "PopList": []
+  },
+  {
+    "Name": "Angola",
+    "IsoCode": "AO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ao.png",
+    "PopList": ["AO"]
+  },
+  {
+    "Name": "Anguilla",
+    "IsoCode": "AI",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ai.png",
+    "PopList": []
+  },
+  {
+    "Name": "Antarctica",
+    "IsoCode": "AQ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/aq.png",
+    "PopList": []
+  },
+  {
+    "Name": "Antigua and Barbuda",
+    "IsoCode": "AG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ag.png",
+    "PopList": []
+  },
+  {
+    "Name": "Argentina",
+    "IsoCode": "AR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ar.png",
+    "PopList": ["AR"]
+  },
+  {
+    "Name": "Armenia",
+    "IsoCode": "AM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/am.png",
+    "PopList": ["AM"]
+  },
+  {
+    "Name": "Aruba",
+    "IsoCode": "AW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/aw.png",
+    "PopList": []
+  },
+  {
+    "Name": "Australia",
+    "IsoCode": "AU",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/au.png",
+    "PopList": ["SYD", "PER", "MEL", "BRB", "ADL"]
+  },
+  {
+    "Name": "Austria",
+    "IsoCode": "AT",
+    "IsEU": true,
+    "TaxRate": 20,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/at.png",
+    "PopList": ["AT"]
+  },
+  {
+    "Name": "Azerbaijan",
+    "IsoCode": "AZ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/az.png",
+    "PopList": ["AZ"]
+  },
+  {
+    "Name": "Bahamas, The",
+    "IsoCode": "BS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bs.png",
+    "PopList": []
+  },
+  {
+    "Name": "Bahrain",
+    "IsoCode": "BH",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bh.png",
+    "PopList": ["BHR"]
+  },
+  {
+    "Name": "Bangladesh",
+    "IsoCode": "BD",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bd.png",
+    "PopList": ["BD"]
+  },
+  {
+    "Name": "Barbados",
+    "IsoCode": "BB",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bb.png",
+    "PopList": []
+  },
+  {
+    "Name": "Belarus",
+    "IsoCode": "BY",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/by.png",
+    "PopList": []
+  },
+  {
+    "Name": "Belgium",
+    "IsoCode": "BE",
+    "IsEU": true,
+    "TaxRate": 21,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/be.png",
+    "PopList": []
+  },
+  {
+    "Name": "Belize",
+    "IsoCode": "BZ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bz.png",
+    "PopList": []
+  },
+  {
+    "Name": "Benin",
+    "IsoCode": "BJ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bj.png",
+    "PopList": []
+  },
+  {
+    "Name": "Bermuda",
+    "IsoCode": "BM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Bhutan",
+    "IsoCode": "BT",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bt.png",
+    "PopList": []
+  },
+  {
+    "Name": "Bolivia",
+    "IsoCode": "BO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bo.png",
+    "PopList": ["BOL"]
+  },
+  {
+    "Name": "Bonaire, Sint Eustatius and Saba",
+    "IsoCode": "BQ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bq.png",
+    "PopList": []
+  },
+  {
+    "Name": "Bosnia and Herzegovina",
+    "IsoCode": "BA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ba.png",
+    "PopList": ["BA"]
+  },
+  {
+    "Name": "Botswana",
+    "IsoCode": "BW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bw.png",
+    "PopList": []
+  },
+  {
+    "Name": "Bouvet Island",
+    "IsoCode": "BV",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bv.png",
+    "PopList": []
+  },
+  {
+    "Name": "Brazil",
+    "IsoCode": "BR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/br.png",
+    "PopList": ["BR", "RJ", "PA", "FO", "BS"]
+  },
+  {
+    "Name": "British Indian Ocean Territory",
+    "IsoCode": "IO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/io.png",
+    "PopList": []
+  },
+  {
+    "Name": "Brunei",
+    "IsoCode": "BN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bn.png",
+    "PopList": []
+  },
+  {
+    "Name": "Bulgaria",
+    "IsoCode": "BG",
+    "IsEU": true,
+    "TaxRate": 20,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bg.png",
+    "PopList": ["BG"]
+  },
+  {
+    "Name": "Burkina Faso",
+    "IsoCode": "BF",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bf.png",
+    "PopList": []
+  },
+  {
+    "Name": "Burundi",
+    "IsoCode": "BI",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bi.png",
+    "PopList": []
+  },
+  {
+    "Name": "Cape Verde",
+    "IsoCode": "CV",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cv.png",
+    "PopList": []
+  },
+  {
+    "Name": "Cambodia",
+    "IsoCode": "KH",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/kh.png",
+    "PopList": ["PP"]
+  },
+  {
+    "Name": "Cameroon",
+    "IsoCode": "CM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Canada",
+    "IsoCode": "CA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ca.png",
+    "PopList": ["MN", "CA", "VA"]
+  },
+  {
+    "Name": "Cayman Islands",
+    "IsoCode": "KY",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ky.png",
+    "PopList": []
+  },
+  {
+    "Name": "Central African Republic",
+    "IsoCode": "CF",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cf.png",
+    "PopList": []
+  },
+  {
+    "Name": "Chad",
+    "IsoCode": "TD",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/td.png",
+    "PopList": []
+  },
+  {
+    "Name": "Chile",
+    "IsoCode": "CL",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cl.png",
+    "PopList": ["CL"]
+  },
+  {
+    "Name": "China",
+    "IsoCode": "CN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cn.png",
+    "PopList": []
+  },
+  {
+    "Name": "Christmas Island",
+    "IsoCode": "CX",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cx.png",
+    "PopList": []
+  },
+  {
+    "Name": "Cocos (Keeling) Islands",
+    "IsoCode": "CC",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cc.png",
+    "PopList": []
+  },
+  {
+    "Name": "Colombia",
+    "IsoCode": "CO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/co.png",
+    "PopList": ["CO"]
+  },
+  {
+    "Name": "Comoros",
+    "IsoCode": "KM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/km.png",
+    "PopList": []
+  },
+  {
+    "Name": "Congo (DRC)",
+    "IsoCode": "CD",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cd.png",
+    "PopList": []
+  },
+  {
+    "Name": "Congo",
+    "IsoCode": "CG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cg.png",
+    "PopList": []
+  },
+  {
+    "Name": "Cook Islands",
+    "IsoCode": "CK",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ck.png",
+    "PopList": []
+  },
+  {
+    "Name": "Costa Rica",
+    "IsoCode": "CR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cr.png",
+    "PopList": ["CR"]
+  },
+  {
+    "Name": "Côte d'Ivoire",
+    "IsoCode": "CI",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ci.png",
+    "PopList": []
+  },
+  {
+    "Name": "Croatia",
+    "IsoCode": "HR",
+    "IsEU": true,
+    "TaxRate": 25,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/hr.png",
+    "PopList": ["HR"]
+  },
+  {
+    "Name": "Cuba",
+    "IsoCode": "CU",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cu.png",
+    "PopList": []
+  },
+  {
+    "Name": "Curaçao",
+    "IsoCode": "CW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cw.png",
+    "PopList": []
+  },
+  {
+    "Name": "Cyprus",
+    "IsoCode": "CY",
+    "IsEU": true,
+    "TaxRate": 19,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cy.png",
+    "PopList": ["CY"]
+  },
+  {
+    "Name": "Czech Republic",
+    "IsoCode": "CZ",
+    "IsEU": true,
+    "TaxRate": 21,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/cz.png",
+    "PopList": ["CZ"]
+  },
+  {
+    "Name": "Denmark",
+    "IsoCode": "DK",
+    "IsEU": true,
+    "TaxRate": 25,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/dk.png",
+    "PopList": ["DK"]
+  },
+  {
+    "Name": "Djibouti",
+    "IsoCode": "DJ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/dj.png",
+    "PopList": []
+  },
+  {
+    "Name": "Dominica",
+    "IsoCode": "DM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/dm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Dominican Republic",
+    "IsoCode": "DO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/do.png",
+    "PopList": []
+  },
+  {
+    "Name": "Ecuador",
+    "IsoCode": "EC",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ec.png",
+    "PopList": ["EC"]
+  },
+  {
+    "Name": "Egypt",
+    "IsoCode": "EG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/eg.png",
+    "PopList": ["EG"]
+  },
+  {
+    "Name": "El Salvador",
+    "IsoCode": "SV",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sv.png",
+    "PopList": []
+  },
+  {
+    "Name": "Equatorial Guinea",
+    "IsoCode": "GQ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gq.png",
+    "PopList": []
+  },
+  {
+    "Name": "Eritrea",
+    "IsoCode": "ER",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/er.png",
+    "PopList": []
+  },
+  {
+    "Name": "Estonia",
+    "IsoCode": "EE",
+    "IsEU": true,
+    "TaxRate": 20,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ee.png",
+    "PopList": []
+  },
+  {
+    "Name": "Ethiopia",
+    "IsoCode": "ET",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/et.png",
+    "PopList": []
+  },
+  {
+    "Name": "Falkland Islands (Islas Malvinas)",
+    "IsoCode": "FK",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/fk.png",
+    "PopList": []
+  },
+  {
+    "Name": "Faroe Islands",
+    "IsoCode": "FO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/fo.png",
+    "PopList": []
+  },
+  {
+    "Name": "Fiji Islands",
+    "IsoCode": "FJ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/fj.png",
+    "PopList": []
+  },
+  {
+    "Name": "Finland",
+    "IsoCode": "FI",
+    "IsEU": true,
+    "TaxRate": 24,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/fi.png",
+    "PopList": ["FI"]
+  },
+  {
+    "Name": "France",
+    "IsoCode": "FR",
+    "IsEU": true,
+    "TaxRate": 20,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/fr.png",
+    "PopList": ["FR", "MS"]
+  },
+  {
+    "Name": "French Guiana",
+    "IsoCode": "GF",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gf.png",
+    "PopList": []
+  },
+  {
+    "Name": "French Polynesia",
+    "IsoCode": "PF",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pf.png",
+    "PopList": []
+  },
+  {
+    "Name": "French Southern and Antarctic Lands",
+    "IsoCode": "TF",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tf.png",
+    "PopList": []
+  },
+  {
+    "Name": "Gabon",
+    "IsoCode": "GA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ga.png",
+    "PopList": []
+  },
+  {
+    "Name": "Gambia, The",
+    "IsoCode": "GM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Georgia",
+    "IsoCode": "GE",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ge.png",
+    "PopList": ["GEO"]
+  },
+  {
+    "Name": "Germany",
+    "IsoCode": "DE",
+    "IsEU": true,
+    "TaxRate": 19,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/de.png",
+    "PopList": ["DE", "DD", "DE2"]
+  },
+  {
+    "Name": "Ghana",
+    "IsoCode": "GH",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gh.png",
+    "PopList": []
+  },
+  {
+    "Name": "Gibraltar",
+    "IsoCode": "GI",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gi.png",
+    "PopList": []
+  },
+  {
+    "Name": "Greece",
+    "IsoCode": "GR",
+    "IsEU": true,
+    "TaxRate": 24,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gr.png",
+    "PopList": ["GR"]
+  },
+  {
+    "Name": "Greenland",
+    "IsoCode": "GL",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gl.png",
+    "PopList": []
+  },
+  {
+    "Name": "Grenada",
+    "IsoCode": "GD",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gd.png",
+    "PopList": []
+  },
+  {
+    "Name": "Guadeloupe",
+    "IsoCode": "GP",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gp.png",
+    "PopList": []
+  },
+  {
+    "Name": "Guam",
+    "IsoCode": "GU",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gu.png",
+    "PopList": ["GU"]
+  },
+  {
+    "Name": "Guatemala",
+    "IsoCode": "GT",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gt.png",
+    "PopList": ["GT"]
+  },
+  {
+    "Name": "Guernsey",
+    "IsoCode": "GG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gg.png",
+    "PopList": []
+  },
+  {
+    "Name": "Guinea",
+    "IsoCode": "GN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gn.png",
+    "PopList": []
+  },
+  {
+    "Name": "Guinea-Bissau",
+    "IsoCode": "GW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gw.png",
+    "PopList": []
+  },
+  {
+    "Name": "Guyana",
+    "IsoCode": "GY",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gy.png",
+    "PopList": []
+  },
+  {
+    "Name": "Haiti",
+    "IsoCode": "HT",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ht.png",
+    "PopList": []
+  },
+  {
+    "Name": "Heard Island and McDonald Islands",
+    "IsoCode": "HM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/hm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Vatican City",
+    "IsoCode": "VA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/va.png",
+    "PopList": []
+  },
+  {
+    "Name": "Honduras",
+    "IsoCode": "HN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/hn.png",
+    "PopList": []
+  },
+  {
+    "Name": "Hong Kong SAR",
+    "IsoCode": "HK",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/hk.png",
+    "PopList": ["HK"]
+  },
+  {
+    "Name": "Hungary",
+    "IsoCode": "HU",
+    "IsEU": true,
+    "TaxRate": 27,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/hu.png",
+    "PopList": ["HU"]
+  },
+  {
+    "Name": "Iceland",
+    "IsoCode": "IS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/is.png",
+    "PopList": ["IS"]
+  },
+  {
+    "Name": "India",
+    "IsoCode": "IN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/in.png",
+    "PopList": ["IN", "MU", "ND", "CEN", "CCU"]
+  },
+  {
+    "Name": "Indonesia",
+    "IsoCode": "ID",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/id.png",
+    "PopList": ["ID"]
+  },
+  {
+    "Name": "Iran",
+    "IsoCode": "IR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ir.png",
+    "PopList": []
+  },
+  {
+    "Name": "Iraq",
+    "IsoCode": "IQ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/iq.png",
+    "PopList": ["IQ", "IQ2"]
+  },
+  {
+    "Name": "Ireland",
+    "IsoCode": "IE",
+    "IsEU": true,
+    "TaxRate": 23,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ie.png",
+    "PopList": ["IE"]
+  },
+  {
+    "Name": "Man, Isle of",
+    "IsoCode": "IM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/im.png",
+    "PopList": []
+  },
+  {
+    "Name": "Israel",
+    "IsoCode": "IL",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/il.png",
+    "PopList": ["ISR"]
+  },
+  {
+    "Name": "Italy",
+    "IsoCode": "IT",
+    "IsEU": true,
+    "TaxRate": 22,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/it.png",
+    "PopList": ["IT"]
+  },
+  {
+    "Name": "Jamaica",
+    "IsoCode": "JM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/jm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Japan",
+    "IsoCode": "JP",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/jp.png",
+    "PopList": ["JP"]
+  },
+  {
+    "Name": "Jersey",
+    "IsoCode": "JE",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/je.png",
+    "PopList": []
+  },
+  {
+    "Name": "Jordan",
+    "IsoCode": "JO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/jo.png",
+    "PopList": ["JO"]
+  },
+  {
+    "Name": "Kazakhstan",
+    "IsoCode": "KZ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/kz.png",
+    "PopList": ["KZ"]
+  },
+  {
+    "Name": "Kenya",
+    "IsoCode": "KE",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ke.png",
+    "PopList": ["KE"]
+  },
+  {
+    "Name": "Kiribati",
+    "IsoCode": "KI",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ki.png",
+    "PopList": []
+  },
+  {
+    "Name": "North Korea",
+    "IsoCode": "KP",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/kp.png",
+    "PopList": []
+  },
+  {
+    "Name": "Korea",
+    "IsoCode": "KR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/kr.png",
+    "PopList": ["KR"]
+  },
+  {
+    "Name": "Kuwait",
+    "IsoCode": "KW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/kw.png",
+    "PopList": []
+  },
+  {
+    "Name": "Kyrgyzstan",
+    "IsoCode": "KG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/kg.png",
+    "PopList": ["KG"]
+  },
+  {
+    "Name": "Laos",
+    "IsoCode": "LA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/la.png",
+    "PopList": []
+  },
+  {
+    "Name": "Latvia",
+    "IsoCode": "LV",
+    "IsEU": true,
+    "TaxRate": 21,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/lv.png",
+    "PopList": ["LV"]
+  },
+  {
+    "Name": "Lebanon",
+    "IsoCode": "LB",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/lb.png",
+    "PopList": []
+  },
+  {
+    "Name": "Lesotho",
+    "IsoCode": "LS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ls.png",
+    "PopList": []
+  },
+  {
+    "Name": "Liberia",
+    "IsoCode": "LR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/lr.png",
+    "PopList": []
+  },
+  {
+    "Name": "Libya",
+    "IsoCode": "LY",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ly.png",
+    "PopList": []
+  },
+  {
+    "Name": "Liechtenstein",
+    "IsoCode": "LI",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/li.png",
+    "PopList": []
+  },
+  {
+    "Name": "Lithuania",
+    "IsoCode": "LT",
+    "IsEU": true,
+    "TaxRate": 21,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/lt.png",
+    "PopList": ["LT"]
+  },
+  {
+    "Name": "Luxembourg",
+    "IsoCode": "LU",
+    "IsEU": true,
+    "TaxRate": 17,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/lu.png",
+    "PopList": ["LU"]
+  },
+  {
+    "Name": "Macao SAR",
+    "IsoCode": "MO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mo.png",
+    "PopList": []
+  },
+  {
+    "Name": "Macedonia, Former Yugoslav Republic of",
+    "IsoCode": "MK",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mk.png",
+    "PopList": []
+  },
+  {
+    "Name": "Madagascar",
+    "IsoCode": "MG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mg.png",
+    "PopList": []
+  },
+  {
+    "Name": "Malawi",
+    "IsoCode": "MW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mw.png",
+    "PopList": []
+  },
+  {
+    "Name": "Malaysia",
+    "IsoCode": "MY",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/my.png",
+    "PopList": ["MY"]
+  },
+  {
+    "Name": "Maldives",
+    "IsoCode": "MV",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mv.png",
+    "PopList": []
+  },
+  {
+    "Name": "Mali",
+    "IsoCode": "ML",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ml.png",
+    "PopList": []
+  },
+  {
+    "Name": "Malta",
+    "IsoCode": "MT",
+    "IsEU": true,
+    "TaxRate": 18,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mt.png",
+    "PopList": []
+  },
+  {
+    "Name": "Marshall Islands",
+    "IsoCode": "MH",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mh.png",
+    "PopList": []
+  },
+  {
+    "Name": "Martinique",
+    "IsoCode": "MQ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mq.png",
+    "PopList": []
+  },
+  {
+    "Name": "Mauritania",
+    "IsoCode": "MR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mr.png",
+    "PopList": []
+  },
+  {
+    "Name": "Mauritius",
+    "IsoCode": "MU",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mu.png",
+    "PopList": []
+  },
+  {
+    "Name": "Mayotte",
+    "IsoCode": "YT",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/yt.png",
+    "PopList": []
+  },
+  {
+    "Name": "Mexico",
+    "IsoCode": "MX",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mx.png",
+    "PopList": ["MX"]
+  },
+  {
+    "Name": "Micronesia",
+    "IsoCode": "FM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/fm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Moldova",
+    "IsoCode": "MD",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/md.png",
+    "PopList": ["MD"]
+  },
+  {
+    "Name": "Monaco",
+    "IsoCode": "MC",
+    "IsEU": true,
+    "TaxRate": 20,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mc.png",
+    "PopList": []
+  },
+  {
+    "Name": "Mongolia",
+    "IsoCode": "MN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mn.png",
+    "PopList": ["MG"]
+  },
+  {
+    "Name": "Montenegro",
+    "IsoCode": "ME",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/me.png",
+    "PopList": []
+  },
+  {
+    "Name": "Montserrat",
+    "IsoCode": "MS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ms.png",
+    "PopList": []
+  },
+  {
+    "Name": "Morocco",
+    "IsoCode": "MA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ma.png",
+    "PopList": []
+  },
+  {
+    "Name": "Mozambique",
+    "IsoCode": "MZ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mz.png",
+    "PopList": []
+  },
+  {
+    "Name": "Myanmar",
+    "IsoCode": "MM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Namibia",
+    "IsoCode": "NA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/na.png",
+    "PopList": []
+  },
+  {
+    "Name": "Nauru",
+    "IsoCode": "NR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/nr.png",
+    "PopList": []
+  },
+  {
+    "Name": "Nepal",
+    "IsoCode": "NP",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/np.png",
+    "PopList": ["NP"]
+  },
+  {
+    "Name": "Netherlands",
+    "IsoCode": "NL",
+    "IsEU": true,
+    "TaxRate": 21,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/nl.png",
+    "PopList": ["AMS"]
+  },
+  {
+    "Name": "New Caledonia",
+    "IsoCode": "NC",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/nc.png",
+    "PopList": []
+  },
+  {
+    "Name": "New Zealand",
+    "IsoCode": "NZ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/nz.png",
+    "PopList": ["AUC"]
+  },
+  {
+    "Name": "Nicaragua",
+    "IsoCode": "NI",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ni.png",
+    "PopList": []
+  },
+  {
+    "Name": "Niger",
+    "IsoCode": "NE",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ne.png",
+    "PopList": []
+  },
+  {
+    "Name": "Nigeria",
+    "IsoCode": "NG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ng.png",
+    "PopList": ["NG"]
+  },
+  {
+    "Name": "Niue",
+    "IsoCode": "NU",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/nu.png",
+    "PopList": []
+  },
+  {
+    "Name": "Norfolk Island",
+    "IsoCode": "NF",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/nf.png",
+    "PopList": []
+  },
+  {
+    "Name": "Northern Mariana Islands",
+    "IsoCode": "MP",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mp.png",
+    "PopList": []
+  },
+  {
+    "Name": "Norway",
+    "IsoCode": "NO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/no.png",
+    "PopList": ["NO"]
+  },
+  {
+    "Name": "Oman",
+    "IsoCode": "OM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/om.png",
+    "PopList": []
+  },
+  {
+    "Name": "Pakistan",
+    "IsoCode": "PK",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pk.png",
+    "PopList": ["PK"]
+  },
+  {
+    "Name": "Palau",
+    "IsoCode": "PW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pw.png",
+    "PopList": []
+  },
+  {
+    "Name": "Palestinian Authority",
+    "IsoCode": "PS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ps.png",
+    "PopList": []
+  },
+  {
+    "Name": "Panama",
+    "IsoCode": "PA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pa.png",
+    "PopList": []
+  },
+  {
+    "Name": "Papua New Guinea",
+    "IsoCode": "PG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pg.png",
+    "PopList": []
+  },
+  {
+    "Name": "Paraguay",
+    "IsoCode": "PY",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/py.png",
+    "PopList": []
+  },
+  {
+    "Name": "Peru",
+    "IsoCode": "PE",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pe.png",
+    "PopList": ["PE"]
+  },
+  {
+    "Name": "Philippines",
+    "IsoCode": "PH",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ph.png",
+    "PopList": ["PH"]
+  },
+  {
+    "Name": "Pitcairn Islands",
+    "IsoCode": "PN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pn.png",
+    "PopList": []
+  },
+  {
+    "Name": "Poland",
+    "IsoCode": "PL",
+    "IsEU": true,
+    "TaxRate": 23,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pl.png",
+    "PopList": ["PL"]
+  },
+  {
+    "Name": "Portugal",
+    "IsoCode": "PT",
+    "IsEU": true,
+    "TaxRate": 23,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pt.png",
+    "PopList": ["PT"]
+  },
+  {
+    "Name": "Puerto Rico",
+    "IsoCode": "PR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pr.png",
+    "PopList": ["PR"]
+  },
+  {
+    "Name": "Qatar",
+    "IsoCode": "QA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/qa.png",
+    "PopList": []
+  },
+  {
+    "Name": "Réunion",
+    "IsoCode": "RE",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/re.png",
+    "PopList": []
+  },
+  {
+    "Name": "Romania",
+    "IsoCode": "RO",
+    "IsEU": true,
+    "TaxRate": 19,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ro.png",
+    "PopList": ["BU"]
+  },
+  {
+    "Name": "Russia",
+    "IsoCode": "RU",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ru.png",
+    "PopList": ["RU", "KY", "KH"]
+  },
+  {
+    "Name": "Rwanda",
+    "IsoCode": "RW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/rw.png",
+    "PopList": []
+  },
+  {
+    "Name": "Saint Barthélemy",
+    "IsoCode": "BL",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/bl.png",
+    "PopList": []
+  },
+  {
+    "Name": "Saint Helena, Ascension and Tristan da Cunha",
+    "IsoCode": "SH",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sh.png",
+    "PopList": []
+  },
+  {
+    "Name": "St. Kitts and Nevis",
+    "IsoCode": "KN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/kn.png",
+    "PopList": []
+  },
+  {
+    "Name": "St. Lucia",
+    "IsoCode": "LC",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/lc.png",
+    "PopList": []
+  },
+  {
+    "Name": "Saint Martin (French part)",
+    "IsoCode": "MF",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/mf.png",
+    "PopList": []
+  },
+  {
+    "Name": "St. Pierre and Miquelon",
+    "IsoCode": "PM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/pm.png",
+    "PopList": []
+  },
+  {
+    "Name": "St. Vincent and the Grenadines",
+    "IsoCode": "VC",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/vc.png",
+    "PopList": []
+  },
+  {
+    "Name": "Samoa",
+    "IsoCode": "WS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ws.png",
+    "PopList": []
+  },
+  {
+    "Name": "San Marino",
+    "IsoCode": "SM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sm.png",
+    "PopList": []
+  },
+  {
+    "Name": "São Tomé and Príncipe",
+    "IsoCode": "ST",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/st.png",
+    "PopList": []
+  },
+  {
+    "Name": "Saudi Arabia",
+    "IsoCode": "SA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sa.png",
+    "PopList": ["RI"]
+  },
+  {
+    "Name": "Senegal",
+    "IsoCode": "SN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sn.png",
+    "PopList": []
+  },
+  {
+    "Name": "Serbia",
+    "IsoCode": "RS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/rs.png",
+    "PopList": ["RS"]
+  },
+  {
+    "Name": "Seychelles",
+    "IsoCode": "SC",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sc.png",
+    "PopList": []
+  },
+  {
+    "Name": "Sierra Leone",
+    "IsoCode": "SL",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sl.png",
+    "PopList": []
+  },
+  {
+    "Name": "Singapore",
+    "IsoCode": "SG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sg.png",
+    "PopList": ["SG", "SG2"]
+  },
+  {
+    "Name": "Sint Maarten (Dutch part)",
+    "IsoCode": "SX",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sx.png",
+    "PopList": []
+  },
+  {
+    "Name": "Slovakia",
+    "IsoCode": "SK",
+    "IsEU": true,
+    "TaxRate": 20,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sk.png",
+    "PopList": ["SK"]
+  },
+  {
+    "Name": "Slovenia",
+    "IsoCode": "SI",
+    "IsEU": true,
+    "TaxRate": 22,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/si.png",
+    "PopList": ["LJ"]
+  },
+  {
+    "Name": "Solomon Islands",
+    "IsoCode": "SB",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sb.png",
+    "PopList": []
+  },
+  {
+    "Name": "Somalia",
+    "IsoCode": "SO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/so.png",
+    "PopList": []
+  },
+  {
+    "Name": "South Africa",
+    "IsoCode": "ZA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/za.png",
+    "PopList": ["JH", "CT"]
+  },
+  {
+    "Name": "South Georgia and the South Sandwich Islands",
+    "IsoCode": "GS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gs.png",
+    "PopList": []
+  },
+  {
+    "Name": "South Sudan",
+    "IsoCode": "SS",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ss.png",
+    "PopList": []
+  },
+  {
+    "Name": "Spain",
+    "IsoCode": "ES",
+    "IsEU": true,
+    "TaxRate": 21,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/es.png",
+    "PopList": ["ES"]
+  },
+  {
+    "Name": "Sri Lanka",
+    "IsoCode": "LK",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/lk.png",
+    "PopList": []
+  },
+  {
+    "Name": "Sudan",
+    "IsoCode": "SD",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sd.png",
+    "PopList": []
+  },
+  {
+    "Name": "Suriname",
+    "IsoCode": "SR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sr.png",
+    "PopList": []
+  },
+  {
+    "Name": "Svalbard",
+    "IsoCode": "SJ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sj.png",
+    "PopList": []
+  },
+  {
+    "Name": "Swaziland",
+    "IsoCode": "SZ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sz.png",
+    "PopList": []
+  },
+  {
+    "Name": "Sweden",
+    "IsoCode": "SE",
+    "IsEU": true,
+    "TaxRate": 25,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/se.png",
+    "PopList": ["SE"]
+  },
+  {
+    "Name": "Switzerland",
+    "IsoCode": "CH",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ch.png",
+    "PopList": ["CH"]
+  },
+  {
+    "Name": "Syria",
+    "IsoCode": "SY",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/sy.png",
+    "PopList": []
+  },
+  {
+    "Name": "Taiwan",
+    "IsoCode": "TW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tw.png",
+    "PopList": ["TW"]
+  },
+  {
+    "Name": "Tajikistan",
+    "IsoCode": "TJ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tj.png",
+    "PopList": []
+  },
+  {
+    "Name": "Tanzania",
+    "IsoCode": "TZ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tz.png",
+    "PopList": []
+  },
+  {
+    "Name": "Thailand",
+    "IsoCode": "TH",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/th.png",
+    "PopList": ["TH"]
+  },
+  {
+    "Name": "Democratic Republic of Timor-Leste",
+    "IsoCode": "TL",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tl.png",
+    "PopList": []
+  },
+  {
+    "Name": "Togo",
+    "IsoCode": "TG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tg.png",
+    "PopList": []
+  },
+  {
+    "Name": "Tokelau",
+    "IsoCode": "TK",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tk.png",
+    "PopList": []
+  },
+  {
+    "Name": "Tonga",
+    "IsoCode": "TO",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/to.png",
+    "PopList": []
+  },
+  {
+    "Name": "Trinidad and Tobago",
+    "IsoCode": "TT",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tt.png",
+    "PopList": []
+  },
+  {
+    "Name": "Tunisia",
+    "IsoCode": "TN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tn.png",
+    "PopList": ["TN"]
+  },
+  {
+    "Name": "Turkey",
+    "IsoCode": "TR",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tr.png",
+    "PopList": ["TR"]
+  },
+  {
+    "Name": "Turkmenistan",
+    "IsoCode": "TM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Turks and Caicos Islands",
+    "IsoCode": "TC",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tc.png",
+    "PopList": []
+  },
+  {
+    "Name": "Tuvalu",
+    "IsoCode": "TV",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/tv.png",
+    "PopList": []
+  },
+  {
+    "Name": "Uganda",
+    "IsoCode": "UG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ug.png",
+    "PopList": []
+  },
+  {
+    "Name": "Ukraine",
+    "IsoCode": "UA",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ua.png",
+    "PopList": ["UA"]
+  },
+  {
+    "Name": "United Arab Emirates",
+    "IsoCode": "AE",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ae.png",
+    "PopList": ["AE", "FU"]
+  },
+  {
+    "Name": "United Kingdom",
+    "IsoCode": "GB",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/gb.png",
+    "PopList": ["UK"]
+  },
+  {
+    "Name": "U.S. Minor Outlying Islands",
+    "IsoCode": "UM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/um.png",
+    "PopList": []
+  },
+  {
+    "Name": "United States",
+    "IsoCode": "US",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/us.png",
+    "PopList": [
+      "NY",
+      "WA",
+      "TX",
+      "LA",
+      "GA",
+      "KC",
+      "MI",
+      "SIL",
+      "IL",
+      "ASB",
+      "DEN",
+      "PHX",
+      "HOU",
+      "OG",
+      "PB",
+      "HI",
+      "BO",
+      "CLT",
+      "MSP"
+    ]
+  },
+  {
+    "Name": "Uruguay",
+    "IsoCode": "UY",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/uy.png",
+    "PopList": []
+  },
+  {
+    "Name": "Uzbekistan",
+    "IsoCode": "UZ",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/uz.png",
+    "PopList": []
+  },
+  {
+    "Name": "Vanuatu",
+    "IsoCode": "VU",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/vu.png",
+    "PopList": []
+  },
+  {
+    "Name": "Bolivarian Republic of Venezuela",
+    "IsoCode": "VE",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ve.png",
+    "PopList": []
+  },
+  {
+    "Name": "Vietnam",
+    "IsoCode": "VN",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/vn.png",
+    "PopList": ["VN"]
+  },
+  {
+    "Name": "Virgin Islands, British",
+    "IsoCode": "VG",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/vg.png",
+    "PopList": []
+  },
+  {
+    "Name": "Virgin Islands",
+    "IsoCode": "VI",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/vi.png",
+    "PopList": []
+  },
+  {
+    "Name": "Wallis and Futuna",
+    "IsoCode": "WF",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/wf.png",
+    "PopList": []
+  },
+  {
+    "Name": "Western Sahara",
+    "IsoCode": "EH",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/eh.png",
+    "PopList": []
+  },
+  {
+    "Name": "Yemen",
+    "IsoCode": "YE",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/ye.png",
+    "PopList": []
+  },
+  {
+    "Name": "Zambia",
+    "IsoCode": "ZM",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/zm.png",
+    "PopList": []
+  },
+  {
+    "Name": "Zimbabwe",
+    "IsoCode": "ZW",
+    "IsEU": false,
+    "TaxRate": 0,
+    "FlagUrl": "https://bunnycdn.b-cdn.net/assets/dashboard/images/flags/zw.png",
+    "PopList": []
+  }
+]
