@@ -1,7 +1,12 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
-import type { ReplicationRegion, Region, ZoneTier, Bucket } from "../types";
+import type {
+  ReplicationRegion,
+  Region,
+  ZoneTier,
+  StorageZone,
+} from "../types";
 
 export interface addStorageZoneRequestBase {
   /**
@@ -62,7 +67,7 @@ export type addStorageZoneRequest =
   | addStorageZoneRequestEdgeSsd
   | addStorageZoneRequestReplicationRegion;
 
-export type addStorageZoneResponse = Bucket;
+export type addStorageZoneResponse = StorageZone;
 
 export const addStorageZone = u
   .input<addStorageZoneRequest>()

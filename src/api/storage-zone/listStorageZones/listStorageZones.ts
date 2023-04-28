@@ -1,7 +1,7 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
-import type { ReplicationRegion, Region, ZoneTier, Bucket } from "../types";
+import type { StorageZone } from "../types";
 
 export interface listStorageZonesRequest {
   /**
@@ -20,26 +20,29 @@ export interface listStorageZonesRequest {
    */
   perPage: number;
   /**
-   * should include deleted buckets
+   * should include deleted storage zones
    * @example false
    */
   includeDeleted?: boolean;
   /**
    * The search term that will be used to filter the results
-   * @example "bucket-name-substring"
+   * @example "storage-zone-name-substring"
    */
   search?: string;
 }
 
 export type listStorageZonesResponse = {
-  Items: Bucket[];
+  /**
+   * list of storage zones that match the query
+   */
+  Items: StorageZone[];
   /**
    * the current query page number
    * @example 1
    */
   CurrentPage: number;
   /**
-   * the total number of items
+   * the total number of queried items in all pages
    * @example 5
    */
   TotalItems: number;
@@ -87,7 +90,6 @@ export async function listStorageZonesClient(
   }).toString();
 
   const overrideUrl = `${url}?${urlSearchParameters}`;
-  console.log(overrideUrl);
 
   const response = await fetch(
     overrideUrl,

@@ -34,24 +34,33 @@ See the official API documentation at [https://docs.bunny.net/docs](https://docs
 
 This package aims to provide a matching TypeScript API Client for the bunny.net API.
 
+<!-- Better documentation in comments than the official api! -->
+
 ### Supported APIs
 
-- ✅ Countries
-  - ✅ Get Country List
-- ✅ Statistics
-  - ✅ Get Statistics
-- 🏗️ Region
-  - 🏗️ Region List
-- 🏗️ Storage Zone
-  - ✅ List Storage Zones
-  - ✅ Add Storage Zone
-  - 🏗️ Check the Storage Zone Availability
-  - 🏗️ Get Storage Zone
-  - 🏗️ Update Storage Zone
-  - 🏗️ Delete Storage Zone
-  - 🏗️ Get Storage Zone Statistics
-  - 🏗️ Reset Password
-  - 🏗️ Reset Read-Only Password
+- 🏗️ API
+  - ✅ Countries
+    - ✅ Get Country List
+  - ✅ Statistics
+    - ✅ Get Statistics
+  - 🏗️ Region
+    - 🏗️ Region List
+  - 🏗️ Storage Zone
+    - ✅ List Storage Zones
+    - ✅ Add Storage Zone
+    - 🏗️ Check the Storage Zone Availability
+    - ✅ Get Storage Zone
+    - 🏗️ Update Storage Zone
+    - ✅ Delete Storage Zone
+    - 🏗️ Get Storage Zone Statistics
+    - ✅ Reset Password
+    - ✅ Reset Read-Only Password
+- 🏗️ Edge Storage API
+  - 🏗️ Download File
+  - 🏗️ Upload File
+  - 🏗️ Delete File
+  - 🏗️ List Files
+- 🏗️ Stream API
 
 ## Quick start
 

@@ -57,9 +57,9 @@ export type StorageHostname =
 export type ZoneTier = 0 | 1;
 
 // TODO
-export interface Bucket {
+export interface StorageZone {
   /**
-   * bucket id
+   * storage zone id
    * @example 270284
    */
   Id: number;
@@ -69,17 +69,17 @@ export interface Bucket {
    */
   UserId: string;
   /**
-   * bucket name
+   * storage zone name
    * @example "example-storage-0"
    */
   Name: string;
   /**
-   * bucket password
+   * storage zone password
    * @example "5f46c1a0-7be8-4659-897529acb638-e696-4158"
    */
   Password: string;
   /**
-   * last modified date of bucket
+   * last modified date of the storage zone
    * @example "2023-04-28T02:23:47.7909075Z"
    */
   DateModified: string;
@@ -90,53 +90,53 @@ export interface Bucket {
   Deleted: boolean;
   // TODO
   /**
-   * bucket total storage used
+   * storage zone total storage used
    */
   StorageUsed: number;
   // TODO
   /**
-   * number of files stored in the bucket
+   * number of files stored in the storage zone
    */
   FilesStored: number;
   /**
-   * bucket region
+   * storage zone region
    * @example "NY"
    */
   Region: Region;
   /**
-   * bucket replication regions
+   * storage zone replication regions
    * @example "DE"
    */
   ReplicationRegions: ReplicationRegion[];
   // TODO
   PullZones: any;
   /**
-   * bucket read-only password
+   * storage zone read-only password
    * @example "bfcbda9b-4749-4a5e-b25e7650a6a8-63db-4848"
    */
   ReadOnlyPassword: string;
   /**
-   * bucket should rewrite 404 Not Found http responses to 200 OK http responses
+   * storage zone should rewrite 404 Not Found http responses to 200 OK http responses
    * @example true
    */
   Rewrite404To200: boolean;
   // TODO: confirm path
   /**
-   * custom file path in bucket to return when encountering 404 Not Found http errors
+   * custom file path in storage zone to return when encountering 404 Not Found http errors
    * @example "/my-partial/url/404.html"
    */
   Custom404FilePath: string | null;
   /**
-   * bucket storage hostname domain
+   * storage zone hostname domain
    * @example "ny.storage.bunnycdn.com"
    */
   StorageHostname: StorageHostname;
   /**
-   * bucket zone tier
+   * storage zone zone tier
    */
   ZoneTier: ZoneTier;
   /**
-   * bucket is changing replication settings
+   * storage zone is changing replication settings
    * @example false
    */
   ReplicationChangeInProgress: boolean;
