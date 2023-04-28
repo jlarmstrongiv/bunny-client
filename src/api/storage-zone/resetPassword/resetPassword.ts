@@ -22,7 +22,7 @@ export const resetPassword = u
   .output<resetPasswordResponse>();
 
 const url = "https://api.bunny.net/storagezone";
-const options = {
+const options: RequestInit = {
   method: "POST",
 };
 

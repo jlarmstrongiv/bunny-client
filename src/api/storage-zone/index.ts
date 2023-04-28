@@ -21,6 +21,11 @@ import {
   getStorageZoneEndpoints,
 } from "./getStorageZone";
 import {
+  updateStorageZone,
+  updateStorageZoneClient,
+  updateStorageZoneEndpoints,
+} from "./updateStorageZone";
+import {
   deleteStorageZone,
   deleteStorageZoneClient,
   deleteStorageZoneEndpoints,
@@ -48,6 +53,8 @@ const storageZoneRouter = u.router({
   ]]: checkTheStorageZoneAvailability,
   [getStorageZoneEndpoints["getStorageZone"]]: getStorageZone,
   [getStorageZoneEndpoints["GET /storagezone/:id"]]: getStorageZone,
+  [updateStorageZoneEndpoints["updateStorageZone"]]: updateStorageZone,
+  [updateStorageZoneEndpoints["POST /storagezone/:id"]]: updateStorageZone,
   [deleteStorageZoneEndpoints["deleteStorageZone"]]: deleteStorageZone,
   [deleteStorageZoneEndpoints["DELETE /storagezone/:id"]]: deleteStorageZone,
   [resetPasswordEndpoints["resetPassword"]]: resetPassword,
@@ -102,6 +109,9 @@ export function createStorageZoneClient(defaultRequestInit: RequestInit = {}) {
         case getStorageZoneEndpoints["getStorageZone"]:
         case getStorageZoneEndpoints["GET /storagezone/:id"]:
           return getStorageZoneClient(defaultRequestInit, input);
+        case updateStorageZoneEndpoints["updateStorageZone"]:
+        case updateStorageZoneEndpoints["POST /storagezone/:id"]:
+          return updateStorageZoneClient(defaultRequestInit, input);
         case deleteStorageZoneEndpoints["deleteStorageZone"]:
         case deleteStorageZoneEndpoints["DELETE /storagezone/:id"]:
           return deleteStorageZoneClient(defaultRequestInit, input);

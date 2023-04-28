@@ -116,7 +116,7 @@ export interface StorageZone {
    */
   ReadOnlyPassword: string;
   /**
-   * storage zone should rewrite 404 Not Found http responses to 200 OK http responses
+   * storage zone rewrites 404 status code to 200 for URLs without extension
    * @example true
    */
   Rewrite404To200: boolean;

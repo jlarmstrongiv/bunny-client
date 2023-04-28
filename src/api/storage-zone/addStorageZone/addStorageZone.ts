@@ -74,7 +74,7 @@ export const addStorageZone = u
   .output<addStorageZoneResponse>();
 
 const url = "https://api.bunny.net/storagezone";
-const options = {
+const options: RequestInit = {
   method: "POST",
   headers: {
     accept: "application/json",

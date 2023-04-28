@@ -22,7 +22,7 @@ export const deleteStorageZone = u
   .output<deleteStorageZoneResponse>();
 
 const url = "https://api.bunny.net/storagezone";
-const options = {
+const options: RequestInit = {
   method: "DELETE",
 };
 
