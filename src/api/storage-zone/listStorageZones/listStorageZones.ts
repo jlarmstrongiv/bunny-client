@@ -3,7 +3,7 @@ import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
 import type { StorageZone } from "../types";
 
-export interface listStorageZonesRequest {
+export interface ListStorageZonesRequest {
   /**
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
@@ -31,7 +31,7 @@ export interface listStorageZonesRequest {
   search?: string;
 }
 
-export type listStorageZonesResponse = {
+export type ListStorageZonesResponse = {
   /**
    * list of storage zones that match the query
    */
@@ -54,8 +54,8 @@ export type listStorageZonesResponse = {
 };
 
 export const listStorageZones = u
-  .input<listStorageZonesRequest>()
-  .output<listStorageZonesResponse>();
+  .input<ListStorageZonesRequest>()
+  .output<ListStorageZonesResponse>();
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
@@ -72,8 +72,8 @@ export const listStorageZonesEndpoints = {
 
 export async function listStorageZonesClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, page, perPage, includeDeleted, search }: listStorageZonesRequest
-): Promise<listStorageZonesResponse> {
+  { AccessKey, page, perPage, includeDeleted, search }: ListStorageZonesRequest
+): Promise<ListStorageZonesResponse> {
   const overrideOptions: RequestInit = {
     headers: {
       ...(AccessKey && { AccessKey }),

@@ -8,7 +8,7 @@ import type {
   StorageZone,
 } from "../types";
 
-export interface addStorageZoneRequestBase {
+export interface AddStorageZoneRequestBase {
   /**
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
@@ -34,8 +34,8 @@ export interface addStorageZoneRequestBase {
   Region: Region;
 }
 
-export interface addStorageZoneRequestEdgeSsd
-  extends addStorageZoneRequestBase {
+export interface AddStorageZoneRequestEdgeSsd
+  extends AddStorageZoneRequestBase {
   /**
    * The code of the main storage zone region (Possible values: DE, NY, LA, SG, SYD)
    * @example "DE"
@@ -48,8 +48,8 @@ export interface addStorageZoneRequestEdgeSsd
   ZoneTier: ZoneTier;
 }
 
-export interface addStorageZoneRequestReplicationRegion
-  extends addStorageZoneRequestBase {
+export interface AddStorageZoneRequestReplicationRegion
+  extends AddStorageZoneRequestBase {
   /**
    * The code of the main storage zone region (Possible values: DE, NY, LA, SG, SYD)
    * @example "DE"
@@ -63,15 +63,15 @@ export interface addStorageZoneRequestReplicationRegion
 }
 
 // mutually exclusive options https://effectivetypescript.com/2021/11/11/optional-never/
-export type addStorageZoneRequest =
-  | addStorageZoneRequestEdgeSsd
-  | addStorageZoneRequestReplicationRegion;
+export type AddStorageZoneRequest =
+  | AddStorageZoneRequestEdgeSsd
+  | AddStorageZoneRequestReplicationRegion;
 
-export type addStorageZoneResponse = StorageZone;
+export type AddStorageZoneResponse = StorageZone;
 
 export const addStorageZone = u
-  .input<addStorageZoneRequest>()
-  .output<addStorageZoneResponse>();
+  .input<AddStorageZoneRequest>()
+  .output<AddStorageZoneResponse>();
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
@@ -89,8 +89,8 @@ export const addStorageZoneEndpoints = {
 
 export async function addStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, ...input }: addStorageZoneRequest
-): Promise<addStorageZoneResponse> {
+  { AccessKey, ...input }: AddStorageZoneRequest
+): Promise<AddStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
       ...(AccessKey && { AccessKey }),

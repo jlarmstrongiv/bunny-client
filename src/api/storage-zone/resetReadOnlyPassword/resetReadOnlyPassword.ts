@@ -2,7 +2,7 @@ import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
 
-export interface resetReadOnlyPasswordRequest {
+export interface ResetReadOnlyPasswordRequest {
   /**
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
@@ -15,11 +15,11 @@ export interface resetReadOnlyPasswordRequest {
   id: number;
 }
 
-export type resetReadOnlyPasswordResponse = void;
+export type ResetReadOnlyPasswordResponse = void;
 
 export const resetReadOnlyPassword = u
-  .input<resetReadOnlyPasswordRequest>()
-  .output<resetReadOnlyPasswordResponse>();
+  .input<ResetReadOnlyPasswordRequest>()
+  .output<ResetReadOnlyPasswordResponse>();
 
 const url = "https://api.bunny.net/storagezone/resetReadOnlyPassword";
 const options: RequestInit = {
@@ -34,8 +34,8 @@ export const resetReadOnlyPasswordEndpoints = {
 
 export async function resetReadOnlyPasswordClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, id }: resetReadOnlyPasswordRequest
-): Promise<resetReadOnlyPasswordResponse> {
+  { AccessKey, id }: ResetReadOnlyPasswordRequest
+): Promise<ResetReadOnlyPasswordResponse> {
   const overrideOptions: RequestInit = {
     headers: {
       ...(AccessKey && { AccessKey }),

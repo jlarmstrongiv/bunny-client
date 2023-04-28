@@ -2,7 +2,7 @@ import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
 
-export interface resetPasswordRequest {
+export interface ResetPasswordRequest {
   /**
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
@@ -15,11 +15,11 @@ export interface resetPasswordRequest {
   id: number;
 }
 
-export type resetPasswordResponse = void;
+export type ResetPasswordResponse = void;
 
 export const resetPassword = u
-  .input<resetPasswordRequest>()
-  .output<resetPasswordResponse>();
+  .input<ResetPasswordRequest>()
+  .output<ResetPasswordResponse>();
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
@@ -33,8 +33,8 @@ export const resetPasswordEndpoints = {
 
 export async function resetPasswordClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, id }: resetPasswordRequest
-): Promise<resetPasswordResponse> {
+  { AccessKey, id }: ResetPasswordRequest
+): Promise<ResetPasswordResponse> {
   const overrideOptions: RequestInit = {
     headers: {
       ...(AccessKey && { AccessKey }),

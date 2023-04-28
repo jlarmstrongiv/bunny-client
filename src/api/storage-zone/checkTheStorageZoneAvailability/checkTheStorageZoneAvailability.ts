@@ -2,7 +2,7 @@ import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
 
-export interface checkTheStorageZoneAvailabilityRequest {
+export interface CheckTheStorageZoneAvailabilityRequest {
   /**
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
@@ -17,13 +17,13 @@ export interface checkTheStorageZoneAvailabilityRequest {
   Name: string;
 }
 
-export type checkTheStorageZoneAvailabilityResponse = {
+export type CheckTheStorageZoneAvailabilityResponse = {
   Available: boolean;
 };
 
 export const checkTheStorageZoneAvailability = u
-  .input<checkTheStorageZoneAvailabilityRequest>()
-  .output<checkTheStorageZoneAvailabilityResponse>();
+  .input<CheckTheStorageZoneAvailabilityRequest>()
+  .output<CheckTheStorageZoneAvailabilityResponse>();
 
 const url = "https://api.bunny.net/storagezone/checkavailability";
 const options: RequestInit = {
@@ -41,8 +41,8 @@ export const checkTheStorageZoneAvailabilityEndpoints = {
 
 export async function checkTheStorageZoneAvailabilityClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, ...input }: checkTheStorageZoneAvailabilityRequest
-): Promise<checkTheStorageZoneAvailabilityResponse> {
+  { AccessKey, ...input }: CheckTheStorageZoneAvailabilityRequest
+): Promise<CheckTheStorageZoneAvailabilityResponse> {
   const overrideOptions: RequestInit = {
     headers: {
       ...(AccessKey && { AccessKey }),

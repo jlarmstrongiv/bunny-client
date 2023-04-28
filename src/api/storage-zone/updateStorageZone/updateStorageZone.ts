@@ -4,7 +4,7 @@ import { u } from "../untypeable";
 import type { ReplicationRegion } from "../types";
 
 // TODO
-export interface updateStorageZoneRequest {
+export interface UpdateStorageZoneRequest {
   /**
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
@@ -41,11 +41,11 @@ export interface updateStorageZoneRequest {
   Rewrite404To200?: boolean;
 }
 
-export type updateStorageZoneResponse = void;
+export type UpdateStorageZoneResponse = void;
 
 export const updateStorageZone = u
-  .input<updateStorageZoneRequest>()
-  .output<updateStorageZoneResponse>();
+  .input<UpdateStorageZoneRequest>()
+  .output<UpdateStorageZoneResponse>();
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
@@ -63,8 +63,8 @@ export const updateStorageZoneEndpoints = {
 
 export async function updateStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, id, ...input }: updateStorageZoneRequest
-): Promise<updateStorageZoneResponse> {
+  { AccessKey, id, ...input }: UpdateStorageZoneRequest
+): Promise<UpdateStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
       ...(AccessKey && { AccessKey }),

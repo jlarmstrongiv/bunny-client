@@ -2,7 +2,7 @@ import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
 
-export interface deleteStorageZoneRequest {
+export interface DeleteStorageZoneRequest {
   /**
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
@@ -15,11 +15,11 @@ export interface deleteStorageZoneRequest {
   id: number;
 }
 
-export type deleteStorageZoneResponse = void;
+export type DeleteStorageZoneResponse = void;
 
 export const deleteStorageZone = u
-  .input<deleteStorageZoneRequest>()
-  .output<deleteStorageZoneResponse>();
+  .input<DeleteStorageZoneRequest>()
+  .output<DeleteStorageZoneResponse>();
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
@@ -33,8 +33,8 @@ export const deleteStorageZoneEndpoints = {
 
 export async function deleteStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, id }: deleteStorageZoneRequest
-): Promise<deleteStorageZoneResponse> {
+  { AccessKey, id }: DeleteStorageZoneRequest
+): Promise<DeleteStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
       ...(AccessKey && { AccessKey }),

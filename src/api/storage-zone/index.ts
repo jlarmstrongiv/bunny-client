@@ -31,6 +31,11 @@ import {
   deleteStorageZoneEndpoints,
 } from "./deleteStorageZone";
 import {
+  getStorageZoneStatistics,
+  getStorageZoneStatisticsClient,
+  getStorageZoneStatisticsEndpoints,
+} from "./getStorageZoneStatistics";
+import {
   resetPassword,
   resetPasswordClient,
   resetPasswordEndpoints,
@@ -57,6 +62,10 @@ const storageZoneRouter = u.router({
   [updateStorageZoneEndpoints["POST /storagezone/:id"]]: updateStorageZone,
   [deleteStorageZoneEndpoints["deleteStorageZone"]]: deleteStorageZone,
   [deleteStorageZoneEndpoints["DELETE /storagezone/:id"]]: deleteStorageZone,
+  [getStorageZoneStatisticsEndpoints["getStorageZoneStatistics"]]:
+    getStorageZoneStatistics,
+  [getStorageZoneStatisticsEndpoints["GET /storagezone/:id/statistics"]]:
+    getStorageZoneStatistics,
   [resetPasswordEndpoints["resetPassword"]]: resetPassword,
   [resetPasswordEndpoints["POST /storagezone/:id/resetPassword"]]:
     resetPassword,
@@ -115,6 +124,11 @@ export function createStorageZoneClient(defaultRequestInit: RequestInit = {}) {
         case deleteStorageZoneEndpoints["deleteStorageZone"]:
         case deleteStorageZoneEndpoints["DELETE /storagezone/:id"]:
           return deleteStorageZoneClient(defaultRequestInit, input);
+        case getStorageZoneStatisticsEndpoints["getStorageZoneStatistics"]:
+        case getStorageZoneStatisticsEndpoints[
+          "GET /storagezone/:id/statistics"
+        ]:
+          return getStorageZoneStatisticsClient(defaultRequestInit, input);
         case resetPasswordEndpoints["resetPassword"]:
         case resetPasswordEndpoints["POST /storagezone/:id/resetPassword"]:
           return resetPasswordClient(defaultRequestInit, input);
