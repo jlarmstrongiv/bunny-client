@@ -1,5 +1,5 @@
 {
-  "name": "bunny-net",
+  "name": "bunny-client",
   "version": "0.0.1",
   "private": false,
   "description": "TypeScript API Client for BunnyCDN 🐰",
@@ -11,9 +11,9 @@
     "typescript",
     "api"
   ],
-  "homepage": "https://github.com/jlarmstrongiv/bunny-net/blob/main/README.md",
-  "bugs": "https://github.com/jlarmstrongiv/bunny-net/issues",
-  "repository": "https://github.com/jlarmstrongiv/bunny-net.git",
+  "homepage": "https://github.com/jlarmstrongiv/bunny-client/blob/main/README.md",
+  "bugs": "https://github.com/jlarmstrongiv/bunny-client/issues",
+  "repository": "https://github.com/jlarmstrongiv/bunny-client.git",
   "license": "CC BY-NC-SA 4.0",
   "author": "John L. Armstrong IV",
   "sideEffects": false,
