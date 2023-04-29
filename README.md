@@ -8,21 +8,7 @@
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/jlarmstrongiv/bunny-client/blob/main/README.md">bunny-client</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/jlarmstrongiv/">John L. Armstrong IV</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<br><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
 
-### Sponsorships
-
-If [bunny.net](https://bunny.net/) or you would like to sponsor this package, the license can be changed to the MIT License if we reach our goal of $5,000 / mo.
-
-### Commercial licenses
-
-Unfortunately, this package has no sponsors. Affordable commercial licenses are available:
-
-- $100 lifetime license for indie developers
-- $10 / mo for businesses with 1–5 employees
-- $25 / mo for businesses with 6–15 employees
-- $75/ mo for businesses with 16–24 employees
-- $150 / mo for businesses with 25+ employees
-
-For purchasing instructions, please create a github discussion with your contact email. Support not included. Thank you!
+Alternative licenses available by request.
 
 ## Motivation
 
@@ -38,13 +24,48 @@ This package aims to provide a matching TypeScript API Client for the bunny.net 
 
 ### Supported APIs
 
+<!--
+
+- private apis
+  - abuse and dmca endpoint
+    - https://toshy.github.io/BunnyNet-PHP/base-api/#abuse-case
+    - https://github.com/ToshY/BunnyNet-PHP/issues/55
+  - billing
+    - https://toshy.github.io/BunnyNet-PHP/base-api/#billing
+    - https://github.com/ToshY/BunnyNet-PHP/issues/34
+    - https://github.com/ToshY/BunnyNet-PHP/issues/58
+  - compute
+    - https://toshy.github.io/BunnyNet-PHP/base-api/#compute
+    - https://docs.bunny.net/reference/computeedgescriptpublic_addscript
+  - drm certificates
+    - https://toshy.github.io/BunnyNet-PHP/base-api/#drm-certificate
+  - user
+    - https://toshy.github.io/BunnyNet-PHP/base-api/#user
+    - https://docs.bunny.net/reference/userpublic_index
+    - https://docs.bunny.net/reference/userpublic_dpa
+  - other
+    - https://toshy.github.io/BunnyNet-PHP/image-processing/
+    - https://toshy.github.io/BunnyNet-PHP/token-authentication/
+
+-->
+
 - 🏗️ API
   - ✅ Countries
     - ✅ Get Country List
-  - ✅ Statistics
-    - ✅ Get Statistics
+  - ✅ Support
+    - ✅ Get Ticket List
+    - ✅ Get Ticket Details
+    - ✅ Close Ticket
+    - ✅ Reply Ticket
+    - ✅ Create Ticket
   - ✅ Region
     - ✅ Region List
+  - 🏗️ Stream Video Library
+  - 🏗️ DNS Zone
+  - 🏗️ Pull Zone
+  - 🏗️ Purge
+  - ✅ Statistics
+    - ✅ Get Statistics
   - ✅ Storage Zone
     - ✅ List Storage Zones
     - ✅ Add Storage Zone
@@ -61,6 +82,9 @@ This package aims to provide a matching TypeScript API Client for the bunny.net 
   - 🏗️ Delete File
   - 🏗️ List Files
 - 🏗️ Stream API
+  - 🏗️ TUS
+  - 🏗️ Manage Collections
+  - 🏗️ Manage Videos
 
 ## Quick start
 
@@ -81,6 +105,9 @@ npm install bunny-client
 
 - `fetch` API
 - Web Streams API
+
+- Supports [Node.js 18+](https://nodejs.org/en/blog/announcements/v18-release-announce#fetch-experimental)
+- Supports [evergreen browsers](https://caniuse.com/fetch)
 
 ### Account Access Key
 

@@ -1,0 +1,94 @@
+{
+  "Id": 196583,
+  "Status": "open",
+  "Comments": [
+    {
+      "Id": 8617725316764,
+      "Type": "Comment",
+      "Body": "Please reply to this test comment, but do not close the ticket",
+      "HtmlBody": "<div class=\"zd-comment\" dir=\"auto\"><p dir=\"auto\">Please reply to this test comment, but do not close the ticket</p></div>",
+      "Public": true,
+      "AuthorId": 8600481430684,
+      "CreatedAt": "2023-04-29T04:30:40",
+      "User": {
+        "Name": "User 456e3",
+        "ExternalId": "c2fbdbcf-0961-4a89-b818-edf3ad7456e3",
+        "Alias": null,
+        "Verified": true,
+        "Signature": null,
+        "Role": "end-user",
+        "PhotoUrl": "https://www.gravatar.com/avatar/8292f524bb616e5a1b49351761de6a74?d=https%3A%2F%2Fbunnynet-avatars.b-cdn.net%2F.ai%2Fimg%2Fdalle-256%2Favatar%2F8292f524bb616e5a1b49351761de6a74%2Frabbit.jpg%3Ftoken%3DX28k9Vt_eos049sSABy8KRVTvFE6Gg6EcB6KJ5-s8UA%26expires%3D19132029685"
+      },
+      "Attachments": [
+        {
+          "ContentUrl": "https://bunnycdn.zendesk.com/attachments/token/27ZaTyB7eg2ceSSKNr60zZbvG/?name=steps.txt",
+          "ContentType": "text/plain",
+          "Size": 42,
+          "Thumbnails": [],
+          "FileName": "steps.txt ",
+          "Id": 8617793197852
+        }
+      ]
+    },
+    {
+      "Id": 8617708867484,
+      "Type": "Comment",
+      "Body": "Please reply to this test comment, but do not close the ticket",
+      "HtmlBody": "<div class=\"zd-comment\" dir=\"auto\"><p dir=\"auto\">Please reply to this test comment, but do not close the ticket</p></div>",
+      "Public": true,
+      "AuthorId": 8600481430684,
+      "CreatedAt": "2023-04-29T04:27:26",
+      "User": {
+        "Name": "User 456e3",
+        "ExternalId": "c2fbdbcf-0961-4a89-b818-edf3ad7456e3",
+        "Alias": null,
+        "Verified": true,
+        "Signature": null,
+        "Role": "end-user",
+        "PhotoUrl": "https://www.gravatar.com/avatar/8292f524bb616e5a1b49351761de6a74?d=https%3A%2F%2Fbunnynet-avatars.b-cdn.net%2F.ai%2Fimg%2Fdalle-256%2Favatar%2F8292f524bb616e5a1b49351761de6a74%2Frabbit.jpg%3Ftoken%3DX28k9Vt_eos049sSABy8KRVTvFE6Gg6EcB6KJ5-s8UA%26expires%3D19132029685"
+      },
+      "Attachments": []
+    },
+    {
+      "Id": 8617671391516,
+      "Type": "Comment",
+      "Body": "",
+      "HtmlBody": "<div class=\"zd-comment\" dir=\"auto\"><p dir=\"auto\"></p></div>",
+      "Public": true,
+      "AuthorId": 8600481430684,
+      "CreatedAt": "2023-04-29T04:25:09",
+      "User": {
+        "Name": "User 456e3",
+        "ExternalId": "c2fbdbcf-0961-4a89-b818-edf3ad7456e3",
+        "Alias": null,
+        "Verified": true,
+        "Signature": null,
+        "Role": "end-user",
+        "PhotoUrl": "https://www.gravatar.com/avatar/8292f524bb616e5a1b49351761de6a74?d=https%3A%2F%2Fbunnynet-avatars.b-cdn.net%2F.ai%2Fimg%2Fdalle-256%2Favatar%2F8292f524bb616e5a1b49351761de6a74%2Frabbit.jpg%3Ftoken%3DX28k9Vt_eos049sSABy8KRVTvFE6Gg6EcB6KJ5-s8UA%26expires%3D19132029685"
+      },
+      "Attachments": []
+    },
+    {
+      "Id": 8617221600540,
+      "Type": "Comment",
+      "Body": "IGNORE: Create Ticket Test",
+      "HtmlBody": "<div class=\"zd-comment\" dir=\"auto\"><p dir=\"auto\">IGNORE: Create Ticket Test</p></div>",
+      "Public": true,
+      "AuthorId": 8600481430684,
+      "CreatedAt": "2023-04-29T02:42:01",
+      "User": {
+        "Name": "User 456e3",
+        "ExternalId": "c2fbdbcf-0961-4a89-b818-edf3ad7456e3",
+        "Alias": null,
+        "Verified": true,
+        "Signature": null,
+        "Role": "end-user",
+        "PhotoUrl": "https://www.gravatar.com/avatar/8292f524bb616e5a1b49351761de6a74?d=https%3A%2F%2Fbunnynet-avatars.b-cdn.net%2F.ai%2Fimg%2Fdalle-256%2Favatar%2F8292f524bb616e5a1b49351761de6a74%2Frabbit.jpg%3Ftoken%3DX28k9Vt_eos049sSABy8KRVTvFE6Gg6EcB6KJ5-s8UA%26expires%3D19132029685"
+      },
+      "Attachments": []
+    }
+  ],
+  "Subject": "IGNORE: Create Ticket Test",
+  "CreatedAt": "2023-04-29T02:42:01",
+  "LastUpdatedAt": "2023-04-29T04:30:40Z"
+}

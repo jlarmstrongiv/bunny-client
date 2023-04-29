@@ -14,12 +14,12 @@ export interface GetStorageZoneStatisticsRequest {
    */
   id: number;
   /**
-   * The start date of the statistics. If no value is passed, the last 30 days will be returned.
+   * The ISO 8601 start date of the statistics. If no value is passed, the last 30 days will be returned.
    * @example "2023-04-15T00:00:00Z"
    */
   dateFrom?: string;
   /**
-   * The end date of the statistics. If no value is passed, the last 30 days will be returned.
+   * The ISO 8601 end date of the statistics. If no value is passed, the last 30 days will be returned.
    * @example "2023-04-17T00:00:00Z"
    */
   dateTo?: string;

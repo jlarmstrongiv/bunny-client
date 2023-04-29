@@ -79,7 +79,7 @@ export interface StorageZone {
    */
   Password: string;
   /**
-   * last modified date of the storage zone
+   * last modified ISO 8601 date of the storage zone
    * @example "2023-04-28T02:23:47.7909075Z"
    */
   DateModified: string;
