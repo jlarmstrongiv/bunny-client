@@ -81,5 +81,7 @@ export async function getCountryListClient(
     throw new FetchError(response.status, response.statusText, response);
   }
 
-  return response.json();
+  const json: GetCountryListResponse = await response.json();
+
+  return json;
 }

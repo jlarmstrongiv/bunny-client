@@ -119,5 +119,7 @@ export async function getStatisticsClient(
     throw new FetchError(response.status, response.statusText, response);
   }
 
-  return response.json();
+  const json: GetStatisticsResponse = await response.json();
+
+  return json;
 }

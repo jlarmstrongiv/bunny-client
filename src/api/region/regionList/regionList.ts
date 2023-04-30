@@ -97,5 +97,7 @@ export async function regionListClient(
     throw new FetchError(response.status, response.statusText, response);
   }
 
-  return response.json();
+  const json: RegionListResponse = await response.json();
+
+  return json;
 }

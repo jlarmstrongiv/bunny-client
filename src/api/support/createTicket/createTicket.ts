@@ -82,5 +82,7 @@ export async function createTicketClient(
     throw new FetchError(response.status, response.statusText, response);
   }
 
-  return response.json();
+  const json: CreateTicketResponse = await response.json();
+
+  return json;
 }

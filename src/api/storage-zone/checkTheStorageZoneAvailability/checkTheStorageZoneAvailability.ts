@@ -59,5 +59,7 @@ export async function checkTheStorageZoneAvailabilityClient(
     throw new FetchError(response.status, response.statusText, response);
   }
 
-  return response.json();
+  const json: CheckTheStorageZoneAvailabilityResponse = await response.json();
+
+  return json;
 }

@@ -100,5 +100,7 @@ export async function listStorageZonesClient(
     throw new FetchError(response.status, response.statusText, response);
   }
 
-  return response.json();
+  const json: ListStorageZonesResponse = await response.json();
+
+  return json;
 }

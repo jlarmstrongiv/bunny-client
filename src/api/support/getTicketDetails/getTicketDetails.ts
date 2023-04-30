@@ -56,5 +56,7 @@ export async function getTicketDetailsClient(
     throw new FetchError(response.status, response.statusText, response);
   }
 
-  return response.json();
+  const json: GetTicketDetailsResponse = await response.json();
+
+  return json;
 }

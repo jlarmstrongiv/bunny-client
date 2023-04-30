@@ -56,5 +56,7 @@ export async function getStorageZoneClient(
     throw new FetchError(response.status, response.statusText, response);
   }
 
-  return response.json();
+  const json: GetStorageZoneResponse = await response.json();
+
+  return json;
 }
