@@ -39,6 +39,14 @@
           "match": true
         }
       },
+      {
+        "selector": "property",
+        "format": null,
+        "filter": {
+          "regex": "content-type",
+          "match": true
+        }
+      },
       // example https://typescript-eslint.io/rules/naming-convention/#allowed-selectors-modifiers-and-types
       {
         "selector": "typeAlias",
@@ -60,6 +68,7 @@
         "leadingUnderscore": "allow",
         "trailingUnderscore": "allow"
       }
-    ]
+    ],
+    "@typescript-eslint/no-unsafe-assignment": "off"
   }
 }

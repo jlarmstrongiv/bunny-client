@@ -19,7 +19,7 @@ const statisticsRouter = u.router({
  * ```ts
  * const statisticsClient = createStatisticsClient({
  *   headers: {
- *     apiKey: API_ACCESS_KEY,
+ *     AccessKey: API_ACCESS_KEY,
  *   },
  * });
  *

@@ -83,7 +83,7 @@ const storageZoneRouter = u.router({
  * ```ts
  * const storageZoneClient = createStorageZoneClient({
  *   headers: {
- *     apiKey: API_ACCESS_KEY,
+ *     AccessKey: API_ACCESS_KEY,
  *   },
  * });
  *
