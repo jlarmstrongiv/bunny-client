@@ -4,10 +4,10 @@ import { u } from "../untypeable";
 
 export interface ResetPasswordRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
    * The ID of the storage zone that should have the password reset
    * @example 270299
@@ -33,11 +33,11 @@ export const resetPasswordEndpoints = {
 
 export async function resetPasswordClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, id }: ResetPasswordRequest
+  { apiKey, id }: ResetPasswordRequest
 ): Promise<ResetPasswordResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
   };
 

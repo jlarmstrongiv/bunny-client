@@ -4,10 +4,10 @@ import { u } from "../untypeable";
 
 export interface ResetReadOnlyPasswordRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
    * The ID of the storage zone that should have the read-only password reset
    * @example 270299
@@ -34,11 +34,11 @@ export const resetReadOnlyPasswordEndpoints = {
 
 export async function resetReadOnlyPasswordClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, id }: ResetReadOnlyPasswordRequest
+  { apiKey, id }: ResetReadOnlyPasswordRequest
 ): Promise<ResetReadOnlyPasswordResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
   };
 

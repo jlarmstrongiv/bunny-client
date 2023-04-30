@@ -1,47 +1,47 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
-import { Ticket } from "../types";
+import { type Ticket } from "../types";
 
 export interface GetTicketListRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
-   * current page of tickets list
+   * Current page of tickets list
    * @example 1
    */
   page?: number;
   /**
-   * number of tickets per page
+   * Number of tickets per page
    * @example 100
    */
   perPage?: number;
 }
 
-export type GetTicketListResponse = {
+export interface GetTicketListResponse {
   /**
-   * list of tickets
+   * List of tickets
    */
   Items: Ticket[];
   /**
-   * current page in ticket list
+   * Current page in ticket list
    * @example 1
    */
   CurrentPage: number;
   /**
-   * total number of tickets in all pages
+   * Total number of tickets in all pages
    * @example 3
    */
   TotalItems: number;
   /**
-   * ticket list has more pages
+   * Ticket list has more pages
    * @example false
    */
   HasMoreItems: boolean;
-};
+}
 
 export const getTicketList = u
   .input<GetTicketListRequest>()
@@ -62,11 +62,11 @@ export const getTicketListEndpoints = {
 
 export async function getTicketListClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, page, perPage }: GetTicketListRequest = {}
+  { apiKey, page, perPage }: GetTicketListRequest = {}
 ): Promise<GetTicketListResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
   };
 

@@ -10,10 +10,10 @@ import type {
 
 export interface AddStorageZoneRequestBase {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
    * The origin URL of the storage zone that will be added
    *
@@ -62,7 +62,7 @@ export interface AddStorageZoneRequestReplicationRegion
   ZoneTier?: never;
 }
 
-// mutually exclusive options https://effectivetypescript.com/2021/11/11/optional-never/
+// Mutually exclusive options https://effectivetypescript.com/2021/11/11/optional-never/
 export type AddStorageZoneRequest =
   | AddStorageZoneRequestEdgeSsd
   | AddStorageZoneRequestReplicationRegion;
@@ -89,11 +89,11 @@ export const addStorageZoneEndpoints = {
 
 export async function addStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, ...input }: AddStorageZoneRequest
+  { apiKey, ...input }: AddStorageZoneRequest
 ): Promise<AddStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
     body: JSON.stringify(input),
   };

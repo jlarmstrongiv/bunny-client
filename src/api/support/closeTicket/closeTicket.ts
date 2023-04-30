@@ -4,12 +4,12 @@ import { u } from "../untypeable";
 
 export interface CloseTicketRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
-   * ticket id
+   * Ticket id
    * @example 196584
    */
   id: number;
@@ -33,11 +33,11 @@ export const closeTicketEndpoints = {
 
 export async function closeTicketClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, id }: CloseTicketRequest
+  { apiKey, id }: CloseTicketRequest
 ): Promise<CloseTicketResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
   };
 

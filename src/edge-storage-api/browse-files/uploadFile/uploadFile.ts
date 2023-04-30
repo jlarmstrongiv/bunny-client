@@ -8,13 +8,13 @@ export interface UploadFileRequest {
    * The storage zone password
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
    *
    */
   storageEndpoint?: string;
   /**
-   * the name of your storage zone where you are connecting to.
+   * The name of your storage zone where you are connecting to.
    */
   storageZoneName: string;
   /**
@@ -50,11 +50,11 @@ export const createTicketEndpoints = {
 
 export async function createTicketClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, ...input }: UploadFileRequest
+  { apiKey, ...input }: UploadFileRequest
 ): Promise<UploadFileResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
     body: JSON.stringify(input),
   };

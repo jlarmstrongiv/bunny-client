@@ -28,10 +28,10 @@ export interface Statistics {
 
 export interface GetStatisticsRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
    * The ISO 8601 start date of the statistics. If no value is passed, the last 30 days will be returned.
    * @example "2023-04-27T00:00:00Z"
@@ -84,7 +84,7 @@ export const getStatisticsEndpoints = {
 export async function getStatisticsClient(
   defaultRequestInit: RequestInit,
   {
-    ApiKey,
+    apiKey,
     dateFrom,
     dateTo,
     pullZone = -1,
@@ -95,7 +95,7 @@ export async function getStatisticsClient(
 ): Promise<GetStatisticsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
   };
 

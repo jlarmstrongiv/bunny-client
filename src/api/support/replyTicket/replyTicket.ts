@@ -5,22 +5,22 @@ import type { Ticket, CreateAttachment } from "../types";
 
 export interface ReplyTicketRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
-   * ticket id
+   * Ticket id
    * @example 196584
    */
   id: number;
   /**
-   * ticket message
+   * Ticket message
    * @example "My videos are still buffering"
    */
   Message?: string;
   /**
-   * file attachments related to this ticket
+   * File attachments related to this ticket
    */
   Attachments?: CreateAttachment[];
 }
@@ -46,11 +46,11 @@ export const replyTicketEndpoints = {
 
 export async function replyTicketClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, id, ...input }: ReplyTicketRequest
+  { apiKey, id, ...input }: ReplyTicketRequest
 ): Promise<ReplyTicketResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
     body: JSON.stringify(input),
   };

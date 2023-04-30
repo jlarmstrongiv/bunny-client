@@ -4,10 +4,10 @@ import { u } from "../untypeable";
 
 export interface GetStorageZoneStatisticsRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
    * The ID of the storage zone
    * @example 270299
@@ -25,7 +25,7 @@ export interface GetStorageZoneStatisticsRequest {
   dateTo?: string;
 }
 
-export type GetStorageZoneStatisticsResponse = {
+export interface GetStorageZoneStatisticsResponse {
   /**
    * BUG: may be inaccurate with new or empty buckets
    *
@@ -46,7 +46,7 @@ export type GetStorageZoneStatisticsResponse = {
    * @example { "2023-03-29T00:00:00Z": 191475, }
    */
   FileCountChart: Record<string, number>;
-};
+}
 
 export const getStorageZoneStatistics = u
   .input<GetStorageZoneStatisticsRequest>()
@@ -67,11 +67,11 @@ export const getStorageZoneStatisticsEndpoints = {
 
 export async function getStorageZoneStatisticsClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, id, dateFrom, dateTo }: GetStorageZoneStatisticsRequest
+  { apiKey, id, dateFrom, dateTo }: GetStorageZoneStatisticsRequest
 ): Promise<GetStorageZoneStatisticsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
   };
 

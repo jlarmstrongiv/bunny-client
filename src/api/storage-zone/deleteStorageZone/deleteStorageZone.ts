@@ -4,10 +4,10 @@ import { u } from "../untypeable";
 
 export interface DeleteStorageZoneRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
    * The Storage Zone ID that should be deleted
    * @example 270299
@@ -33,11 +33,11 @@ export const deleteStorageZoneEndpoints = {
 
 export async function deleteStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, id }: DeleteStorageZoneRequest
+  { apiKey, id }: DeleteStorageZoneRequest
 ): Promise<DeleteStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
   };
 

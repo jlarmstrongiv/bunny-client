@@ -7,7 +7,7 @@ import {
 } from "./regionList";
 
 const countriesRouter = u.router({
-  [regionListEndpoints["regionList"]]: regionList,
+  [regionListEndpoints.regionList]: regionList,
   [regionListEndpoints["GET /region"]]: regionList,
 });
 
@@ -19,7 +19,7 @@ const countriesRouter = u.router({
  * ```ts
  * const regionClient = createRegionClient({
  *   headers: {
- *     ApiKey: API_ACCESS_KEY,
+ *     apiKey: API_ACCESS_KEY,
  *   },
  * });
  *
@@ -30,7 +30,7 @@ export function createRegionClient(defaultRequestInit: RequestInit = {}) {
   const regionClient = createTypeLevelClient<typeof countriesRouter>(
     async (path, input) => {
       switch (path) {
-        case regionListEndpoints["regionList"]:
+        case regionListEndpoints.regionList:
         case regionListEndpoints["GET /region"]:
           return regionListClient(defaultRequestInit, input);
         default:

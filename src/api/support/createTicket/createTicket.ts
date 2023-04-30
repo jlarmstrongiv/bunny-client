@@ -6,38 +6,38 @@ import type { Ticket, CreateAttachment } from "../types";
 // TODO: fill in all the id examples
 export interface CreateTicketRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
-   * ticket subject line
+   * Ticket subject line
    * @example "Stream"
    */
   Subject?: string;
   /**
-   * pull zone id related to this ticket
+   * Pull zone id related to this ticket
    */
   LinkedPullZone?: number;
   /**
-   * video library id related to this ticket
+   * Video library id related to this ticket
    */
   LinkedVideoLibrary?: number;
   /**
-   * dns zone id related to this ticket
+   * Dns zone id related to this ticket
    */
   LinkedDnsZone?: number;
   /**
-   * ticket message
+   * Ticket message
    * @example "My videos are buffering"
    */
   Message: string;
   /**
-   * storage zone id related to this ticket
+   * Storage zone id related to this ticket
    */
   LinkedStorageZone?: number;
   /**
-   * file attachments related to this ticket
+   * File attachments related to this ticket
    */
   Attachments?: CreateAttachment[];
 }
@@ -64,11 +64,11 @@ export const createTicketEndpoints = {
 
 export async function createTicketClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, ...input }: CreateTicketRequest
+  { apiKey, ...input }: CreateTicketRequest
 ): Promise<CreateTicketResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
     body: JSON.stringify(input),
   };

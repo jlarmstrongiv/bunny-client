@@ -6,10 +6,10 @@ import type { ReplicationRegion } from "../types";
 // TODO
 export interface UpdateStorageZoneRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
    * The ID of the storage zone that should be updated
    * @example 270302
@@ -63,11 +63,11 @@ export const updateStorageZoneEndpoints = {
 
 export async function updateStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, id, ...input }: UpdateStorageZoneRequest
+  { apiKey, id, ...input }: UpdateStorageZoneRequest
 ): Promise<UpdateStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
     body: JSON.stringify(input),
   };

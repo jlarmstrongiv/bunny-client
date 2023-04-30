@@ -1,16 +1,16 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
-import { Ticket } from "../types";
+import { type Ticket } from "../types";
 
 export interface GetTicketDetailsRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
-   * ticket id
+   * Ticket id
    * @example 196584
    */
   id: number;
@@ -37,11 +37,11 @@ export const getTicketDetailsEndpoints = {
 
 export async function getTicketDetailsClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, id }: GetTicketDetailsRequest
+  { apiKey, id }: GetTicketDetailsRequest
 ): Promise<GetTicketDetailsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
   };
 

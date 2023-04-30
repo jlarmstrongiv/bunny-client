@@ -7,7 +7,7 @@ import {
 } from "./getStatistics";
 
 const statisticsRouter = u.router({
-  [getStatisticsEndpoints["getStatistics"]]: getStatistics,
+  [getStatisticsEndpoints.getStatistics]: getStatistics,
   [getStatisticsEndpoints["GET /statistics"]]: getStatistics,
 });
 
@@ -19,7 +19,7 @@ const statisticsRouter = u.router({
  * ```ts
  * const statisticsClient = createStatisticsClient({
  *   headers: {
- *     ApiKey: API_ACCESS_KEY,
+ *     apiKey: API_ACCESS_KEY,
  *   },
  * });
  *
@@ -30,7 +30,7 @@ export function createStatisticsClient(defaultRequestInit: RequestInit = {}) {
   const statisticsClient = createTypeLevelClient<typeof statisticsRouter>(
     async (path, input) => {
       switch (path) {
-        case getStatisticsEndpoints["getStatistics"]:
+        case getStatisticsEndpoints.getStatistics:
         case getStatisticsEndpoints["GET /statistics"]:
           return getStatisticsClient(defaultRequestInit, input);
         default:

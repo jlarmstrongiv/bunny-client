@@ -4,10 +4,10 @@ import { u } from "../untypeable";
 
 export interface CheckTheStorageZoneAvailabilityRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
    * Determines the name of the zone that we are checking.
    *
@@ -17,9 +17,9 @@ export interface CheckTheStorageZoneAvailabilityRequest {
   Name: string;
 }
 
-export type CheckTheStorageZoneAvailabilityResponse = {
+export interface CheckTheStorageZoneAvailabilityResponse {
   Available: boolean;
-};
+}
 
 export const checkTheStorageZoneAvailability = u
   .input<CheckTheStorageZoneAvailabilityRequest>()
@@ -41,11 +41,11 @@ export const checkTheStorageZoneAvailabilityEndpoints = {
 
 export async function checkTheStorageZoneAvailabilityClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, ...input }: CheckTheStorageZoneAvailabilityRequest
+  { apiKey, ...input }: CheckTheStorageZoneAvailabilityRequest
 ): Promise<CheckTheStorageZoneAvailabilityResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
     body: JSON.stringify(input),
   };

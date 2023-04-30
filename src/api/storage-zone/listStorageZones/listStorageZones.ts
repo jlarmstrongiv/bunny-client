@@ -5,22 +5,22 @@ import type { StorageZone } from "../types";
 
 export interface ListStorageZonesRequest {
   /**
-   * user-specific API Access Key
+   * User-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  ApiKey?: string;
+  apiKey?: string;
   /**
-   * page number between 1 and 2147483647
+   * Page number between 1 and 2147483647
    * @example 1
    */
   page: number;
   /**
-   * number of results per page between 5 and 1000
+   * Number of results per page between 5 and 1000
    * @example 1000
    */
   perPage: number;
   /**
-   * should include deleted storage zones
+   * Should include deleted storage zones
    * @example false
    */
   includeDeleted?: boolean;
@@ -31,27 +31,27 @@ export interface ListStorageZonesRequest {
   search?: string;
 }
 
-export type ListStorageZonesResponse = {
+export interface ListStorageZonesResponse {
   /**
-   * list of storage zones that match the query
+   * List of storage zones that match the query
    */
   Items: StorageZone[];
   /**
-   * the current query page number
+   * The current query page number
    * @example 1
    */
   CurrentPage: number;
   /**
-   * the total number of queried items in all pages
+   * The total number of queried items in all pages
    * @example 5
    */
   TotalItems: number;
   /**
-   * whether the query has additional pages of results
+   * Whether the query has additional pages of results
    * @example false
    */
   HasMoreItems: boolean;
-};
+}
 
 export const listStorageZones = u
   .input<ListStorageZonesRequest>()
@@ -72,11 +72,11 @@ export const listStorageZonesEndpoints = {
 
 export async function listStorageZonesClient(
   defaultRequestInit: RequestInit,
-  { ApiKey, page, perPage, includeDeleted, search }: ListStorageZonesRequest
+  { apiKey, page, perPage, includeDeleted, search }: ListStorageZonesRequest
 ): Promise<ListStorageZonesResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(ApiKey && { ApiKey }),
+      ...(apiKey && { apiKey }),
     },
   };
 
