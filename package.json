@@ -54,6 +54,7 @@
     "xo": "^0.54.2"
   },
   "dependencies": {
+    "camelcase-keys": "^8.0.2",
     "deepmerge-ts": "^5.1.0",
     "hasha": "^5.2.2",
     "ts-custom-error": "^3.3.1",
