@@ -1,0 +1,44 @@
+{
+  "extends": ["xo", "xo-typescript", "xo-typescript/space", "prettier"],
+  "ignorePatterns": ["**/dist/**", "**/docs/**"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "root": true,
+  "rules": {
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    // default options for @typescript-eslint/naming-convention https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/naming-convention.md#options
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": ["camelCase"],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "allow"
+      },
+      {
+        "selector": "variable",
+        "format": ["camelCase", "UPPER_CASE"],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "allow"
+      },
+      // example https://typescript-eslint.io/rules/naming-convention/#how-does-the-rule-evaluate-a-names-format
+      {
+        "selector": "default",
+        "format": ["PascalCase"],
+        "filter": {
+          "regex": "AccessKey",
+          "match": true
+        }
+      },
+      // example https://stackoverflow.com/a/74818459
+      {
+        "selector": "property",
+        "format": null,
+        "filter": {
+          "regex": "(GET|POST|PUT|PATCH|DELETE) /.*",
+          "match": true
+        }
+      }
+    ]
+  }
+}
