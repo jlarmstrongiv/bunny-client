@@ -7,7 +7,7 @@ export interface GetStorageZoneStatisticsRequest {
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  AccessKey?: string;
+  ApiKey?: string;
   /**
    * The ID of the storage zone
    * @example 270299
@@ -27,6 +27,8 @@ export interface GetStorageZoneStatisticsRequest {
 
 export type GetStorageZoneStatisticsResponse = {
   /**
+   * BUG: may be inaccurate with new or empty buckets
+   *
    * key: ISO 8601 date and time
    *
    * value: storage used
@@ -35,6 +37,8 @@ export type GetStorageZoneStatisticsResponse = {
    */
   StorageUsedChart: Record<string, number>;
   /**
+   * BUG: may be inaccurate with new or empty buckets
+   *
    * key: ISO 8601 date and time
    *
    * value: total file count
@@ -63,11 +67,11 @@ export const getStorageZoneStatisticsEndpoints = {
 
 export async function getStorageZoneStatisticsClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, id, dateFrom, dateTo }: GetStorageZoneStatisticsRequest
+  { ApiKey, id, dateFrom, dateTo }: GetStorageZoneStatisticsRequest
 ): Promise<GetStorageZoneStatisticsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(AccessKey && { AccessKey }),
+      ...(ApiKey && { ApiKey }),
     },
   };
 

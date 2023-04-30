@@ -48,7 +48,7 @@ const statisticsRouter = u.router({
  * ```ts
  * const supportClient = createSupportClient({
  *   headers: {
- *     AccessKey: API_ACCESS_KEY,
+ *     ApiKey: API_ACCESS_KEY,
  *   },
  * });
  *

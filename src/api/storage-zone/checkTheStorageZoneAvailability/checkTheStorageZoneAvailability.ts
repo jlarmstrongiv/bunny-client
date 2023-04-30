@@ -7,7 +7,7 @@ export interface CheckTheStorageZoneAvailabilityRequest {
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  AccessKey?: string;
+  ApiKey?: string;
   /**
    * Determines the name of the zone that we are checking.
    *
@@ -41,11 +41,11 @@ export const checkTheStorageZoneAvailabilityEndpoints = {
 
 export async function checkTheStorageZoneAvailabilityClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, ...input }: CheckTheStorageZoneAvailabilityRequest
+  { ApiKey, ...input }: CheckTheStorageZoneAvailabilityRequest
 ): Promise<CheckTheStorageZoneAvailabilityResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(AccessKey && { AccessKey }),
+      ...(ApiKey && { ApiKey }),
     },
     body: JSON.stringify(input),
   };

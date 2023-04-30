@@ -1,6 +1,7 @@
 /test.db
 /bunny-cdn-screenshot.png
 /src/playground.ts
+/docs
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,yarn,astro,linux,macos,remix,dotenv,gatsby,nextjs,gitbook,windows,remix+arc,docusaurus,storybookjs,remix+vercel,remix+netlify,remix+cloudflarepages,remix+cloudflareworkers,turbo
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,yarn,astro,linux,macos,remix,dotenv,gatsby,nextjs,gitbook,windows,remix+arc,docusaurus,storybookjs,remix+vercel,remix+netlify,remix+cloudflarepages,remix+cloudflareworkers,turbo

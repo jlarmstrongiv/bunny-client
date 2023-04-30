@@ -35,15 +35,18 @@
   ],
   "scripts": {
     "build": "tsup-node",
-    "playground": "npx esno ./src/playground"
+    "playground": "npx esno ./src/playground",
+    "typedoc": "npx typedoc src/index.ts"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
     "tsup": "6.7.0",
+    "typedoc": "^0.24.6",
     "typescript": "5.0.4"
   },
   "dependencies": {
     "deepmerge-ts": "^5.1.0",
+    "hasha": "^5.2.2",
     "ts-custom-error": "^3.3.1",
     "untypeable": "^0.2.1"
   }

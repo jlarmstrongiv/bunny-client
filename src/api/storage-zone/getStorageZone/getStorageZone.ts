@@ -8,7 +8,7 @@ export interface GetStorageZoneRequest {
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  AccessKey?: string;
+  ApiKey?: string;
   /**
    * The ID of the Storage Zone that should be returned
    * @example 270299
@@ -37,11 +37,11 @@ export const getStorageZoneEndpoints = {
 
 export async function getStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, id }: GetStorageZoneRequest
+  { ApiKey, id }: GetStorageZoneRequest
 ): Promise<GetStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(AccessKey && { AccessKey }),
+      ...(ApiKey && { ApiKey }),
     },
   };
 

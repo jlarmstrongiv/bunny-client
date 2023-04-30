@@ -8,7 +8,7 @@ export interface ListStorageZonesRequest {
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  AccessKey?: string;
+  ApiKey?: string;
   /**
    * page number between 1 and 2147483647
    * @example 1
@@ -72,11 +72,11 @@ export const listStorageZonesEndpoints = {
 
 export async function listStorageZonesClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, page, perPage, includeDeleted, search }: ListStorageZonesRequest
+  { ApiKey, page, perPage, includeDeleted, search }: ListStorageZonesRequest
 ): Promise<ListStorageZonesResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(AccessKey && { AccessKey }),
+      ...(ApiKey && { ApiKey }),
     },
   };
 

@@ -19,7 +19,7 @@ const countriesRouter = u.router({
  * ```ts
  * const regionClient = createRegionClient({
  *   headers: {
- *     AccessKey: API_ACCESS_KEY,
+ *     ApiKey: API_ACCESS_KEY,
  *   },
  * });
  *

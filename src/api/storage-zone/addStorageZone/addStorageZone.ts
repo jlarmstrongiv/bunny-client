@@ -13,7 +13,7 @@ export interface AddStorageZoneRequestBase {
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  AccessKey?: string;
+  ApiKey?: string;
   /**
    * The origin URL of the storage zone that will be added
    *
@@ -89,11 +89,11 @@ export const addStorageZoneEndpoints = {
 
 export async function addStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, ...input }: AddStorageZoneRequest
+  { ApiKey, ...input }: AddStorageZoneRequest
 ): Promise<AddStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(AccessKey && { AccessKey }),
+      ...(ApiKey && { ApiKey }),
     },
     body: JSON.stringify(input),
   };

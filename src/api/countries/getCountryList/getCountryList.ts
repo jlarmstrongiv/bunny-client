@@ -40,7 +40,7 @@ export interface GetCountryListRequest {
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  AccessKey?: string;
+  ApiKey?: string;
 }
 
 export type GetCountryListResponse = Country[];
@@ -64,11 +64,11 @@ export const getCountryListEndpoints = {
 
 export async function getCountryListClient(
   defaultRequestInit: RequestInit,
-  { AccessKey }: GetCountryListRequest = {}
+  { ApiKey }: GetCountryListRequest = {}
 ): Promise<GetCountryListResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(AccessKey && { AccessKey }),
+      ...(ApiKey && { ApiKey }),
     },
   };
 

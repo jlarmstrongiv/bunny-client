@@ -9,7 +9,7 @@ export interface UpdateStorageZoneRequest {
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  AccessKey?: string;
+  ApiKey?: string;
   /**
    * The ID of the storage zone that should be updated
    * @example 270302
@@ -63,11 +63,11 @@ export const updateStorageZoneEndpoints = {
 
 export async function updateStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, id, ...input }: UpdateStorageZoneRequest
+  { ApiKey, id, ...input }: UpdateStorageZoneRequest
 ): Promise<UpdateStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(AccessKey && { AccessKey }),
+      ...(ApiKey && { ApiKey }),
     },
     body: JSON.stringify(input),
   };

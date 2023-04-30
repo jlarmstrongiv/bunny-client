@@ -7,7 +7,7 @@ export interface CloseTicketRequest {
    * user-specific API Access Key
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
-  AccessKey?: string;
+  ApiKey?: string;
   /**
    * ticket id
    * @example 196584
@@ -33,11 +33,11 @@ export const closeTicketEndpoints = {
 
 export async function closeTicketClient(
   defaultRequestInit: RequestInit,
-  { AccessKey, id }: CloseTicketRequest
+  { ApiKey, id }: CloseTicketRequest
 ): Promise<CloseTicketResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(AccessKey && { AccessKey }),
+      ...(ApiKey && { ApiKey }),
     },
   };
 
