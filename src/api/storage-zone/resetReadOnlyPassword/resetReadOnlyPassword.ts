@@ -38,7 +38,7 @@ export async function resetReadOnlyPasswordClient(
 ): Promise<ResetReadOnlyPasswordResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
   };
 

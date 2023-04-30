@@ -84,7 +84,7 @@ export async function regionListClient(
 ): Promise<RegionListResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
   };
 

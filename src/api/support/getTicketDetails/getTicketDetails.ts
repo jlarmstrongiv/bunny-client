@@ -41,7 +41,7 @@ export async function getTicketDetailsClient(
 ): Promise<GetTicketDetailsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
   };
 

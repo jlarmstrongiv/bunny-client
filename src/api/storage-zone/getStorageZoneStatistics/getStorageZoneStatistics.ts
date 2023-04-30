@@ -71,7 +71,7 @@ export async function getStorageZoneStatisticsClient(
 ): Promise<GetStorageZoneStatisticsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
   };
 

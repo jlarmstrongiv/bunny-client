@@ -93,7 +93,7 @@ export async function addStorageZoneClient(
 ): Promise<AddStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
     body: JSON.stringify(input),
   };

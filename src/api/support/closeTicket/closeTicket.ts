@@ -37,7 +37,7 @@ export async function closeTicketClient(
 ): Promise<CloseTicketResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
   };
 

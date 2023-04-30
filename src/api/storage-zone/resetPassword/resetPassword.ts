@@ -37,7 +37,7 @@ export async function resetPasswordClient(
 ): Promise<ResetPasswordResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
   };
 

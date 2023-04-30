@@ -37,7 +37,7 @@ export async function deleteStorageZoneClient(
 ): Promise<DeleteStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
   };
 

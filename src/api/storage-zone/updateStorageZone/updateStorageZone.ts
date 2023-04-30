@@ -67,7 +67,7 @@ export async function updateStorageZoneClient(
 ): Promise<UpdateStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
     body: JSON.stringify(input),
   };

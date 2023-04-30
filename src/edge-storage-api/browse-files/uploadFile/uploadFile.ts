@@ -54,7 +54,7 @@ export async function createTicketClient(
 ): Promise<UploadFileResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
     body: JSON.stringify(input),
   };

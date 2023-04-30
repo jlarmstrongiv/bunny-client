@@ -66,7 +66,7 @@ export async function getTicketListClient(
 ): Promise<GetTicketListResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
   };
 

@@ -95,7 +95,7 @@ export async function getStatisticsClient(
 ): Promise<GetStatisticsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
   };
 

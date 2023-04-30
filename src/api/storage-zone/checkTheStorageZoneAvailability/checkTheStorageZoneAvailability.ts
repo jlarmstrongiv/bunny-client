@@ -45,7 +45,7 @@ export async function checkTheStorageZoneAvailabilityClient(
 ): Promise<CheckTheStorageZoneAvailabilityResponse> {
   const overrideOptions: RequestInit = {
     headers: {
-      ...(apiKey && { apiKey }),
+      ...(apiKey && { AccessKey: apiKey }),
     },
     body: JSON.stringify(input),
   };
