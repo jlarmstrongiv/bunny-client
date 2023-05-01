@@ -25,6 +25,11 @@ jobs:
       - name: Build package 🏗️
         run: npm run build
 
+      - name: Publish docs 📖
+        run: |
+          npm run typedoc:build
+          npm run typedoc:publish
+
       - name: Publish package on NPM 📦
         run: npm publish
         env:
