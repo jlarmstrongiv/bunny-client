@@ -21,3 +21,12 @@ jobs:
 
       - name: Build package 🏗️
         run: npm run build
+
+      - name: Lint package 🧹
+        run: npm run lint:check
+
+      - name: Format package 📐
+        run: npm run format:check
+
+      - name: Build docs 📖
+        run: npm run docs:build

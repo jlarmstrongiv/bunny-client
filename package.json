@@ -35,11 +35,13 @@
   ],
   "scripts": {
     "build": "tsup-node",
-    "eslint:check": "npx eslint .",
-    "eslint:fix": "npx eslint . --fix",
-    "playground": "npx esno ./src/playground",
-    "typedoc:build": "npx typedoc src/index.ts",
-    "typedoc:publish": "npx surge --project docs --domain bunny-client.surge.sh"
+    "docs:build": "npx typedoc --treatWarningsAsErrors src/index.ts",
+    "docs:publish": "npx surge --project docs --domain bunny-client.surge.sh",
+    "format:check": "npx prettier --check 'src/**/*.ts'",
+    "format:fix": "npx prettier --write 'src/**/*.ts'",
+    "lint:check": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "playground": "npx esno ./src/playground"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
@@ -55,6 +57,7 @@
     "eslint-config-xo-typescript": "^0.57.0",
     "eslint-plugin-sort": "^2.10.0",
     "esno": "^0.16.3",
+    "prettier": "^2.8.8",
     "surge": "^0.23.1",
     "tsup": "6.7.0",
     "typedoc": "^0.24.6",

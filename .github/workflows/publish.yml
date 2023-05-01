@@ -25,10 +25,16 @@ jobs:
       - name: Build package 🏗️
         run: npm run build
 
+      - name: Lint package 🧹
+        run: npm run lint:check
+
+      - name: Format package 📐
+        run: npm run format:check
+
       - name: Publish docs 📖
         run: |
-          npm run typedoc:build
-          npm run typedoc:publish
+          npm run docs:build
+          npm run docs:publish
 
       - name: Publish package on NPM 📦
         run: npm publish

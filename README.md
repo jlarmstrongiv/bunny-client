@@ -39,6 +39,7 @@ Provide a TypeScript API Client for BunnyCDN with few dependencies.
   - other
     - https://toshy.github.io/BunnyNet-PHP/image-processing/
     - https://toshy.github.io/BunnyNet-PHP/token-authentication/
+    - https://github.com/BunnyWay/BunnyCDN.TokenAuthentication/blob/master/nodejs/token.js
   - documentation vs api reference https://docs.bunny.net/docs/cdn-logging
 
   - consider writing a surge.sh cli alternative
@@ -105,10 +106,12 @@ Provide a TypeScript API Client for BunnyCDN with few dependencies.
     - ✅ Reset Password
     - ✅ Reset Read-Only Password
 - ✅ Edge Storage API
-  - ✅ Download File
-  - ✅ Upload File
-  - ✅ Delete File
-  - ✅ List Files
+  - ✅ Manage Files
+    - ✅ Download File
+    - ✅ Upload File
+    - ✅ Delete File
+  - ✅ Browse Files
+    - ✅ List Files
 - 🏗️ Stream API
   - 🏗️ TUS
   - 🏗️ Manage Collections
@@ -156,11 +159,18 @@ cb1a7c68-89a0-462a-9495-13ebd7366cfe
 
 <!-- GET /url format https://stackoverflow.com/a/16230133 -->
 
-Each client matches with a menu item in the Bunny CDN [docs](https://docs.bunny.net/reference/bunnynet-api-overview).
+Each client matches with a menu item in the Bunny CDN [docs](https://docs.bunny.net/reference/bunnynet-api-overview)
 
 1. Import the client
 1. Optionally set globals, like the `apiKey`
 1. Use the client methods to call the API
+
+The main differences between the API and the TypeScript Client are:
+
+- `camelCase` inputs and outputs to match TypeScript style guides
+- `tsdoc` examples for all inputs and outputs
+- Replace the generic `AccessKey` with `apiKey` and `storageZonePassword`
+- more default parameters
 
 <!-- TODO: storageZoneClient input to lowercase refactor -->
 

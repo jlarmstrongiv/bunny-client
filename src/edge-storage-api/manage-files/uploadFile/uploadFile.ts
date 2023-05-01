@@ -24,7 +24,7 @@ export interface UploadFileRequest {
    * const string = Buffer.from(arrayBuffer).toString();
    * ```
    *
-   * Converting a String to ArrayBuffer safely:
+   * Converting a String to an ArrayBuffer safely:
    * @example
    * ```ts
    * const textEncoder = new TextEncoder(); // Always utf-8
