@@ -6,9 +6,9 @@ Provide a TypeScript API Client for BunnyCDN with few dependencies.
 
 ## Documentation
 
-See the official API documentation at [https://docs.bunny.net/docs](https://docs.bunny.net/docs)
-
-See the generated TypeScript documentation at [https://bunny-client.surge.sh](https://bunny-client.surge.sh)
+- [quick start guide](https://github.com/jlarmstrongiv/bunny-client#quick-start)
+- [official API documentation](https://docs.bunny.net/docs)
+- [generated TypeScript documentation](https://bunny-client.surge.sh)
 
 <!-- Better documentation in comments than the official api! -->
 
@@ -125,17 +125,18 @@ See the generated TypeScript documentation at [https://bunny-client.surge.sh](ht
 
 ### Installation
 
+Install via [npm](https://www.npmjs.com/package/bunny-client):
+
 ```shell
 npm install bunny-client
 ```
 
-### Polyfills
+### Required polyfills
 
 - `fetch` API
 - Web Streams API
 
-- Supports [Node.js 18+](https://nodejs.org/en/blog/announcements/v18-release-announce#fetch-experimental)
-- Supports [evergreen browsers](https://caniuse.com/fetch)
+Supports [Node.js 18+](https://nodejs.org/en/blog/announcements/v18-release-announce#fetch-experimental) and [evergreen browsers](https://caniuse.com/fetch)
 
 ### Account Access Key
 
@@ -143,7 +144,7 @@ npm install bunny-client
 
 <!-- some api keys cannot be created with an entity, such as zones -->
 
-Get your API Key from [https://dash.bunny.net/account/settings](https://dash.bunny.net/account/settings)
+Get your API Key from your [account settings](https://dash.bunny.net/account/settings)
 
 API Key example:
 
@@ -155,7 +156,25 @@ cb1a7c68-89a0-462a-9495-13ebd7366cfe
 
 <!-- GET /url format https://stackoverflow.com/a/16230133 -->
 
-Coming soon!
+Each client matches with a menu item in the Bunny CDN [docs](https://docs.bunny.net/reference/bunnynet-api-overview).
+
+1. Import the client
+1. Optionally set globals, like the `apiKey`
+1. Use the client methods to call the API
+
+<!-- TODO: storageZoneClient input to lowercase refactor -->
+
+```ts
+const storageZoneClient = createStorageZoneClient({
+  apiKey: API_ACCESS_KEY,
+});
+
+const response = await storageZoneClient("addStorageZone", {
+  Name: "api-example",
+  Region: "NY",
+  ZoneTier: 1,
+});
+```
 
 ## License
 
@@ -163,7 +182,7 @@ Coming soon!
 <!-- https://chooser-beta.creativecommons.org/ -->
 <!-- https://github.com/idleberg/Creative-Commons-Markdown -->
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/jlarmstrongiv/bunny-client/blob/main/README.md">bunny-client</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/jlarmstrongiv/">John L. Armstrong IV</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<br><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/jlarmstrongiv/bunny-client/">bunny-client</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/jlarmstrongiv/">John L. Armstrong IV</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<br><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
 
 Alternative licenses available by request.
 

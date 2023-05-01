@@ -8,7 +8,7 @@ based on the
 
 Thank you for your interest in contributing to John L. Armstrong IV's bunny-client ("We" or "Us").
 
-The purpose of this contributor agreement ("Agreement") is to clarify and document the rights granted by contributors to Us. To make this document effective, please follow the instructions at https://github.com/jlarmstrongiv/bunny-client/blob/main/README.md.
+The purpose of this contributor agreement ("Agreement") is to clarify and document the rights granted by contributors to Us. To make this document effective, please follow the instructions at https://github.com/jlarmstrongiv/bunny-client/.
 
 ### 0\. Preamble
 
