@@ -1,0 +1,15 @@
+{
+  "intentionallyNotExported": [
+    "AddStorageZoneRequestEdgeSsd",
+    "AddStorageZoneRequestReplicationRegion",
+    "StorageZone",
+    "Ticket",
+    "Country",
+    "Statistics",
+    "File",
+    "Region",
+    "CreateAttachment",
+    "StorageHostname",
+    "ReplicationRegion"
+  ]
+}

@@ -1,3 +1,7 @@
+export type {
+  ResetPasswordRequest,
+  ResetPasswordResponse,
+} from "./resetPassword";
 export {
   resetPassword,
   resetPasswordClient,

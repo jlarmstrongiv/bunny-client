@@ -2,6 +2,7 @@
 // - https://github.com/mskelton/eslint-plugin-sort/issues/53
 // TODO: add default parameters tsdoc comments
 // TODO: consider consistent aliasing, create vs add/upload, StorageHostname vs storageEndpoint, all those region aliases
+// - then remove them from intentionallyNotExported
 {
   "extends": [
     "xo",
@@ -102,6 +103,33 @@
     // TODO: remove https://eslint.org/docs/latest/rules/no-warning-comments
     "no-warning-comments": "off",
     "sort/string-enums": "error",
+    // sort groups default https://github.com/mskelton/eslint-plugin-sort/blob/main/src/index.ts
+    // sort typeOrder https://github.com/mskelton/eslint-plugin-sort/blob/HEAD/docs/rules/imports.md
+    "sort/exports": [
+      "error",
+      {
+        "groups": [
+          { "type": "default", "order": 50 },
+          { "type": "sourceless", "order": 40 },
+          { "regex": "^\\.+\\/", "order": 30 },
+          { "type": "dependency", "order": 10 },
+          { "type": "other", "order": 20 }
+        ],
+        "typeOrder": "first"
+      }
+    ],
+    "sort/imports": [
+      "error",
+      {
+        "groups": [
+          { "type": "side-effect", "order": 10 },
+          { "regex": "^\\.+\\/", "order": 40 },
+          { "type": "dependency", "order": 20 },
+          { "type": "other", "order": 30 }
+        ],
+        "typeOrder": "first"
+      }
+    ],
     "sort/string-unions": "error",
     "sort/type-properties": "error"
   }

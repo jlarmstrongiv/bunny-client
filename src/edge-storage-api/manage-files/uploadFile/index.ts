@@ -1,3 +1,4 @@
+export type { UploadFileRequest, UploadFileResponse } from "./uploadFile";
 export {
   uploadFile,
   uploadFileClient,
