@@ -1,7 +1,7 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
+import type { CreateAttachment, Ticket } from "../types";
 import { u } from "../untypeable";
-import type { Ticket, CreateAttachment } from "../types";
 
 // TODO: fill in all the id examples
 export interface CreateTicketRequest {
@@ -11,35 +11,35 @@ export interface CreateTicketRequest {
    */
   apiKey?: string;
   /**
-   * Ticket subject line
-   * @example "Stream"
+   * File attachments related to this ticket
    */
-  Subject?: string;
+  Attachments?: CreateAttachment[];
+  /**
+   * Dns zone id related to this ticket
+   */
+  LinkedDnsZone?: number;
   /**
    * Pull zone id related to this ticket
    */
   LinkedPullZone?: number;
   /**
+   * Storage zone id related to this ticket
+   */
+  LinkedStorageZone?: number;
+  /**
    * Video library id related to this ticket
    */
   LinkedVideoLibrary?: number;
-  /**
-   * Dns zone id related to this ticket
-   */
-  LinkedDnsZone?: number;
   /**
    * Ticket message
    * @example "My videos are buffering"
    */
   Message: string;
   /**
-   * Storage zone id related to this ticket
+   * Ticket subject line
+   * @example "Stream"
    */
-  LinkedStorageZone?: number;
-  /**
-   * File attachments related to this ticket
-   */
-  Attachments?: CreateAttachment[];
+  Subject?: string;
 }
 
 export type CreateTicketResponse = Ticket;
@@ -50,11 +50,11 @@ export const createTicket = u
 
 const url = "https://api.bunny.net/support/ticket/create";
 const options: RequestInit = {
-  method: "POST",
   headers: {
     accept: "application/json",
     "content-type": "application/json",
   },
+  method: "POST",
 };
 
 export const createTicketEndpoints = {
@@ -67,10 +67,10 @@ export async function createTicketClient(
   { apiKey, ...input }: CreateTicketRequest
 ): Promise<CreateTicketResponse> {
   const overrideOptions: RequestInit = {
+    body: JSON.stringify(input),
     headers: {
       ...(apiKey && { AccessKey: apiKey }),
     },
-    body: JSON.stringify(input),
   };
 
   const response = await fetch(

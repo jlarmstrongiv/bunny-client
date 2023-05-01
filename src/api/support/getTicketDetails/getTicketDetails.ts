@@ -1,7 +1,7 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
-import { u } from "../untypeable";
 import { type Ticket } from "../types";
+import { u } from "../untypeable";
 
 export interface GetTicketDetailsRequest {
   /**
@@ -24,15 +24,15 @@ export const getTicketDetails = u
 
 const url = "https://api.bunny.net/support/ticket/details";
 const options: RequestInit = {
-  method: "GET",
   headers: {
     accept: "application/json",
   },
+  method: "GET",
 };
 
 export const getTicketDetailsEndpoints = {
-  getTicketDetails: "getTicketDetails",
   "GET /support/ticket/details/:id": "GET /support/ticket/details/:id",
+  getTicketDetails: "getTicketDetails",
 } as const;
 
 export async function getTicketDetailsClient(

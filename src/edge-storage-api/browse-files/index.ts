@@ -1,6 +1,6 @@
 import { createTypeLevelClient } from "untypeable";
-import { u } from "./untypeable";
 import { listFiles, listFilesClient, listFilesEndpoints } from "./listFiles";
+import { u } from "./untypeable";
 
 const statisticsRouter = u.router({
   [listFilesEndpoints.listFiles]: listFiles,

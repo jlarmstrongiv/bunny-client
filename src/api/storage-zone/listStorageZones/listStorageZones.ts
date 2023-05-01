@@ -1,7 +1,7 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
-import { u } from "../untypeable";
 import type { StorageZone } from "../types";
+import { u } from "../untypeable";
 
 export interface ListStorageZonesRequest {
   /**
@@ -9,6 +9,11 @@ export interface ListStorageZonesRequest {
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
   apiKey?: string;
+  /**
+   * Should include deleted storage zones
+   * @example false
+   */
+  includeDeleted?: boolean;
   /**
    * Page number between 1 and 2147483647
    * @example 1
@@ -20,11 +25,6 @@ export interface ListStorageZonesRequest {
    */
   perPage?: number;
   /**
-   * Should include deleted storage zones
-   * @example false
-   */
-  includeDeleted?: boolean;
-  /**
    * The search term that will be used to filter the results
    * @example "storage-zone-name-substring"
    */
@@ -33,24 +33,24 @@ export interface ListStorageZonesRequest {
 
 export interface ListStorageZonesResponse {
   /**
-   * List of storage zones that match the query
-   */
-  Items: StorageZone[];
-  /**
    * The current query page number
    * @example 1
    */
   CurrentPage: number;
   /**
-   * The total number of queried items in all pages
-   * @example 5
-   */
-  TotalItems: number;
-  /**
    * Whether the query has additional pages of results
    * @example false
    */
   HasMoreItems: boolean;
+  /**
+   * List of storage zones that match the query
+   */
+  Items: StorageZone[];
+  /**
+   * The total number of queried items in all pages
+   * @example 5
+   */
+  TotalItems: number;
 }
 
 export const listStorageZones = u
@@ -59,24 +59,24 @@ export const listStorageZones = u
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
-  method: "GET",
   headers: {
     accept: "application/json",
   },
+  method: "GET",
 };
 
 export const listStorageZonesEndpoints = {
-  listStorageZones: "listStorageZones",
   "GET /storagezone": "GET /storagezone",
+  listStorageZones: "listStorageZones",
 } as const;
 
 export async function listStorageZonesClient(
   defaultRequestInit: RequestInit,
   {
     apiKey,
+    includeDeleted,
     page = 1,
     perPage = 1000,
-    includeDeleted,
     search,
   }: ListStorageZonesRequest
 ): Promise<ListStorageZonesResponse> {

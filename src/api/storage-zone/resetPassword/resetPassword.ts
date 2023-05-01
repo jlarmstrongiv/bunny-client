@@ -27,8 +27,8 @@ const options: RequestInit = {
 };
 
 export const resetPasswordEndpoints = {
-  resetPassword: "resetPassword",
   "POST /storagezone/:id/resetPassword": "POST /storagezone/:id/resetPassword",
+  resetPassword: "resetPassword",
 } as const;
 
 export async function resetPasswordClient(

@@ -31,8 +31,8 @@ const options: RequestInit = {
 };
 
 export const deleteStorageZoneEndpoints = {
-  deleteStorageZone: "deleteStorageZone",
   "DELETE /storagezone/:id": "DELETE /storagezone/:id",
+  deleteStorageZone: "deleteStorageZone",
 } as const;
 
 export async function deleteStorageZoneClient(

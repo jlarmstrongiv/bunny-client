@@ -1,29 +1,29 @@
 import { createTypeLevelClient } from "untypeable";
-import { u } from "./untypeable";
-import {
-  downloadFile,
-  downloadFileClient,
-  downloadFileEndpoints,
-} from "./downloadFile";
-import {
-  uploadFile,
-  uploadFileClient,
-  uploadFileEndpoints,
-} from "./uploadFile";
 import {
   deleteFile,
   deleteFileClient,
   deleteFileEndpoints,
 } from "./deleteFile";
+import {
+  downloadFile,
+  downloadFileClient,
+  downloadFileEndpoints,
+} from "./downloadFile";
+import { u } from "./untypeable";
+import {
+  uploadFile,
+  uploadFileClient,
+  uploadFileEndpoints,
+} from "./uploadFile";
 
 const statisticsRouter = u.router({
+  [deleteFileEndpoints.deleteFile]: deleteFile,
+  [deleteFileEndpoints["DELETE /:storageZoneName/:path/:fileName"]]: deleteFile,
   [downloadFileEndpoints.downloadFile]: downloadFile,
   [downloadFileEndpoints["GET /:storageZoneName/:path/:fileName"]]:
     downloadFile,
   [uploadFileEndpoints.uploadFile]: uploadFile,
   [uploadFileEndpoints["PUT /:storageZoneName/:path/:fileName"]]: uploadFile,
-  [deleteFileEndpoints.deleteFile]: deleteFile,
-  [deleteFileEndpoints["DELETE /:storageZoneName/:path/:fileName"]]: deleteFile,
 });
 
 /**
@@ -56,15 +56,15 @@ export function createManageFilesClient(
       };
 
       switch (path) {
+        case deleteFileEndpoints.deleteFile:
+        case deleteFileEndpoints["DELETE /:storageZoneName/:path/:fileName"]:
+          return deleteFileClient(defaultRequestInit, overrideInput);
         case downloadFileEndpoints.downloadFile:
         case downloadFileEndpoints["GET /:storageZoneName/:path/:fileName"]:
           return downloadFileClient(defaultRequestInit, overrideInput);
         case uploadFileEndpoints.uploadFile:
         case uploadFileEndpoints["PUT /:storageZoneName/:path/:fileName"]:
           return uploadFileClient(defaultRequestInit, overrideInput);
-        case deleteFileEndpoints.deleteFile:
-        case deleteFileEndpoints["DELETE /:storageZoneName/:path/:fileName"]:
-          return deleteFileClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
             `[${manageFilesClient.name}]: no endpoint found named "${path}"`

@@ -9,11 +9,6 @@ export interface GetStorageZoneStatisticsRequest {
    */
   apiKey?: string;
   /**
-   * The ID of the storage zone
-   * @example 270299
-   */
-  id: number;
-  /**
    * The ISO 8601 start date of the statistics. If no value is passed, the last 30 days will be returned.
    * @example "2023-04-15T00:00:00Z"
    */
@@ -23,19 +18,14 @@ export interface GetStorageZoneStatisticsRequest {
    * @example "2023-04-17T00:00:00Z"
    */
   dateTo?: string;
+  /**
+   * The ID of the storage zone
+   * @example 270299
+   */
+  id: number;
 }
 
 export interface GetStorageZoneStatisticsResponse {
-  /**
-   * BUG: may be inaccurate with new or empty buckets
-   *
-   * key: ISO 8601 date and time
-   *
-   * value: storage used
-   *
-   * @example { "2023-03-29T00:00:00Z": 9274615899, }
-   */
-  StorageUsedChart: Record<string, number>;
   /**
    * BUG: may be inaccurate with new or empty buckets
    *
@@ -46,6 +36,16 @@ export interface GetStorageZoneStatisticsResponse {
    * @example { "2023-03-29T00:00:00Z": 191475, }
    */
   FileCountChart: Record<string, number>;
+  /**
+   * BUG: may be inaccurate with new or empty buckets
+   *
+   * key: ISO 8601 date and time
+   *
+   * value: storage used
+   *
+   * @example { "2023-03-29T00:00:00Z": 9274615899, }
+   */
+  StorageUsedChart: Record<string, number>;
 }
 
 export const getStorageZoneStatistics = u
@@ -54,20 +54,20 @@ export const getStorageZoneStatistics = u
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
-  method: "GET",
   headers: {
     accept: "application/json",
   },
+  method: "GET",
 };
 
 export const getStorageZoneStatisticsEndpoints = {
-  getStorageZoneStatistics: "getStorageZoneStatistics",
   "GET /storagezone/:id/statistics": "GET /storagezone/:id/statistics",
+  getStorageZoneStatistics: "getStorageZoneStatistics",
 } as const;
 
 export async function getStorageZoneStatisticsClient(
   defaultRequestInit: RequestInit,
-  { apiKey, id, dateFrom, dateTo }: GetStorageZoneStatisticsRequest
+  { apiKey, dateFrom, dateTo, id }: GetStorageZoneStatisticsRequest
 ): Promise<GetStorageZoneStatisticsResponse> {
   const overrideOptions: RequestInit = {
     headers: {

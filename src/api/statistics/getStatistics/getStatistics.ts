@@ -4,26 +4,26 @@ import { u } from "../untypeable";
 
 // TODO: test after traffic
 export interface Statistics {
-  TotalBandwidthUsed: number;
-  TotalOriginTraffic: number;
   AverageOriginResponseTime: number;
-  OriginResponseTimeChart: Record<string, number>;
-  TotalRequestsServed: number;
-  CacheHitRate: number;
-  BandwidthUsedChart: Record<string, number>;
   BandwidthCachedChart: Record<string, number>;
+  BandwidthUsedChart: Record<string, number>;
+  CacheHitRate: number;
   CacheHitRateChart: Record<string, number>;
-  RequestsServedChart: Record<string, number>;
-  PullRequestsPulledChart: Record<string, number>;
-  OriginShieldBandwidthUsedChart: Record<string, number>;
-  OriginShieldInternalBandwidthUsedChart: Record<string, number>;
-  OriginTrafficChart: Record<string, number>;
-  UserBalanceHistoryChart: Record<string, number>;
-  // TODO
-  GeoTrafficDistribution: any; // {}
   Error3xxChart: Record<string, number>;
   Error4xxChart: Record<string, number>;
   Error5xxChart: Record<string, number>;
+  // TODO
+  GeoTrafficDistribution: any; // {}
+  OriginResponseTimeChart: Record<string, number>;
+  OriginShieldBandwidthUsedChart: Record<string, number>;
+  OriginShieldInternalBandwidthUsedChart: Record<string, number>;
+  OriginTrafficChart: Record<string, number>;
+  PullRequestsPulledChart: Record<string, number>;
+  RequestsServedChart: Record<string, number>;
+  TotalBandwidthUsed: number;
+  TotalOriginTraffic: number;
+  TotalRequestsServed: number;
+  UserBalanceHistoryChart: Record<string, number>;
 }
 
 export interface GetStatisticsRequest {
@@ -43,6 +43,16 @@ export interface GetStatisticsRequest {
    */
   dateTo?: string;
   /**
+   * If true, the statistics data will be returned in hourly grouping.
+   * @example false
+   */
+  hourly?: boolean;
+  /**
+   * If set, the respose will contain the non-2xx response
+   * @example false
+   */
+  loadErrors?: boolean;
+  /**
    * If set, the statistics will be only returned for the given Pull Zone
    */
   pullZone?: number;
@@ -50,16 +60,6 @@ export interface GetStatisticsRequest {
    * If set, the statistics will be only returned for the given region ID
    */
   serverZoneId?: number;
-  /**
-   * If set, the respose will contain the non-2xx response
-   * @example false
-   */
-  loadErrors?: boolean;
-  /**
-   * If true, the statistics data will be returned in hourly groupping.
-   * @example false
-   */
-  hourly?: boolean;
 }
 
 export type GetStatisticsResponse = Statistics;
@@ -70,15 +70,15 @@ export const getStatistics = u
 
 const url = "https://api.bunny.net/statistics";
 const options: RequestInit = {
-  method: "GET",
   headers: {
     accept: "application/json",
   },
+  method: "GET",
 };
 
 export const getStatisticsEndpoints = {
-  getStatistics: "getStatistics",
   "GET /statistics": "GET /statistics",
+  getStatistics: "getStatistics",
 } as const;
 
 export async function getStatisticsClient(
@@ -87,10 +87,10 @@ export async function getStatisticsClient(
     apiKey,
     dateFrom,
     dateTo,
+    hourly = false,
+    loadErrors = false,
     pullZone = -1,
     serverZoneId = -1,
-    loadErrors = false,
-    hourly = false,
   }: GetStatisticsRequest = {}
 ): Promise<GetStatisticsResponse> {
   const overrideOptions: RequestInit = {
@@ -102,10 +102,10 @@ export async function getStatisticsClient(
   const urlSearchParameters = new URLSearchParams({
     ...(dateFrom && { dateFrom }),
     ...(dateTo && { dateTo }),
+    hourly: hourly.toString(),
+    loadErrors: loadErrors.toString(),
     pullZone: pullZone.toString(),
     serverZoneId: serverZoneId.toString(),
-    loadErrors: loadErrors.toString(),
-    hourly: hourly.toString(),
   }).toString();
 
   const overrideUrl = `${url}?${urlSearchParameters}`;

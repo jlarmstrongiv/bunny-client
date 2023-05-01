@@ -27,11 +27,11 @@ export const checkTheStorageZoneAvailability = u
 
 const url = "https://api.bunny.net/storagezone/checkavailability";
 const options: RequestInit = {
-  method: "POST",
   headers: {
     accept: "application/json",
     "content-type": "application/json",
   },
+  method: "POST",
 };
 
 export const checkTheStorageZoneAvailabilityEndpoints = {
@@ -44,10 +44,10 @@ export async function checkTheStorageZoneAvailabilityClient(
   { apiKey, ...input }: CheckTheStorageZoneAvailabilityRequest
 ): Promise<CheckTheStorageZoneAvailabilityResponse> {
   const overrideOptions: RequestInit = {
+    body: JSON.stringify(input),
     headers: {
       ...(apiKey && { AccessKey: apiKey }),
     },
-    body: JSON.stringify(input),
   };
 
   const response = await fetch(

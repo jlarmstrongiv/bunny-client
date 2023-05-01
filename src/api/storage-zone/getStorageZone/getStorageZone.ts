@@ -1,7 +1,7 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
-import { u } from "../untypeable";
 import type { StorageZone } from "../types";
+import { u } from "../untypeable";
 
 export interface GetStorageZoneRequest {
   /**
@@ -24,15 +24,15 @@ export const getStorageZone = u
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
-  method: "GET",
   headers: {
     accept: "application/json",
   },
+  method: "GET",
 };
 
 export const getStorageZoneEndpoints = {
-  getStorageZone: "getStorageZone",
   "GET /storagezone/:id": "GET /storagezone/:id",
+  getStorageZone: "getStorageZone",
 } as const;
 
 export async function getStorageZoneClient(

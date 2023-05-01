@@ -1,10 +1,10 @@
 import { createTypeLevelClient } from "untypeable";
-import { u } from "./untypeable";
 import {
   getCountryList,
   getCountryListClient,
   getCountryListEndpoints,
 } from "./getCountryList";
+import { u } from "./untypeable";
 
 const countriesRouter = u.router({
   [getCountryListEndpoints.getCountryList]: getCountryList,

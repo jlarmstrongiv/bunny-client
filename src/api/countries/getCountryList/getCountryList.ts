@@ -4,35 +4,35 @@ import { u } from "../untypeable";
 
 export interface Country {
   /**
-   * Country name
-   * @example "United Kingdom"
+   * Url of a 512x512 png with a circular country flag with a grey (#e1dfdf) background color
    */
-  Name: string;
-  /**
-   * Country two-digit [ISO country code](https://web.archive.org/web/20230427223803/https://www.nationsonline.org/oneworld/country_code_list.htm)
-   * @example "GB"
-   */
-  IsoCode: string;
+  FlagUrl: string;
   /**
    * Country is part of the [European Union](https://web.archive.org/web/20230427223937/https://en.wikipedia.org/wiki/European_Union)
    * @example false
    */
   IsEU: boolean;
   /**
-   * Country tax rate out of 100 percent
-   * in the [European Union](https://web.archive.org/web/20230427223937/https://en.wikipedia.org/wiki/European_Union), this is the VAT tax rate
-   * @example 25
+   * Country two-digit [ISO country code](https://web.archive.org/web/20230427223803/https://www.nationsonline.org/oneworld/country_code_list.htm)
+   * @example "GB"
    */
-  TaxRate: number;
+  IsoCode: string;
   /**
-   * Url of a 512x512 png with a circular country flag with a grey (#e1dfdf) background color
+   * Country name
+   * @example "United Kingdom"
    */
-  FlagUrl: string;
+  Name: string;
   /**
    * Country [Points of Presence](https://web.archive.org/web/20230427225159/https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/) [list](https://web.archive.org/web/20230427225239/https://bunny.net/network/) of abbreviations
    * @example "NY"
    */
   PopList: string[];
+  /**
+   * Country tax rate out of 100 percent
+   * in the [European Union](https://web.archive.org/web/20230427223937/https://en.wikipedia.org/wiki/European_Union), this is the VAT tax rate
+   * @example 25
+   */
+  TaxRate: number;
 }
 
 export interface GetCountryListRequest {
@@ -51,15 +51,15 @@ export const getCountryList = u
 
 const url = "https://api.bunny.net/country";
 const options: RequestInit = {
-  method: "GET",
   headers: {
     accept: "application/json",
   },
+  method: "GET",
 };
 
 export const getCountryListEndpoints = {
-  getCountryList: "getCountryList",
   "GET /country": "GET /country",
+  getCountryList: "getCountryList",
 } as const;
 
 export async function getCountryListClient(

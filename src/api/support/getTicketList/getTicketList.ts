@@ -1,7 +1,7 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
-import { u } from "../untypeable";
 import { type Ticket } from "../types";
+import { u } from "../untypeable";
 
 export interface GetTicketListRequest {
   /**
@@ -23,24 +23,24 @@ export interface GetTicketListRequest {
 
 export interface GetTicketListResponse {
   /**
-   * List of tickets
-   */
-  Items: Ticket[];
-  /**
    * Current page in ticket list
    * @example 1
    */
   CurrentPage: number;
   /**
-   * Total number of tickets in all pages
-   * @example 3
-   */
-  TotalItems: number;
-  /**
    * Ticket list has more pages
    * @example false
    */
   HasMoreItems: boolean;
+  /**
+   * List of tickets
+   */
+  Items: Ticket[];
+  /**
+   * Total number of tickets in all pages
+   * @example 3
+   */
+  TotalItems: number;
 }
 
 export const getTicketList = u
@@ -49,15 +49,15 @@ export const getTicketList = u
 
 const url = "https://api.bunny.net/support/ticket/list";
 const options: RequestInit = {
-  method: "GET",
   headers: {
     accept: "application/json",
   },
+  method: "GET",
 };
 
 export const getTicketListEndpoints = {
-  getTicketList: "getTicketList",
   "GET /support/ticket/list": "GET /support/ticket/list",
+  getTicketList: "getTicketList",
 } as const;
 
 export async function getTicketListClient(
@@ -86,5 +86,7 @@ export async function getTicketListClient(
     throw new FetchError(response.status, response.statusText, response);
   }
 
-  return response.json();
+  const json: GetTicketListResponse = await response.json();
+
+  return json;
 }

@@ -27,9 +27,9 @@ const options: RequestInit = {
 };
 
 export const resetReadOnlyPasswordEndpoints = {
-  resetReadOnlyPassword: "resetReadOnlyPassword",
   "POST /storagezone/resetReadOnlyPassword?id=:id":
     "POST /storagezone/resetReadOnlyPassword?id=:id",
+  resetReadOnlyPassword: "resetReadOnlyPassword",
 } as const;
 
 export async function resetReadOnlyPasswordClient(

@@ -1,12 +1,12 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
-import { u } from "../untypeable";
 import type {
-  ReplicationRegion,
   Region,
-  ZoneTier,
+  ReplicationRegion,
   StorageZone,
+  ZoneTier,
 } from "../types";
+import { u } from "../untypeable";
 
 export interface AddStorageZoneRequestBase {
   /**
@@ -15,6 +15,11 @@ export interface AddStorageZoneRequestBase {
    */
   apiKey?: string;
   /**
+   * The name of the storage zone
+   * @example "mywebsite"
+   */
+  Name: string;
+  /**
    * The origin URL of the storage zone that will be added
    *
    * The origin URL is a very important part of your Pull Zone. It tells our servers where to fetch files that we don't yet have in cache. In the majority of cases, this will simply be the URL of your website or storage service. Please make sure that if your website is using HTTPS, that you make sure your origin URL is set up with HTTPS as well to keep the connection encrypted throughout the network.
@@ -22,11 +27,6 @@ export interface AddStorageZoneRequestBase {
    * @example "https://mywebsite.com"
    */
   OriginUrl?: string;
-  /**
-   * The name of the storage zone
-   * @example "mywebsite"
-   */
-  Name: string;
   /**
    * The code of the main storage zone region (Possible values: DE, NY, LA, SG)
    * @example "NY"
@@ -80,11 +80,11 @@ export const addStorageZone = u
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
-  method: "POST",
   headers: {
     accept: "application/json",
     "content-type": "application/json",
   },
+  method: "POST",
 };
 
 export const addStorageZoneEndpoints = {
@@ -97,10 +97,10 @@ export async function addStorageZoneClient(
   { apiKey, ...input }: AddStorageZoneRequest
 ): Promise<AddStorageZoneResponse> {
   const overrideOptions: RequestInit = {
+    body: JSON.stringify(input),
     headers: {
       ...(apiKey && { AccessKey: apiKey }),
     },
-    body: JSON.stringify(input),
   };
 
   const response = await fetch(

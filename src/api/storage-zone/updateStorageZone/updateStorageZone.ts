@@ -1,7 +1,7 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
-import { u } from "../untypeable";
 import type { ReplicationRegion as ReplicationZone } from "../types";
+import { u } from "../untypeable";
 
 // TODO
 export interface UpdateStorageZoneRequest {
@@ -10,16 +10,17 @@ export interface UpdateStorageZoneRequest {
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
   apiKey?: string;
+  // TODO: confirm path
+  /**
+   * The path to the custom file that will be returned in a case of 404
+   * @example "/my-partial/url/404.html"
+   */
+  Custom404FilePath?: string;
   /**
    * The ID of the storage zone that should be updated
    * @example 270302
    */
   id: number;
-  /**
-   * The list of replication zones enabled for the storage zone
-   * @example "DE"
-   */
-  ReplicationZones?: ReplicationZone[];
   /**
    * The origin URL of the storage zone
    *
@@ -28,12 +29,11 @@ export interface UpdateStorageZoneRequest {
    * @example "https://mywebsite.com"
    */
   OriginUrl?: string;
-  // TODO: confirm path
   /**
-   * The path to the custom file that will be returned in a case of 404
-   * @example "/my-partial/url/404.html"
+   * The list of replication zones enabled for the storage zone
+   * @example "DE"
    */
-  Custom404FilePath?: string;
+  ReplicationZones?: ReplicationZone[];
   /**
    * Rewrite 404 status code to 200 for URLs without extension
    * @example true
@@ -49,16 +49,16 @@ export const updateStorageZone = u
 
 const url = "https://api.bunny.net/storagezone";
 const options: RequestInit = {
-  method: "POST",
   headers: {
     accept: "application/json",
     "content-type": "application/json",
   },
+  method: "POST",
 };
 
 export const updateStorageZoneEndpoints = {
-  updateStorageZone: "updateStorageZone",
   "POST /storagezone/:id": "POST /storagezone/:id",
+  updateStorageZone: "updateStorageZone",
 } as const;
 
 export async function updateStorageZoneClient(
@@ -66,10 +66,10 @@ export async function updateStorageZoneClient(
   { apiKey, id, ...input }: UpdateStorageZoneRequest
 ): Promise<UpdateStorageZoneResponse> {
   const overrideOptions: RequestInit = {
+    body: JSON.stringify(input),
     headers: {
       ...(apiKey && { AccessKey: apiKey }),
     },
-    body: JSON.stringify(input),
   };
 
   const overrideUrl = `${url}/${id}`;

@@ -1,43 +1,43 @@
 import { createTypeLevelClient } from "untypeable";
-import { u } from "./untypeable";
-import {
-  getTicketList,
-  getTicketListClient,
-  getTicketListEndpoints,
-} from "./getTicketList";
-import {
-  getTicketDetails,
-  getTicketDetailsClient,
-  getTicketDetailsEndpoints,
-} from "./getTicketDetails";
 import {
   closeTicket,
   closeTicketClient,
   closeTicketEndpoints,
 } from "./closeTicket";
 import {
-  replyTicket,
-  replyTicketClient,
-  replyTicketEndpoints,
-} from "./replyTicket";
-import {
   createTicket,
   createTicketClient,
   createTicketEndpoints,
 } from "./createTicket";
+import {
+  getTicketDetails,
+  getTicketDetailsClient,
+  getTicketDetailsEndpoints,
+} from "./getTicketDetails";
+import {
+  getTicketList,
+  getTicketListClient,
+  getTicketListEndpoints,
+} from "./getTicketList";
+import {
+  replyTicket,
+  replyTicketClient,
+  replyTicketEndpoints,
+} from "./replyTicket";
+import { u } from "./untypeable";
 
 const statisticsRouter = u.router({
-  [getTicketListEndpoints.getTicketList]: getTicketList,
-  [getTicketListEndpoints["GET /support/ticket/list"]]: getTicketList,
+  [closeTicketEndpoints.closeTicket]: closeTicket,
+  [closeTicketEndpoints["POST /support/ticket/:id/close"]]: closeTicket,
+  [createTicketEndpoints.createTicket]: createTicket,
+  [createTicketEndpoints["POST /support/ticket/create"]]: createTicket,
   [getTicketDetailsEndpoints.getTicketDetails]: getTicketDetails,
   [getTicketDetailsEndpoints["GET /support/ticket/details/:id"]]:
     getTicketDetails,
-  [closeTicketEndpoints.closeTicket]: closeTicket,
-  [closeTicketEndpoints["POST /support/ticket/:id/close"]]: closeTicket,
+  [getTicketListEndpoints.getTicketList]: getTicketList,
+  [getTicketListEndpoints["GET /support/ticket/list"]]: getTicketList,
   [replyTicketEndpoints.replyTicket]: replyTicket,
   [replyTicketEndpoints["POST /support/ticket/:id/reply"]]: replyTicket,
-  [createTicketEndpoints.createTicket]: createTicket,
-  [createTicketEndpoints["POST /support/ticket/create"]]: createTicket,
 });
 
 /**
@@ -66,21 +66,21 @@ export function createSupportClient(
       };
 
       switch (path) {
-        case getTicketListEndpoints.getTicketList:
-        case getTicketListEndpoints["GET /support/ticket/list"]:
-          return getTicketListClient(defaultRequestInit, overrideInput);
-        case getTicketDetailsEndpoints.getTicketDetails:
-        case getTicketDetailsEndpoints["GET /support/ticket/details/:id"]:
-          return getTicketDetailsClient(defaultRequestInit, overrideInput);
         case closeTicketEndpoints.closeTicket:
         case closeTicketEndpoints["POST /support/ticket/:id/close"]:
           return closeTicketClient(defaultRequestInit, overrideInput);
-        case replyTicketEndpoints.replyTicket:
-        case replyTicketEndpoints["POST /support/ticket/:id/reply"]:
-          return replyTicketClient(defaultRequestInit, overrideInput);
         case createTicketEndpoints.createTicket:
         case createTicketEndpoints["POST /support/ticket/create"]:
           return createTicketClient(defaultRequestInit, overrideInput);
+        case getTicketDetailsEndpoints.getTicketDetails:
+        case getTicketDetailsEndpoints["GET /support/ticket/details/:id"]:
+          return getTicketDetailsClient(defaultRequestInit, overrideInput);
+        case getTicketListEndpoints.getTicketList:
+        case getTicketListEndpoints["GET /support/ticket/list"]:
+          return getTicketListClient(defaultRequestInit, overrideInput);
+        case replyTicketEndpoints.replyTicket:
+        case replyTicketEndpoints["POST /support/ticket/:id/reply"]:
+          return replyTicketClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
             `[${supportClient.name}]: no endpoint found named "${path}"`

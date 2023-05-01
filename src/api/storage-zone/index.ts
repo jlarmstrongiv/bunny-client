@@ -1,10 +1,4 @@
 import { createTypeLevelClient } from "untypeable";
-import { u } from "./untypeable";
-import {
-  listStorageZones,
-  listStorageZonesClient,
-  listStorageZonesEndpoints,
-} from "./listStorageZones";
 import {
   addStorageZone,
   addStorageZoneClient,
@@ -16,25 +10,25 @@ import {
   checkTheStorageZoneAvailabilityEndpoints,
 } from "./checkTheStorageZoneAvailability";
 import {
-  getStorageZone,
-  getStorageZoneClient,
-  getStorageZoneEndpoints,
-} from "./getStorageZone";
-import {
-  updateStorageZone,
-  updateStorageZoneClient,
-  updateStorageZoneEndpoints,
-} from "./updateStorageZone";
-import {
   deleteStorageZone,
   deleteStorageZoneClient,
   deleteStorageZoneEndpoints,
 } from "./deleteStorageZone";
 import {
+  getStorageZone,
+  getStorageZoneClient,
+  getStorageZoneEndpoints,
+} from "./getStorageZone";
+import {
   getStorageZoneStatistics,
   getStorageZoneStatisticsClient,
   getStorageZoneStatisticsEndpoints,
 } from "./getStorageZoneStatistics";
+import {
+  listStorageZones,
+  listStorageZonesClient,
+  listStorageZonesEndpoints,
+} from "./listStorageZones";
 import {
   resetPassword,
   resetPasswordClient,
@@ -45,10 +39,14 @@ import {
   resetReadOnlyPasswordClient,
   resetReadOnlyPasswordEndpoints,
 } from "./resetReadOnlyPassword";
+import { u } from "./untypeable";
+import {
+  updateStorageZone,
+  updateStorageZoneClient,
+  updateStorageZoneEndpoints,
+} from "./updateStorageZone";
 
 const storageZoneRouter = u.router({
-  [listStorageZonesEndpoints.listStorageZones]: listStorageZones,
-  [listStorageZonesEndpoints["GET /storagezone"]]: listStorageZones,
   [addStorageZoneEndpoints.addStorageZone]: addStorageZone,
   [addStorageZoneEndpoints["POST /storagezone"]]: addStorageZone,
   [checkTheStorageZoneAvailabilityEndpoints.checkTheStorageZoneAvailability]:
@@ -56,16 +54,16 @@ const storageZoneRouter = u.router({
   [checkTheStorageZoneAvailabilityEndpoints[
     "POST /storagezone/checkavailability"
   ]]: checkTheStorageZoneAvailability,
-  [getStorageZoneEndpoints.getStorageZone]: getStorageZone,
-  [getStorageZoneEndpoints["GET /storagezone/:id"]]: getStorageZone,
-  [updateStorageZoneEndpoints.updateStorageZone]: updateStorageZone,
-  [updateStorageZoneEndpoints["POST /storagezone/:id"]]: updateStorageZone,
   [deleteStorageZoneEndpoints.deleteStorageZone]: deleteStorageZone,
   [deleteStorageZoneEndpoints["DELETE /storagezone/:id"]]: deleteStorageZone,
+  [getStorageZoneEndpoints.getStorageZone]: getStorageZone,
+  [getStorageZoneEndpoints["GET /storagezone/:id"]]: getStorageZone,
   [getStorageZoneStatisticsEndpoints.getStorageZoneStatistics]:
     getStorageZoneStatistics,
   [getStorageZoneStatisticsEndpoints["GET /storagezone/:id/statistics"]]:
     getStorageZoneStatistics,
+  [listStorageZonesEndpoints.listStorageZones]: listStorageZones,
+  [listStorageZonesEndpoints["GET /storagezone"]]: listStorageZones,
   [resetPasswordEndpoints.resetPassword]: resetPassword,
   [resetPasswordEndpoints["POST /storagezone/:id/resetPassword"]]:
     resetPassword,
@@ -73,6 +71,8 @@ const storageZoneRouter = u.router({
   [resetReadOnlyPasswordEndpoints[
     "POST /storagezone/resetReadOnlyPassword?id=:id"
   ]]: resetReadOnlyPassword,
+  [updateStorageZoneEndpoints.updateStorageZone]: updateStorageZone,
+  [updateStorageZoneEndpoints["POST /storagezone/:id"]]: updateStorageZone,
 });
 
 /**
@@ -105,9 +105,6 @@ export function createStorageZoneClient(
       };
 
       switch (path) {
-        case listStorageZonesEndpoints.listStorageZones:
-        case listStorageZonesEndpoints["GET /storagezone"]:
-          return listStorageZonesClient(defaultRequestInit, overrideInput);
         case addStorageZoneEndpoints.addStorageZone:
         case addStorageZoneEndpoints["POST /storagezone"]:
           return addStorageZoneClient(defaultRequestInit, overrideInput);
@@ -119,15 +116,12 @@ export function createStorageZoneClient(
             defaultRequestInit,
             overrideInput
           );
-        case getStorageZoneEndpoints.getStorageZone:
-        case getStorageZoneEndpoints["GET /storagezone/:id"]:
-          return getStorageZoneClient(defaultRequestInit, overrideInput);
-        case updateStorageZoneEndpoints.updateStorageZone:
-        case updateStorageZoneEndpoints["POST /storagezone/:id"]:
-          return updateStorageZoneClient(defaultRequestInit, overrideInput);
         case deleteStorageZoneEndpoints.deleteStorageZone:
         case deleteStorageZoneEndpoints["DELETE /storagezone/:id"]:
           return deleteStorageZoneClient(defaultRequestInit, overrideInput);
+        case getStorageZoneEndpoints.getStorageZone:
+        case getStorageZoneEndpoints["GET /storagezone/:id"]:
+          return getStorageZoneClient(defaultRequestInit, overrideInput);
         case getStorageZoneStatisticsEndpoints.getStorageZoneStatistics:
         case getStorageZoneStatisticsEndpoints[
           "GET /storagezone/:id/statistics"
@@ -136,6 +130,9 @@ export function createStorageZoneClient(
             defaultRequestInit,
             overrideInput
           );
+        case listStorageZonesEndpoints.listStorageZones:
+        case listStorageZonesEndpoints["GET /storagezone"]:
+          return listStorageZonesClient(defaultRequestInit, overrideInput);
         case resetPasswordEndpoints.resetPassword:
         case resetPasswordEndpoints["POST /storagezone/:id/resetPassword"]:
           return resetPasswordClient(defaultRequestInit, overrideInput);
@@ -144,6 +141,9 @@ export function createStorageZoneClient(
           "POST /storagezone/resetReadOnlyPassword?id=:id"
         ]:
           return resetReadOnlyPasswordClient(defaultRequestInit, overrideInput);
+        case updateStorageZoneEndpoints.updateStorageZone:
+        case updateStorageZoneEndpoints["POST /storagezone/:id"]:
+          return updateStorageZoneClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
             `[${storageZoneClient.name}]: no endpoint found named "${path}"`

@@ -1,8 +1,15 @@
 // TODO: add plugins
 // - https://github.com/mskelton/eslint-plugin-sort/issues/53
 // TODO: add default parameters tsdoc comments
+// TODO: consider consistent aliasing, create vs add/upload, StorageHostname vs storageEndpoint, all those region aliases
 {
-  "extends": ["xo", "xo-typescript", "xo-typescript/space", "prettier"],
+  "extends": [
+    "xo",
+    "xo-typescript",
+    "xo-typescript/space",
+    "plugin:sort/recommended",
+    "prettier"
+  ],
   "ignorePatterns": ["**/dist/**", "**/docs/**"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
@@ -74,6 +81,12 @@
         "leadingUnderscore": "allow",
         "trailingUnderscore": "allow"
       },
+      {
+        "selector": "class",
+        "format": ["PascalCase"],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "allow"
+      },
       // TODO: remove and normalize properties returned from the API
       // - use https://github.com/sindresorhus/camelcase-keys#stoppaths
       // - drop commonjs https://github.com/egoist/tsup/issues/628
@@ -87,6 +100,9 @@
     "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     // TODO: remove https://eslint.org/docs/latest/rules/no-warning-comments
-    "no-warning-comments": "off"
+    "no-warning-comments": "off",
+    "sort/string-enums": "error",
+    "sort/string-unions": "error",
+    "sort/type-properties": "error"
   }
 }

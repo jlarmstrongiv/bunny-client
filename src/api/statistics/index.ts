@@ -1,10 +1,10 @@
 import { createTypeLevelClient } from "untypeable";
-import { u } from "./untypeable";
 import {
   getStatistics,
   getStatisticsClient,
   getStatisticsEndpoints,
 } from "./getStatistics";
+import { u } from "./untypeable";
 
 const statisticsRouter = u.router({
   [getStatisticsEndpoints.getStatistics]: getStatistics,
