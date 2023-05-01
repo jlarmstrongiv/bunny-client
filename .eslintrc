@@ -71,6 +71,7 @@
     ],
     "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
+    // TODO: remove https://eslint.org/docs/latest/rules/no-warning-comments
     "no-warning-comments": "off"
   }
 }

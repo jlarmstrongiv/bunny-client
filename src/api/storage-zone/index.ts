@@ -82,9 +82,7 @@ const storageZoneRouter = u.router({
  * @example
  * ```ts
  * const storageZoneClient = createStorageZoneClient({
- *   headers: {
- *     AccessKey: API_ACCESS_KEY,
- *   },
+ *   apiKey: API_ACCESS_KEY,
  * });
  *
  * const response = await storageZoneClient("addStorageZone", {
@@ -94,46 +92,57 @@ const storageZoneRouter = u.router({
  * });
  * ```
  */
-export function createStorageZoneClient(defaultRequestInit: RequestInit = {}) {
+export function createStorageZoneClient(
+  defaultInput: Record<string, any> = {},
+  defaultRequestInit: RequestInit = {}
+) {
   const storageZoneClient = createTypeLevelClient<typeof storageZoneRouter>(
     async (path, input) => {
+      const overrideInput = {
+        ...defaultInput,
+        ...input,
+      };
+
       switch (path) {
         case listStorageZonesEndpoints.listStorageZones:
         case listStorageZonesEndpoints["GET /storagezone"]:
-          return listStorageZonesClient(defaultRequestInit, input);
+          return listStorageZonesClient(defaultRequestInit, overrideInput);
         case addStorageZoneEndpoints.addStorageZone:
         case addStorageZoneEndpoints["POST /storagezone"]:
-          return addStorageZoneClient(defaultRequestInit, input);
+          return addStorageZoneClient(defaultRequestInit, overrideInput);
         case checkTheStorageZoneAvailabilityEndpoints.checkTheStorageZoneAvailability:
         case checkTheStorageZoneAvailabilityEndpoints[
           "POST /storagezone/checkavailability"
         ]:
           return checkTheStorageZoneAvailabilityClient(
             defaultRequestInit,
-            input
+            overrideInput
           );
         case getStorageZoneEndpoints.getStorageZone:
         case getStorageZoneEndpoints["GET /storagezone/:id"]:
-          return getStorageZoneClient(defaultRequestInit, input);
+          return getStorageZoneClient(defaultRequestInit, overrideInput);
         case updateStorageZoneEndpoints.updateStorageZone:
         case updateStorageZoneEndpoints["POST /storagezone/:id"]:
-          return updateStorageZoneClient(defaultRequestInit, input);
+          return updateStorageZoneClient(defaultRequestInit, overrideInput);
         case deleteStorageZoneEndpoints.deleteStorageZone:
         case deleteStorageZoneEndpoints["DELETE /storagezone/:id"]:
-          return deleteStorageZoneClient(defaultRequestInit, input);
+          return deleteStorageZoneClient(defaultRequestInit, overrideInput);
         case getStorageZoneStatisticsEndpoints.getStorageZoneStatistics:
         case getStorageZoneStatisticsEndpoints[
           "GET /storagezone/:id/statistics"
         ]:
-          return getStorageZoneStatisticsClient(defaultRequestInit, input);
+          return getStorageZoneStatisticsClient(
+            defaultRequestInit,
+            overrideInput
+          );
         case resetPasswordEndpoints.resetPassword:
         case resetPasswordEndpoints["POST /storagezone/:id/resetPassword"]:
-          return resetPasswordClient(defaultRequestInit, input);
+          return resetPasswordClient(defaultRequestInit, overrideInput);
         case resetReadOnlyPasswordEndpoints.resetReadOnlyPassword:
         case resetReadOnlyPasswordEndpoints[
           "POST /storagezone/resetReadOnlyPassword?id=:id"
         ]:
-          return resetReadOnlyPasswordClient(defaultRequestInit, input);
+          return resetReadOnlyPasswordClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
             `[${storageZoneClient.name}]: no endpoint found named "${path}"`

@@ -18,21 +18,27 @@ const countriesRouter = u.router({
  * @example
  * ```ts
  * const regionClient = createRegionClient({
- *   headers: {
- *     AccessKey: API_ACCESS_KEY,
- *   },
+ *   apiKey: API_ACCESS_KEY,
  * });
  *
  * const response = await regionClient("regionList");
  * ```
  */
-export function createRegionClient(defaultRequestInit: RequestInit = {}) {
+export function createRegionClient(
+  defaultInput: Record<string, any> = {},
+  defaultRequestInit: RequestInit = {}
+) {
   const regionClient = createTypeLevelClient<typeof countriesRouter>(
     async (path, input) => {
+      const overrideInput = {
+        ...defaultInput,
+        ...input,
+      };
+
       switch (path) {
         case regionListEndpoints.regionList:
         case regionListEndpoints["GET /region"]:
-          return regionListClient(defaultRequestInit, input);
+          return regionListClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
             `[${regionClient.name}]: no endpoint found named "${path}"`

@@ -4,4 +4,5 @@ export {
   createStatisticsClient,
   createStorageZoneClient,
   createRegionClient,
+  createSupportClient,
 } from "./api";

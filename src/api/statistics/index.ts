@@ -18,21 +18,27 @@ const statisticsRouter = u.router({
  * @example
  * ```ts
  * const statisticsClient = createStatisticsClient({
- *   headers: {
- *     AccessKey: API_ACCESS_KEY,
- *   },
+ *   apiKey: API_ACCESS_KEY,
  * });
  *
  * const response = await statisticsClient("getStatistics");
  * ```
  */
-export function createStatisticsClient(defaultRequestInit: RequestInit = {}) {
+export function createStatisticsClient(
+  defaultInput: Record<string, any> = {},
+  defaultRequestInit: RequestInit = {}
+) {
   const statisticsClient = createTypeLevelClient<typeof statisticsRouter>(
     async (path, input) => {
+      const overrideInput = {
+        ...defaultInput,
+        ...input,
+      };
+
       switch (path) {
         case getStatisticsEndpoints.getStatistics:
         case getStatisticsEndpoints["GET /statistics"]:
-          return getStatisticsClient(defaultRequestInit, input);
+          return getStatisticsClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
             `[${statisticsClient.name}]: no endpoint found named "${path}"`

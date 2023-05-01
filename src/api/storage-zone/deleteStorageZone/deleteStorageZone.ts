@@ -4,7 +4,7 @@ import { u } from "../untypeable";
 
 export interface DeleteStorageZoneRequest {
   /**
-   * User-specific API Access Key
+   * User-specific [API Key](https://dash.bunny.net/account/settings)
    * @example "cb1a7c68-89a0-462a-9495-13ebd7366cfe"
    */
   apiKey?: string;

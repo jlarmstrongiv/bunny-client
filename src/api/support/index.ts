@@ -47,33 +47,39 @@ const statisticsRouter = u.router({
  * @example
  * ```ts
  * const supportClient = createSupportClient({
- *   headers: {
- *     AccessKey: API_ACCESS_KEY,
- *   },
+ *   apiKey: API_ACCESS_KEY,
  * });
  *
  * const response = await supportClient("getTicketList");
  * ```
  */
-export function createSupportClient(defaultRequestInit: RequestInit = {}) {
+export function createSupportClient(
+  defaultInput: Record<string, any> = {},
+  defaultRequestInit: RequestInit = {}
+) {
   const supportClient = createTypeLevelClient<typeof statisticsRouter>(
     async (path, input) => {
+      const overrideInput = {
+        ...defaultInput,
+        ...input,
+      };
+
       switch (path) {
         case getTicketListEndpoints.getTicketList:
         case getTicketListEndpoints["GET /support/ticket/list"]:
-          return getTicketListClient(defaultRequestInit, input);
+          return getTicketListClient(defaultRequestInit, overrideInput);
         case getTicketDetailsEndpoints.getTicketDetails:
         case getTicketDetailsEndpoints["GET /support/ticket/details/:id"]:
-          return getTicketDetailsClient(defaultRequestInit, input);
+          return getTicketDetailsClient(defaultRequestInit, overrideInput);
         case closeTicketEndpoints.closeTicket:
         case closeTicketEndpoints["POST /support/ticket/:id/close"]:
-          return closeTicketClient(defaultRequestInit, input);
+          return closeTicketClient(defaultRequestInit, overrideInput);
         case replyTicketEndpoints.replyTicket:
         case replyTicketEndpoints["POST /support/ticket/:id/reply"]:
-          return replyTicketClient(defaultRequestInit, input);
+          return replyTicketClient(defaultRequestInit, overrideInput);
         case createTicketEndpoints.createTicket:
         case createTicketEndpoints["POST /support/ticket/create"]:
-          return createTicketClient(defaultRequestInit, input);
+          return createTicketClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
             `[${supportClient.name}]: no endpoint found named "${path}"`
