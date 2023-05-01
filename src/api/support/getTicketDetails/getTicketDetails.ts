@@ -23,7 +23,7 @@ export const getTicketDetails = u
   .output<GetTicketDetailsResponse>();
 
 const url = "https://api.bunny.net/support/ticket/details";
-const options = {
+const options: RequestInit = {
   method: "GET",
   headers: {
     accept: "application/json",

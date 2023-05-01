@@ -1,7 +1,7 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
-import type { ReplicationRegion } from "../types";
+import type { ReplicationRegion as ReplicationZone } from "../types";
 
 // TODO
 export interface UpdateStorageZoneRequest {
@@ -19,7 +19,7 @@ export interface UpdateStorageZoneRequest {
    * The list of replication zones enabled for the storage zone
    * @example "DE"
    */
-  ReplicationZones?: ReplicationRegion[];
+  ReplicationZones?: ReplicationZone[];
   /**
    * The origin URL of the storage zone
    *

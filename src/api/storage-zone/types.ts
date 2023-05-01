@@ -49,6 +49,43 @@ export type StorageHostname =
   | "br.storage.bunnycdn.com"
   | "jh.storage.bunnycdn.com";
 
+/* eslint-disable @typescript-eslint/naming-convention */
+export const storageZoneEndpoints = {
+  /**
+   * Falkenstein, DE
+   */
+  DE: "storage.bunnycdn.com",
+  /**
+   * London, UK
+   */
+  UK: "uk.storage.bunnycdn.com",
+  /**
+   * New York, US
+   */
+  NY: "ny.storage.bunnycdn.com",
+  /**
+   * Los Angeles, US
+   */
+  LA: "la.storage.bunnycdn.com",
+  /**
+   * Singapore, SG
+   */
+  SG: "sg.storage.bunnycdn.com",
+  /**
+   * Stockholm, SE
+   */
+  SE: "se.storage.bunnycdn.com",
+  /**
+   * São Paulo, BR
+   */
+  BR: "br.storage.bunnycdn.com",
+  /**
+   * Johannesburg, SA
+   */
+  JH: "jh.storage.bunnycdn.com",
+} as const;
+/* eslint-enable @typescript-eslint/naming-convention */
+
 /**
  * 0 - Standard
  *
@@ -59,32 +96,32 @@ export type ZoneTier = 0 | 1;
 // TODO
 export interface StorageZone {
   /**
-   * storage zone id
+   * Storage zone id
    * @example 270284
    */
   Id: number;
   /**
-   * user id
+   * User id
    * @example "c2fbdbcf-0961-4a89-b828-edf3ad7456e3"
    */
   UserId: string;
   /**
-   * storage zone name
+   * Storage zone name
    * @example "example-storage-0"
    */
   Name: string;
   /**
-   * storage zone password
+   * Storage zone password
    * @example "5f46c1a0-7be8-4659-897529acb638-e696-4158"
    */
   Password: string;
   /**
-   * last modified ISO 8601 date of the storage zone
+   * Last modified ISO 8601 date of the storage zone
    * @example "2023-04-28T02:23:47.7909075Z"
    */
   DateModified: string;
   /**
-   * is storage zone deleted
+   * Is storage zone deleted
    * @example false
    */
   Deleted: boolean;
@@ -99,24 +136,24 @@ export interface StorageZone {
    */
   FilesStored: number;
   /**
-   * storage zone region
+   * Storage zone region
    * @example "NY"
    */
   Region: Region;
   /**
-   * storage zone replication regions
+   * Storage zone replication regions
    * @example "DE"
    */
   ReplicationRegions: ReplicationRegion[];
   // TODO
   PullZones: any;
   /**
-   * storage zone read-only password
+   * Storage zone read-only password
    * @example "bfcbda9b-4749-4a5e-b25e7650a6a8-63db-4848"
    */
   ReadOnlyPassword: string;
   /**
-   * storage zone rewrites 404 status code to 200 for URLs without extension
+   * Storage zone rewrites 404 status code to 200 for URLs without extension
    * @example true
    */
   Rewrite404To200: boolean;
@@ -127,16 +164,16 @@ export interface StorageZone {
    */
   Custom404FilePath: string | null;
   /**
-   * storage zone hostname domain
+   * Storage zone hostname domain
    * @example "ny.storage.bunnycdn.com"
    */
   StorageHostname: StorageHostname;
   /**
-   * storage zone zone tier
+   * Storage zone zone tier
    */
   ZoneTier: ZoneTier;
   /**
-   * storage zone is changing replication settings
+   * Storage zone is changing replication settings
    * @example false
    */
   ReplicationChangeInProgress: boolean;

@@ -1,0 +1,19 @@
+[
+  {
+    "Guid": "02f8ef36-e3e8-4701-a86f-08cab3efe8b9",
+    "StorageZoneName": "file-example-storage-zone-2",
+    "Path": "/file-example-storage-zone-2/subpath/",
+    "ObjectName": "demo.db",
+    "Length": 1073741824,
+    "LastChanged": "2023-05-01T04:06:38.883",
+    "ServerId": 562,
+    "ArrayNumber": 0,
+    "IsDirectory": false,
+    "UserId": "c2fbdbcf-0961-4a89-b818-edf3ad7456e3",
+    "ContentType": "",
+    "DateCreated": "2023-05-01T04:06:38.883",
+    "StorageZoneId": 271332,
+    "Checksum": "49BC20DF15E412A64472421E13FE86FF1C5165E18B2AFCCF160D4DC19FE68A14",
+    "ReplicatedZones": ""
+  }
+]

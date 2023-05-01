@@ -1,43 +1,43 @@
-// see also https://developer.zendesk.com/api-reference/ticketing/introduction/
+// See also https://developer.zendesk.com/api-reference/ticketing/introduction/
 
 export interface User {
   /**
-   * user display name
+   * User display name
    * @example "User 456e3"
    * @example "Tomas"
    */
   Name: string;
   /**
-   * user external id
+   * User external id
    * @example "c2fbdbcf-0961-4a89-b818-edf3ad7456e3"
    * @example null
    */
   ExternalId: string | null;
   /**
-   * user alias
+   * User alias
    * @example null
    * @example "Tomas"
    */
-  Alias: null | string;
+  Alias: string | null;
   /**
-   * user is email verified
+   * User is email verified
    * @example true
    */
   Verified: boolean;
   /**
-   * user signature
+   * User signature
    * @example null
    * @example "Best Regards,\nTomas\n\nbunny.net\nhttps://bunny.net",
    */
-  Signature: null | string;
+  Signature: string | null;
   /**
-   * user role
+   * User role
    * @example "end-user"
    * @example "agent"
    */
   Role: string;
   /**
-   * user profile picture url
+   * User profile picture url
    * @example "https://www.gravatar.com/avatar/8292f524bb616e5a1b49351761de6a74?d=https%3A%2F%2Fbunnynet-avatars.b-cdn.net%2F.ai%2Fimg%2Fdalle-256%2Favatar%2F8292f524bb616e5a1b49351761de6a74%2Frabbit.jpg%3Ftoken%3Db6R6-nsuF6kT0SIsEWblocQ8B_GLmmkhF1IDuZbcw6E%26expires%3D19132025855"
    * @example "https://bunnycdn.zendesk.com/system/photos/7706916107548/tomas-support.png"
    */
@@ -46,7 +46,7 @@ export interface User {
 
 export interface Attachment {
   /**
-   * url to download the attachment (BUG: corrupted file returned)
+   * Url to download the attachment (BUG: corrupted file returned)
    * @example "https://bunnycdn.zendesk.com/attachments/token/27ZaTyB7eg2ceSSKNr60zZbvG/?name=steps.txt"
    */
   ContentUrl: string;
@@ -56,22 +56,22 @@ export interface Attachment {
    */
   ContentType: "text/plain";
   /**
-   * size of the file in bytes
+   * Size of the file in bytes
    * @example 42
    */
   Size: number;
   /**
-   * attachment thumbnail previews (can be empty)
+   * Attachment thumbnail previews (can be empty)
    * @example []
    */
   Thumbnails: string[];
   /**
-   * attachment file name (BUG: trailing space)
+   * Attachment file name (BUG: trailing space)
    * @example "steps.txt "
    */
   FileName: string;
   /**
-   * attachment id
+   * Attachment id
    * @example 8617793197852
    */
   Id: number;
@@ -79,12 +79,12 @@ export interface Attachment {
 
 export interface CreateAttachment {
   /**
-   * the body, or content, of the attachment
+   * The body, or content, of the attachment
    * @example "Steps to reproduce the issue:"
    */
   Body: string;
   /**
-   * file name of the attachment
+   * File name of the attachment
    * @example "reproduction.txt"
    */
   FileName: string;
@@ -97,34 +97,34 @@ export interface CreateAttachment {
 
 export interface Comment {
   /**
-   * comment id
+   * Comment id
    * @example 8617221600540
    */
   Id: number;
   /**
-   * comment type
+   * Comment type
    * @example "Comment"
    */
   Type: string;
   /**
-   * comment body
+   * Comment body
    * @example "My videos are buffering"
    * @example "Hello,\n\nThank you for contacting bunny.net.\n\nIf there is something we can assist you with, do not hesitate to let us know.\n\nBest Regards,\nTomas\n\nbunny.net\nhttps://bunny.net"
    */
   Body: string;
   /**
-   * comment html body
+   * Comment html body
    * @example "<div class="zd-comment" dir="auto"><p dir="auto">My videos are buffering</p></div>"
    * @example "<div class=\"zd-comment\" dir=\"auto\">Hello,<br><br>Thank you for contacting bunny.net.<br><br>If there is something we can assist you with, do not hesitate to let us know.<br>\n\n<span class=\"collapse-signature\"></span><div class=\"signature\"><p dir=\"auto\">Best Regards,<br>\nTomas</p>\n<p dir=\"auto\">bunny.net<br>\n<a href=\"https://bunny.net\" rel=\"noreferrer\">https://bunny.net</a></p></div></div>"
    */
   HtmlBody: string;
   /**
-   * is comment public
+   * Is comment public
    * @example true
    */
   Public: boolean;
   /**
-   * comment author id
+   * Comment author id
    * @example 8600481430684
    */
   AuthorId: number;
@@ -134,23 +134,23 @@ export interface Comment {
    */
   CreatedAt: string;
   /**
-   * user object related to the comment
+   * User object related to the comment
    */
   User: User;
   /**
-   * file attachments
+   * File attachments
    */
   Attachments: Attachment[];
 }
 
 export interface Ticket {
   /**
-   * ticket id
+   * Ticket id
    * @example 196584
    */
   Id: number;
   /**
-   * ticket status
+   * Ticket status
    * @example "new"
    * @example "open"
    * @example "solved"
@@ -159,14 +159,14 @@ export interface Ticket {
    */
   Status: string;
   /**
-   * ticket comments
+   * Ticket comments
    */
   Comments: Comment[];
   /**
-   * ticket subject
+   * Ticket subject
    * @example "Stream"
    */
-  Subject: null | string;
+  Subject: string | null;
   /**
    * ISO 8601 date and time ticket created at
    * @example "2023-04-29T02:42:01"
@@ -195,6 +195,7 @@ export type CommonUseCases = Record<
   Partial<Record<IssueCategory, Record<string, string>>>
 >;
 
+/* eslint-disable @typescript-eslint/naming-convention */
 export const commonUseCases = {
   CDN: {
     General: {
@@ -299,3 +300,4 @@ export const commonUseCases = {
     },
   },
 } as const;
+/* eslint-enable @typescript-eslint/naming-convention */

@@ -32,7 +32,7 @@ export const replyTicket = u
   .output<ReplyTicketResponse>();
 
 const url = "https://api.bunny.net/support/ticket";
-const options = {
+const options: RequestInit = {
   method: "POST",
   headers: {
     "content-type": "application/json",

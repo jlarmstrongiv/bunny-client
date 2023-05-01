@@ -13,12 +13,12 @@ export interface ListStorageZonesRequest {
    * Page number between 1 and 2147483647
    * @example 1
    */
-  page: number;
+  page?: number;
   /**
    * Number of results per page between 5 and 1000
    * @example 1000
    */
-  perPage: number;
+  perPage?: number;
   /**
    * Should include deleted storage zones
    * @example false
@@ -72,7 +72,13 @@ export const listStorageZonesEndpoints = {
 
 export async function listStorageZonesClient(
   defaultRequestInit: RequestInit,
-  { apiKey, page, perPage, includeDeleted, search }: ListStorageZonesRequest
+  {
+    apiKey,
+    page = 1,
+    perPage = 1000,
+    includeDeleted,
+    search,
+  }: ListStorageZonesRequest
 ): Promise<ListStorageZonesResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -82,7 +88,7 @@ export async function listStorageZonesClient(
 
   const urlSearchParameters = new URLSearchParams({
     ...(typeof includeDeleted === "boolean" && {
-      includeDelete: includeDeleted.toString(),
+      includeDeleted: includeDeleted.toString(),
     }),
     ...(search && { search }),
     page: page.toString(),

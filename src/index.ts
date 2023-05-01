@@ -6,3 +6,7 @@ export {
   createRegionClient,
   createSupportClient,
 } from "./api";
+export {
+  createBrowseFilesClient,
+  createManageFilesClient,
+} from "./edge-storage-api";

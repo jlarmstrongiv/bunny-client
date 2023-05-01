@@ -1,3 +1,6 @@
+// TODO: add plugins
+// - https://github.com/mskelton/eslint-plugin-sort/issues/53
+// TODO: add default parameters tsdoc comments
 {
   "extends": ["xo", "xo-typescript", "xo-typescript/space", "prettier"],
   "ignorePatterns": ["**/dist/**", "**/docs/**"],
@@ -5,6 +8,17 @@
   "plugins": ["@typescript-eslint"],
   "root": true,
   "rules": {
+    // example https://typescript-eslint.io/rules/ban-types/
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          // un-ban a type that is banned by default
+          "null": false
+        },
+        "extendDefaults": true
+      }
+    ],
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     // default options for @typescript-eslint/naming-convention https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/naming-convention.md#options
     "@typescript-eslint/naming-convention": [
@@ -62,6 +76,7 @@
       },
       // TODO: remove and normalize properties returned from the API
       // - use https://github.com/sindresorhus/camelcase-keys#stoppaths
+      // - drop commonjs https://github.com/egoist/tsup/issues/628
       {
         "selector": "typeProperty",
         "format": ["camelCase", "PascalCase"],

@@ -9,6 +9,10 @@ export interface DeleteStorageZoneRequest {
    */
   apiKey?: string;
   /**
+   * IMPORTANT: deleted buckets cannot be re-created with the same name
+   *
+   * You can list deleted buckets with the `includeDeleted` option when using `listFiles`
+   *
    * The Storage Zone ID that should be deleted
    * @example 270299
    */

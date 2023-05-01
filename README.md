@@ -1,15 +1,5 @@
 # `bunny-client` The TypeScript API Client for BunnyCDN
 
-## License
-
-<!-- https://creativecommons.org/choose/ -->
-<!-- https://chooser-beta.creativecommons.org/ -->
-<!-- https://github.com/idleberg/Creative-Commons-Markdown -->
-
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/jlarmstrongiv/bunny-client/blob/main/README.md">bunny-client</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/jlarmstrongiv/">John L. Armstrong IV</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<br><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
-
-Alternative licenses available by request.
-
 ## Motivation
 
 Provide a TypeScript API Client for BunnyCDN with few dependencies.
@@ -18,7 +8,7 @@ Provide a TypeScript API Client for BunnyCDN with few dependencies.
 
 See the official API documentation at [https://docs.bunny.net/docs](https://docs.bunny.net/docs)
 
-This package aims to provide a matching TypeScript API Client for the bunny.net API.
+See the generated TypeScript documentation at [https://bunny-client.surge.sh](https://bunny-client.surge.sh)
 
 <!-- Better documentation in comments than the official api! -->
 
@@ -43,9 +33,21 @@ This package aims to provide a matching TypeScript API Client for the bunny.net 
     - https://toshy.github.io/BunnyNet-PHP/base-api/#user
     - https://docs.bunny.net/reference/userpublic_index
     - https://docs.bunny.net/reference/userpublic_dpa
+  - api keys
+    - https://docs.bunny.net/reference/apikeypublic_listapikeys
+    - https://web.archive.org/web/20230428220030/https://docs.bunny.net/reference/apikeypublic_listapikeys
   - other
     - https://toshy.github.io/BunnyNet-PHP/image-processing/
     - https://toshy.github.io/BunnyNet-PHP/token-authentication/
+  - documentation vs api reference https://docs.bunny.net/docs/cdn-logging
+
+  - consider writing a surge.sh cli alternative
+
+  - tus https://docs.bunny.net/reference/tus-resumable-uploads
+    - https://www.npmjs.com/package/tus-js-client
+    - https://www.npmjs.com/package/tus
+    - https://www.npmjs.com/package/use-tus
+    - https://www.npmjs.com/package/@uppy/tus
 
 -->
 
@@ -63,6 +65,32 @@ This package aims to provide a matching TypeScript API Client for the bunny.net 
   - 🏗️ Stream Video Library
   - 🏗️ DNS Zone
   - 🏗️ Pull Zone
+    - 🏗️ List Pull Zones
+    - 🏗️ Add Pull Zone
+    - 🏗️ Get Pull Zone
+    - 🏗️ Update Pull Zone
+    - 🏗️ Delete Pull Zone
+    - 🏗️ Delete Edge Rule
+    - 🏗️ Add/Update Edge Rule
+    - 🏗️ Set Edge Rule Enabled
+    - 🏗️ Get Origin Shield Queue Statistics
+    - 🏗️ Get SafeHop Statistics
+    - 🏗️ Get Optimizer Statistics
+    - 🏗️ Load Free Certificate
+    - 🏗️ Purge Cache
+    - 🏗️ Check the pull zone availability
+    - 🏗️ Add Custom Certificate
+    - 🏗️ Remove Certificate
+    - 🏗️ Add Custom Hostname
+    - 🏗️ Remove Custom Hostname
+    - 🏗️ Set Force SSL
+    - 🏗️ Reset token Key
+    - 🏗️ Add Allowed Referer
+    - 🏗️ Remove Allowed Referer
+    - 🏗️ Add Blocked Referer
+    - 🏗️ Remove Blocked Referer
+    - 🏗️ Add Blocked IP
+    - 🏗️ Remove Blocked IP
   - 🏗️ Purge
   - ✅ Statistics
     - ✅ Get Statistics
@@ -76,11 +104,11 @@ This package aims to provide a matching TypeScript API Client for the bunny.net 
     - ✅ Get Storage Zone Statistics
     - ✅ Reset Password
     - ✅ Reset Read-Only Password
-- 🏗️ Edge Storage API
-  - 🏗️ Download File
-  - 🏗️ Upload File
-  - 🏗️ Delete File
-  - 🏗️ List Files
+- ✅ Edge Storage API
+  - ✅ Download File
+  - ✅ Upload File
+  - ✅ Delete File
+  - ✅ List Files
 - 🏗️ Stream API
   - 🏗️ TUS
   - 🏗️ Manage Collections
@@ -115,9 +143,9 @@ npm install bunny-client
 
 <!-- some api keys cannot be created with an entity, such as zones -->
 
-Get your API Access Key from [https://panel.bunny.net/account](https://panel.bunny.net/account)
+Get your API Key from [https://dash.bunny.net/account/settings](https://dash.bunny.net/account/settings)
 
-API Access Key example:
+API Key example:
 
 ```
 cb1a7c68-89a0-462a-9495-13ebd7366cfe
@@ -125,7 +153,19 @@ cb1a7c68-89a0-462a-9495-13ebd7366cfe
 
 ### Client
 
+<!-- GET /url format https://stackoverflow.com/a/16230133 -->
+
 Coming soon!
+
+## License
+
+<!-- https://creativecommons.org/choose/ -->
+<!-- https://chooser-beta.creativecommons.org/ -->
+<!-- https://github.com/idleberg/Creative-Commons-Markdown -->
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/jlarmstrongiv/bunny-client/blob/main/README.md">bunny-client</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/jlarmstrongiv/">John L. Armstrong IV</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<br><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+
+Alternative licenses available by request.
 
 ## Contributing
 

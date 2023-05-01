@@ -43,6 +43,11 @@ export interface AddStorageZoneRequestEdgeSsd
   ReplicationRegions?: never;
   /**
    * Determines the storage zone tier that will be storing the data
+   *
+   * 0 - Standard
+   *
+   * 1 - Edge (SSD)
+   *
    * @example 0
    */
   ZoneTier: ZoneTier;
@@ -54,7 +59,7 @@ export interface AddStorageZoneRequestReplicationRegion
    * The code of the main storage zone region (Possible values: DE, NY, LA, SG, SYD)
    * @example "DE"
    */
-  ReplicationRegions?: ReplicationRegion[];
+  ReplicationRegions: ReplicationRegion[];
   /**
    * Determines the storage zone tier that will be storing the data
    * @example 0

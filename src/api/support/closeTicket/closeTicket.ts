@@ -22,7 +22,7 @@ export const closeTicket = u
   .output<CloseTicketResponse>();
 
 const url = "https://api.bunny.net/support/ticket";
-const options = {
+const options: RequestInit = {
   method: "POST",
 };
 

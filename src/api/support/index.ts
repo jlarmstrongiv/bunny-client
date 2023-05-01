@@ -41,6 +41,7 @@ const statisticsRouter = u.router({
 });
 
 /**
+ * @param defaultInput default input parameters for every request
  * @param defaultRequestInit default fetch parameters for every request
  * @returns statisticsClient
  *

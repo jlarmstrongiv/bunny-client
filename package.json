@@ -42,6 +42,10 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
+    "@types/eslint": "^8.37.0",
+    "@types/eslint-config-prettier": "^6.11.0",
+    "@types/normalize-path": "^3.0.0",
+    "@types/xo": "^0.39.5",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
     "eslint": "^8.39.0",
@@ -57,6 +61,7 @@
     "camelcase-keys": "^8.0.2",
     "deepmerge-ts": "^5.1.0",
     "hasha": "^5.2.2",
+    "normalize-path": "^3.0.0",
     "ts-custom-error": "^3.3.1",
     "untypeable": "^0.2.1"
   }
