@@ -1,14 +1,14 @@
 import { createTypeLevelClient } from "untypeable";
 import {
-  getCountryList,
-  getCountryListClient,
-  getCountryListEndpoints,
-} from "./getCountryList";
+  addPullZone,
+  addPullZoneClient,
+  addPullZoneEndpoints,
+} from "./addPullZone";
 import { u } from "./untypeable";
 
 const countriesRouter = u.router({
-  [getCountryListEndpoints.getCountryList]: getCountryList,
-  [getCountryListEndpoints["GET /country"]]: getCountryList,
+  [addPullZoneEndpoints.addPullZone]: addPullZone,
+  [addPullZoneEndpoints["POST /pullzone"]]: addPullZone,
 });
 
 /**
@@ -36,9 +36,9 @@ export function createPullZoneClient(
       };
 
       switch (path) {
-        case getCountryListEndpoints.getCountryList:
-        case getCountryListEndpoints["GET /country"]:
-          return getCountryListClient(defaultRequestInit, overrideInput);
+        case addPullZoneEndpoints.addPullZone:
+        case addPullZoneEndpoints["POST /pullzone"]:
+          return addPullZoneClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
             `[${pullZoneClient.name}]: no endpoint found named "${path}"`

@@ -562,11 +562,11 @@ export interface OptimizerClass {
   properties: string;
 }
 
-export type UploadFileResponse = void;
+export type AddPullZoneResponse = void;
 
-export const uploadFile = u
+export const addPullZone = u
   .input<AddPullZoneRequest>()
-  .output<UploadFileResponse>();
+  .output<AddPullZoneResponse>();
 
 const options: RequestInit = {
   headers: {
@@ -575,39 +575,29 @@ const options: RequestInit = {
   method: "PUT",
 };
 
-export const uploadFileEndpoints = {
-  "PUT /:storageZoneName/:path/:fileName":
-    "PUT /:storageZoneName/:path/:fileName",
-  uploadFile: "uploadFile",
+export const addPullZoneEndpoints = {
+  addPullZone: "addPullZone",
+  "POST /pullzone": "POST /pullzone",
 } as const;
 
-export async function uploadFileClient(
+export async function addPullZoneClient(
   defaultRequestInit: RequestInit,
-  {
-    file,
-    fileName,
-    path = "",
-    storageZoneEndpoint = "storage.bunnycdn.com",
-    storageZoneName = "",
-    storageZonePassword,
-  }: AddPullZoneRequest
-): Promise<UploadFileResponse> {
-  const overrideOptions: RequestInit = {
-    body: file,
-    headers: {
-      ...(storageZonePassword && { AccessKey: storageZonePassword }),
-    },
-  };
-
-  const fullPath = normalize(`${storageZoneName}/${path}/${fileName}`);
-  const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}/`;
-
-  const response = await fetch(
-    overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
-  );
-
-  if (!response.ok) {
-    throw new FetchError(response.status, response.statusText, response);
-  }
+  input: AddPullZoneRequest
+): Promise<AddPullZoneResponse> {
+  console.log(input);
+  // Const overrideOptions: RequestInit = {
+  //   body: file,
+  //   headers: {
+  //     ...(storageZonePassword && { AccessKey: storageZonePassword }),
+  //   },
+  // };
+  // const fullPath = normalize(`${storageZoneName}/${path}/${fileName}`);
+  // const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}/`;
+  // const response = await fetch(
+  //   overrideUrl,
+  //   deepmerge(defaultRequestInit, options, overrideOptions)
+  // );
+  // if (!response.ok) {
+  //   throw new FetchError(response.status, response.statusText, response);
+  // }
 }
