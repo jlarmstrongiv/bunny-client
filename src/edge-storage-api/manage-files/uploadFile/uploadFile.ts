@@ -64,6 +64,7 @@ export interface UploadFileRequest {
    * @example "22a5e2c4-0b5f-4fb0-bdb94eebb264-8944-4154"
    */
   storageZonePassword?: string;
+  // TODO: add cache tag https://bunny.net/blog/introducing-tag-based-cdn-cache-purging/
 }
 
 export type UploadFileResponse = void;

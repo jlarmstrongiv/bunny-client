@@ -49,41 +49,6 @@ export type StorageHostname =
   | "storage.bunnycdn.com"
   | "uk.storage.bunnycdn.com";
 
-/* eslint-disable @typescript-eslint/naming-convention */
-export const storageZoneEndpoints = {
-  /**
-   * São Paulo, BR
-   */
-  BR: "br.storage.bunnycdn.com",
-  /**
-   * Falkenstein, DE
-   */
-  DE: "storage.bunnycdn.com",
-  /**
-   * Johannesburg, SA
-   */
-  JH: "jh.storage.bunnycdn.com",
-  /**
-   * Los Angeles, US
-   */
-  LA: "la.storage.bunnycdn.com",
-  /**
-   * New York, US
-   */
-  NY: "ny.storage.bunnycdn.com",
-  /**
-   * Stockholm, SE
-   */
-  SE: "se.storage.bunnycdn.com",
-  /**
-   * Singapore, SG
-   */
-  SG: "sg.storage.bunnycdn.com",
-  /**
-   * London, UK
-   */
-  UK: "uk.storage.bunnycdn.com",
-} as const;
 /* eslint-enable @typescript-eslint/naming-convention */
 
 /**
@@ -92,7 +57,6 @@ export const storageZoneEndpoints = {
  * 1 - Edge (SSD)
  */
 export type ZoneTier = 0 | 1;
-
 // TODO
 export interface StorageZone {
   // TODO: confirm path
@@ -111,6 +75,9 @@ export interface StorageZone {
    * @example false
    */
   Deleted: boolean;
+  /**
+   * @example 0
+   */
   Discount: number;
   // TODO
   /**
@@ -165,7 +132,7 @@ export interface StorageZone {
    * @example "ny.storage.bunnycdn.com"
    */
   StorageHostname: StorageHostname;
-  // TODO
+  // TODO example
   /**
    * storage zone total storage used
    */
@@ -180,3 +147,39 @@ export interface StorageZone {
    */
   ZoneTier: ZoneTier;
 }
+
+/* eslint-disable @typescript-eslint/naming-convention */
+export const storageZoneEndpoints = {
+  /**
+   * São Paulo, BR
+   */
+  BR: "br.storage.bunnycdn.com",
+  /**
+   * Falkenstein, DE
+   */
+  DE: "storage.bunnycdn.com",
+  /**
+   * Johannesburg, SA
+   */
+  JH: "jh.storage.bunnycdn.com",
+  /**
+   * Los Angeles, US
+   */
+  LA: "la.storage.bunnycdn.com",
+  /**
+   * New York, US
+   */
+  NY: "ny.storage.bunnycdn.com",
+  /**
+   * Stockholm, SE
+   */
+  SE: "se.storage.bunnycdn.com",
+  /**
+   * Singapore, SG
+   */
+  SG: "sg.storage.bunnycdn.com",
+  /**
+   * London, UK
+   */
+  UK: "uk.storage.bunnycdn.com",
+} as const;

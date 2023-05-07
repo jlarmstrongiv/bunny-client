@@ -43,6 +43,9 @@ Provide a TypeScript API Client for BunnyCDN with few dependencies.
   - documentation vs api reference https://docs.bunny.net/docs/cdn-logging
 
   - consider writing a surge.sh cli alternative
+  - consider a react-query client
+  - consider nextjs examples
+  - documentation site https://nextra.site/
 
   - tus https://docs.bunny.net/reference/tus-resumable-uploads
     - https://www.npmjs.com/package/tus-js-client

@@ -1,11 +1,6 @@
 import { deepmerge } from "deepmerge-ts";
 import { FetchError } from "../../../utilities";
-import type {
-  Region,
-  ReplicationRegion,
-  StorageZone,
-  ZoneTier,
-} from "../types";
+import type { Region, ReplicationRegion, StorageZone } from "../types";
 import { u } from "../untypeable";
 
 export interface AddStorageZoneRequestBase {
@@ -50,7 +45,7 @@ export interface AddStorageZoneRequestEdgeSsd
    *
    * @example 0
    */
-  ZoneTier: ZoneTier;
+  ZoneTier: 1;
 }
 
 export interface AddStorageZoneRequestReplicationRegion
@@ -59,12 +54,12 @@ export interface AddStorageZoneRequestReplicationRegion
    * The code of the main storage zone region (Possible values: DE, NY, LA, SG, SYD)
    * @example "DE"
    */
-  ReplicationRegions: ReplicationRegion[];
+  ReplicationRegions?: ReplicationRegion[];
   /**
    * Determines the storage zone tier that will be storing the data
    * @example 0
    */
-  ZoneTier?: never;
+  ZoneTier: 0;
 }
 
 // Mutually exclusive options https://effectivetypescript.com/2021/11/11/optional-never/

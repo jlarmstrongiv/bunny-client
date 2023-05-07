@@ -90,6 +90,8 @@
       },
       // TODO: remove and normalize properties returned from the API
       // - use https://github.com/sindresorhus/camelcase-keys#stoppaths
+      // - can also convert keys back to pascal case
+      // - may still fail for EnableGeoZoneASIA (perhaps only change first letter?)
       // - drop commonjs https://github.com/egoist/tsup/issues/628
       {
         "selector": "typeProperty",

@@ -55,6 +55,7 @@ export interface Attachment {
    * @example "https://bunnycdn.zendesk.com/attachments/token/27ZaTyB7eg2ceSSKNr60zZbvG/?name=steps.txt"
    */
   ContentUrl: string;
+  // TODO: attachments are base64 encoded https://toshy.github.io/BunnyNet-PHP/base-api/#list-tickets
   /**
    * Attachment file name (BUG: trailing space)
    * @example "steps.txt "
@@ -78,6 +79,7 @@ export interface Attachment {
 }
 
 export interface CreateAttachment {
+  // TODO: attachments are base64 encoded https://toshy.github.io/BunnyNet-PHP/base-api/#list-tickets
   /**
    * The body, or content, of the attachment
    * @example "Steps to reproduce the issue:"
