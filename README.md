@@ -2,7 +2,7 @@
 
 ## Motivation
 
-Provide a TypeScript API Client for BunnyCDN with few dependencies.
+Provide an unofficial TypeScript API Client for BunnyCDN with few dependencies.
 
 ## Documentation
 
@@ -173,7 +173,7 @@ The main differences between the API and the TypeScript Client are:
 - `camelCase` inputs and outputs to match TypeScript style guides
 - `tsdoc` examples for all inputs and outputs
 - Replace the generic `AccessKey` with `apiKey` and `storageZonePassword`
-- more default parameters
+- More default parameters
 
 <!-- TODO: storageZoneClient input to lowercase refactor -->
 
