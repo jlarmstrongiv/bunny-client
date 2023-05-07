@@ -1,6 +1,6 @@
 {
   "name": "bunny-client",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "TypeScript API Client for BunnyCDN 🐰",
   "keywords": [
