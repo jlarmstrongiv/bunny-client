@@ -67,7 +67,7 @@ export async function downloadFileClient(
     },
   };
 
-  const fullPath = normalize(`${storageZoneName}/${path}/${fileName}`);
+  const fullPath = normalize(`${storageZoneName}/${path}/${fileName}`, false);
   const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}`;
 
   const response = await fetch(

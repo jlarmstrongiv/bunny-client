@@ -160,7 +160,7 @@ export async function listFilesClient(
     },
   };
 
-  const fullPath = normalize(`${storageZoneName}/${path}`);
+  const fullPath = normalize(`${storageZoneName}/${path}`, false);
   const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}`;
 
   const response = await fetch(
