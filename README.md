@@ -16,6 +16,8 @@ Provide an unofficial TypeScript API Client for BunnyCDN with few dependencies.
 
 <!--
 
+- use the unofficial api to take note of warnings and default values https://toshy.github.io/BunnyNet-PHP/edge-storage-api/#reference
+
 - private apis
   - abuse and dmca endpoint
     - https://toshy.github.io/BunnyNet-PHP/base-api/#abuse-case
@@ -41,6 +43,9 @@ Provide an unofficial TypeScript API Client for BunnyCDN with few dependencies.
     - https://toshy.github.io/BunnyNet-PHP/token-authentication/
     - https://github.com/BunnyWay/BunnyCDN.TokenAuthentication/blob/master/nodejs/token.js
   - documentation vs api reference https://docs.bunny.net/docs/cdn-logging
+  - optimizer
+    - https://support.bunny.net/hc/en-us/articles/360027448392-Bunny-Optimizer-Engine-Documentation
+    - https://docs.bunny.net/docs/stream-image-processing
 
   - consider writing a surge.sh cli alternative
   - consider a react-query client
@@ -128,6 +133,7 @@ Provide an unofficial TypeScript API Client for BunnyCDN with few dependencies.
 
 <!-- avoiding zod due to performance concerns -->
 <!-- https://github.com/colinhacks/zod/issues/205 -->
+<!-- https://www.reddit.com/r/typescript/comments/13sldut/how_do_people_use_zod_on_a_large_project/ -->
 
 ### Installation
 
@@ -190,6 +196,8 @@ const response = await storageZoneClient("addStorageZone", {
 ```
 
 ## License
+
+<!-- consider adding to https://github.com/NuroDev/untypeable -->
 
 <!-- https://creativecommons.org/choose/ -->
 <!-- https://chooser-beta.creativecommons.org/ -->

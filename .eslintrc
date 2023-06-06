@@ -1,6 +1,4 @@
-// TODO: add plugins
-// - https://github.com/mskelton/eslint-plugin-sort/issues/53
-// TODO: add default parameters tsdoc comments
+// TODO: add default parameters tsdoc comments https://tsdoc.org/pages/tags/defaultvalue/
 // TODO: consider consistent aliasing, create vs add/upload, StorageHostname vs storageEndpoint, all those region aliases
 // - then remove them from intentionallyNotExported
 {
@@ -93,6 +91,7 @@
       // - can also convert keys back to pascal case
       // - may still fail for EnableGeoZoneASIA (perhaps only change first letter?)
       // - drop commonjs https://github.com/egoist/tsup/issues/628
+      // - unfortunately, jsdoc comments are lost, so that will need to be redone
       {
         "selector": "typeProperty",
         "format": ["camelCase", "PascalCase"],

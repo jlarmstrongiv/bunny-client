@@ -592,7 +592,7 @@ export async function addPullZoneClient(
   //   },
   // };
   // const fullPath = normalize(`${storageZoneName}/${path}/${fileName}`);
-  // const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}/`;
+  // const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}`;
   // const response = await fetch(
   //   overrideUrl,
   //   deepmerge(defaultRequestInit, options, overrideOptions)

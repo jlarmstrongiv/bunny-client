@@ -4,7 +4,24 @@ import type { StorageHostname as StorageZoneEndpoint } from "../../../api/storag
 import { FetchError } from "../../../utilities";
 import { u } from "../untypeable";
 
+// TODO: use
+// - file type https://www.npmjs.com/package/file-type
+// - json https://www.npmjs.com/package/is-json
+// - svg https://www.npmjs.com/package/is-svg
+// - html https://www.npmjs.com/package/is-html
+// - missing css, js, etc. may also be good to read from file path or file name
+//   - get mimetype https://www.npmjs.com/package/mime-types
+// and add the file-type header
+// - docs, see request box https://docs.bunny.net/reference/put_-storagezonename-path-filename
+// - https://gist.github.com/cp6/cff63f23ec3727a7b306067780b5f2e0#file-bunnycdn_storage-php-L2
+// needed for
+// - wasm https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements
+// - web manifest https://vite-pwa-org.netlify.app/deployment/#getting-started
+// - and more
+
 export interface UploadFileRequest {
+  // TODO: the unofficial api mentioned the checksum needs to be all uppercase?
+  // - https://toshy.github.io/BunnyNet-PHP/edge-storage-api/#upload-file
   /**
    * The hex-encoded SHA256 checksum of the uploaded content. The server will compare the final SHA256 to the checksum and reject the request in case the checksums do not match.
    * @example "49bc20df15e412a64472421e13fe86ff1c5165e18b2afccf160d4dc19fe68a14"
@@ -105,7 +122,7 @@ export async function uploadFileClient(
   };
 
   const fullPath = normalize(`${storageZoneName}/${path}/${fileName}`);
-  const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}/`;
+  const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}`;
 
   const response = await fetch(
     overrideUrl,

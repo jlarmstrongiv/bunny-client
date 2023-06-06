@@ -65,7 +65,7 @@ export async function deleteFileClient(
   };
 
   const fullPath = normalize(`${storageZoneName}/${path}/${fileName}`);
-  const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}/`;
+  const overrideUrl = `https://${storageZoneEndpoint}/${fullPath}`;
 
   const response = await fetch(
     overrideUrl,
