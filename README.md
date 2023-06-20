@@ -1,4 +1,4 @@
-# `bunny-client` The TypeScript API Client for BunnyCDN
+# `bunny-client` The TypeScript API Client for BunnyCDN 🐰
 
 ## Motivation
 
@@ -15,6 +15,8 @@ Provide an unofficial TypeScript API Client for BunnyCDN with few dependencies.
 ### Supported APIs
 
 <!--
+
+- TODO: link each client to the official documentation like `defineConfig` from Astro
 
 - use the unofficial api to take note of warnings and default values https://toshy.github.io/BunnyNet-PHP/edge-storage-api/#reference
 
