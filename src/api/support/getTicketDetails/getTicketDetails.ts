@@ -37,7 +37,7 @@ export const getTicketDetailsEndpoints = {
 
 export async function getTicketDetailsClient(
   defaultRequestInit: RequestInit,
-  { apiKey, id }: GetTicketDetailsRequest
+  { apiKey, id }: GetTicketDetailsRequest,
 ): Promise<GetTicketDetailsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -49,7 +49,7 @@ export async function getTicketDetailsClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

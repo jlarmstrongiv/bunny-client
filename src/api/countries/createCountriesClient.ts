@@ -26,7 +26,7 @@ const countriesRouter = u.router({
  */
 export function createCountriesClient(
   defaultInput: Record<string, any>,
-  defaultRequestInit: RequestInit = {}
+  defaultRequestInit: RequestInit = {},
 ) {
   const countriesClient = createTypeLevelClient<typeof countriesRouter>(
     async (path, input) => {
@@ -41,10 +41,10 @@ export function createCountriesClient(
           return getCountryListClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
-            `[${countriesClient.name}]: no endpoint found named "${path}"`
+            `[${countriesClient.name}]: no endpoint found named "${path}"`,
           );
       }
-    }
+    },
   );
   return countriesClient;
 }

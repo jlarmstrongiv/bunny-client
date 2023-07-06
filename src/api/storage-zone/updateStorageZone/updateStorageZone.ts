@@ -63,7 +63,7 @@ export const updateStorageZoneEndpoints = {
 
 export async function updateStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { apiKey, id, ...input }: UpdateStorageZoneRequest
+  { apiKey, id, ...input }: UpdateStorageZoneRequest,
 ): Promise<UpdateStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     body: JSON.stringify(input),
@@ -76,7 +76,7 @@ export async function updateStorageZoneClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

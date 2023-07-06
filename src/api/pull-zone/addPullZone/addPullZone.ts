@@ -582,7 +582,7 @@ export const addPullZoneEndpoints = {
 
 export async function addPullZoneClient(
   defaultRequestInit: RequestInit,
-  input: AddPullZoneRequest
+  input: AddPullZoneRequest,
 ): Promise<AddPullZoneResponse> {
   console.log(input);
   // Const overrideOptions: RequestInit = {

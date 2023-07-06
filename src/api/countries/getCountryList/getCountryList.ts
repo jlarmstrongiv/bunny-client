@@ -64,7 +64,7 @@ export const getCountryListEndpoints = {
 
 export async function getCountryListClient(
   defaultRequestInit: RequestInit,
-  { apiKey }: GetCountryListRequest = {}
+  { apiKey }: GetCountryListRequest = {},
 ): Promise<GetCountryListResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -74,7 +74,7 @@ export async function getCountryListClient(
 
   const response = await fetch(
     url,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

@@ -152,7 +152,7 @@ export async function listFilesClient(
     storageZoneEndpoint = "storage.bunnycdn.com",
     storageZoneName = "",
     storageZonePassword,
-  }: ListFilesRequest
+  }: ListFilesRequest,
 ): Promise<ListFilesResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -165,7 +165,7 @@ export async function listFilesClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

@@ -33,7 +33,7 @@ export const resetPasswordEndpoints = {
 
 export async function resetPasswordClient(
   defaultRequestInit: RequestInit,
-  { apiKey, id }: ResetPasswordRequest
+  { apiKey, id }: ResetPasswordRequest,
 ): Promise<ResetPasswordResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -45,7 +45,7 @@ export async function resetPasswordClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

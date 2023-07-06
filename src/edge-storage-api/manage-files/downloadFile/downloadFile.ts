@@ -59,7 +59,7 @@ export async function downloadFileClient(
     storageZoneEndpoint = "storage.bunnycdn.com",
     storageZoneName = "",
     storageZonePassword,
-  }: DownloadFileRequest
+  }: DownloadFileRequest,
 ): Promise<DownloadFileResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -72,7 +72,7 @@ export async function downloadFileClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

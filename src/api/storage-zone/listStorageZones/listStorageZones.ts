@@ -78,7 +78,7 @@ export async function listStorageZonesClient(
     page = 1,
     perPage = 1000,
     search,
-  }: ListStorageZonesRequest
+  }: ListStorageZonesRequest,
 ): Promise<ListStorageZonesResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -99,7 +99,7 @@ export async function listStorageZonesClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

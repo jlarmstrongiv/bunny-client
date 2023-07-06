@@ -37,7 +37,7 @@ export const deleteStorageZoneEndpoints = {
 
 export async function deleteStorageZoneClient(
   defaultRequestInit: RequestInit,
-  { apiKey, id }: DeleteStorageZoneRequest
+  { apiKey, id }: DeleteStorageZoneRequest,
 ): Promise<DeleteStorageZoneResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -49,7 +49,7 @@ export async function deleteStorageZoneClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

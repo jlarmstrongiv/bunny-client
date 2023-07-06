@@ -62,7 +62,7 @@ export const getTicketListEndpoints = {
 
 export async function getTicketListClient(
   defaultRequestInit: RequestInit,
-  { apiKey, page, perPage }: GetTicketListRequest = {}
+  { apiKey, page, perPage }: GetTicketListRequest = {},
 ): Promise<GetTicketListResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -79,7 +79,7 @@ export async function getTicketListClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

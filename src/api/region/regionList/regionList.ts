@@ -80,7 +80,7 @@ export const regionListEndpoints = {
 
 export async function regionListClient(
   defaultRequestInit: RequestInit,
-  { apiKey }: RegionListRequest = {}
+  { apiKey }: RegionListRequest = {},
 ): Promise<RegionListResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -90,7 +90,7 @@ export async function regionListClient(
 
   const response = await fetch(
     url,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

@@ -56,7 +56,7 @@ export async function deleteFileClient(
     storageZoneEndpoint = "storage.bunnycdn.com",
     storageZoneName = "",
     storageZonePassword,
-  }: DeleteFileRequest
+  }: DeleteFileRequest,
 ): Promise<DeleteFileResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -69,7 +69,7 @@ export async function deleteFileClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

@@ -46,7 +46,7 @@ const statisticsRouter = u.router({
  */
 export function createManageFilesClient(
   defaultInput: Record<string, any> = {},
-  defaultRequestInit: RequestInit = {}
+  defaultRequestInit: RequestInit = {},
 ) {
   const manageFilesClient = createTypeLevelClient<typeof statisticsRouter>(
     async (path, input) => {
@@ -67,10 +67,10 @@ export function createManageFilesClient(
           return uploadFileClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
-            `[${manageFilesClient.name}]: no endpoint found named "${path}"`
+            `[${manageFilesClient.name}]: no endpoint found named "${path}"`,
           );
       }
-    }
+    },
   );
   return manageFilesClient;
 }

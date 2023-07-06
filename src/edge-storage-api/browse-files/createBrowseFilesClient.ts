@@ -25,7 +25,7 @@ const statisticsRouter = u.router({
  */
 export function createBrowseFilesClient(
   defaultInput: Record<string, any> = {},
-  defaultRequestInit: RequestInit = {}
+  defaultRequestInit: RequestInit = {},
 ) {
   const browseFilesClient = createTypeLevelClient<typeof statisticsRouter>(
     async (path, input) => {
@@ -40,10 +40,10 @@ export function createBrowseFilesClient(
           return listFilesClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
-            `[${browseFilesClient.name}]: no endpoint found named "${path}"`
+            `[${browseFilesClient.name}]: no endpoint found named "${path}"`,
           );
       }
-    }
+    },
   );
   return browseFilesClient;
 }

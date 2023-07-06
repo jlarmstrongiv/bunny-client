@@ -95,7 +95,7 @@ const storageZoneRouter = u.router({
  */
 export function createStorageZoneClient(
   defaultInput: Record<string, any> = {},
-  defaultRequestInit: RequestInit = {}
+  defaultRequestInit: RequestInit = {},
 ) {
   const storageZoneClient = createTypeLevelClient<typeof storageZoneRouter>(
     async (path, input) => {
@@ -114,7 +114,7 @@ export function createStorageZoneClient(
         ]:
           return checkTheStorageZoneAvailabilityClient(
             defaultRequestInit,
-            overrideInput
+            overrideInput,
           );
         case deleteStorageZoneEndpoints.deleteStorageZone:
         case deleteStorageZoneEndpoints["DELETE /storagezone/:id"]:
@@ -128,7 +128,7 @@ export function createStorageZoneClient(
         ]:
           return getStorageZoneStatisticsClient(
             defaultRequestInit,
-            overrideInput
+            overrideInput,
           );
         case listStorageZonesEndpoints.listStorageZones:
         case listStorageZonesEndpoints["GET /storagezone"]:
@@ -146,10 +146,10 @@ export function createStorageZoneClient(
           return updateStorageZoneClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
-            `[${storageZoneClient.name}]: no endpoint found named "${path}"`
+            `[${storageZoneClient.name}]: no endpoint found named "${path}"`,
           );
       }
-    }
+    },
   );
   return storageZoneClient;
 }

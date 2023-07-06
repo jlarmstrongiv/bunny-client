@@ -26,7 +26,7 @@ const countriesRouter = u.router({
  */
 export function createPullZoneClient(
   defaultInput: Record<string, any>,
-  defaultRequestInit: RequestInit = {}
+  defaultRequestInit: RequestInit = {},
 ) {
   const pullZoneClient = createTypeLevelClient<typeof countriesRouter>(
     async (path, input) => {
@@ -41,10 +41,10 @@ export function createPullZoneClient(
           return addPullZoneClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
-            `[${pullZoneClient.name}]: no endpoint found named "${path}"`
+            `[${pullZoneClient.name}]: no endpoint found named "${path}"`,
           );
       }
-    }
+    },
   );
   return pullZoneClient;
 }

@@ -33,7 +33,7 @@ export const closeTicketEndpoints = {
 
 export async function closeTicketClient(
   defaultRequestInit: RequestInit,
-  { apiKey, id }: CloseTicketRequest
+  { apiKey, id }: CloseTicketRequest,
 ): Promise<CloseTicketResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -45,7 +45,7 @@ export async function closeTicketClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

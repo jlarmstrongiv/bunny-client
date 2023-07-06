@@ -112,7 +112,7 @@ export async function uploadFileClient(
     storageZoneEndpoint = "storage.bunnycdn.com",
     storageZoneName = "",
     storageZonePassword,
-  }: UploadFileRequest
+  }: UploadFileRequest,
 ): Promise<UploadFileResponse> {
   const overrideOptions: RequestInit = {
     body: file,
@@ -126,7 +126,7 @@ export async function uploadFileClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

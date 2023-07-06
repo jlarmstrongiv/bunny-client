@@ -64,7 +64,7 @@ export const createTicketEndpoints = {
 
 export async function createTicketClient(
   defaultRequestInit: RequestInit,
-  { apiKey, ...input }: CreateTicketRequest
+  { apiKey, ...input }: CreateTicketRequest,
 ): Promise<CreateTicketResponse> {
   const overrideOptions: RequestInit = {
     body: JSON.stringify(input),
@@ -75,7 +75,7 @@ export async function createTicketClient(
 
   const response = await fetch(
     url,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

@@ -34,7 +34,7 @@ export const resetReadOnlyPasswordEndpoints = {
 
 export async function resetReadOnlyPasswordClient(
   defaultRequestInit: RequestInit,
-  { apiKey, id }: ResetReadOnlyPasswordRequest
+  { apiKey, id }: ResetReadOnlyPasswordRequest,
 ): Promise<ResetReadOnlyPasswordResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -50,7 +50,7 @@ export async function resetReadOnlyPasswordClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

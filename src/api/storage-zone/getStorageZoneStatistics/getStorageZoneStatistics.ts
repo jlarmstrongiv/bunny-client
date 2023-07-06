@@ -67,7 +67,7 @@ export const getStorageZoneStatisticsEndpoints = {
 
 export async function getStorageZoneStatisticsClient(
   defaultRequestInit: RequestInit,
-  { apiKey, dateFrom, dateTo, id }: GetStorageZoneStatisticsRequest
+  { apiKey, dateFrom, dateTo, id }: GetStorageZoneStatisticsRequest,
 ): Promise<GetStorageZoneStatisticsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -84,7 +84,7 @@ export async function getStorageZoneStatisticsClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

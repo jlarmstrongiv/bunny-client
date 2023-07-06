@@ -41,7 +41,7 @@ export const checkTheStorageZoneAvailabilityEndpoints = {
 
 export async function checkTheStorageZoneAvailabilityClient(
   defaultRequestInit: RequestInit,
-  { apiKey, ...input }: CheckTheStorageZoneAvailabilityRequest
+  { apiKey, ...input }: CheckTheStorageZoneAvailabilityRequest,
 ): Promise<CheckTheStorageZoneAvailabilityResponse> {
   const overrideOptions: RequestInit = {
     body: JSON.stringify(input),
@@ -52,7 +52,7 @@ export async function checkTheStorageZoneAvailabilityClient(
 
   const response = await fetch(
     url,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

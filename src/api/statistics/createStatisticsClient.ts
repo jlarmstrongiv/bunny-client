@@ -27,7 +27,7 @@ const statisticsRouter = u.router({
  */
 export function createStatisticsClient(
   defaultInput: Record<string, any> = {},
-  defaultRequestInit: RequestInit = {}
+  defaultRequestInit: RequestInit = {},
 ) {
   const statisticsClient = createTypeLevelClient<typeof statisticsRouter>(
     async (path, input) => {
@@ -42,10 +42,10 @@ export function createStatisticsClient(
           return getStatisticsClient(defaultRequestInit, overrideInput);
         default:
           throw new Error(
-            `[${statisticsClient.name}]: no endpoint found named "${path}"`
+            `[${statisticsClient.name}]: no endpoint found named "${path}"`,
           );
       }
-    }
+    },
   );
   return statisticsClient;
 }

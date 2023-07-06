@@ -91,7 +91,7 @@ export async function getStatisticsClient(
     loadErrors = false,
     pullZone = -1,
     serverZoneId = -1,
-  }: GetStatisticsRequest = {}
+  }: GetStatisticsRequest = {},
 ): Promise<GetStatisticsResponse> {
   const overrideOptions: RequestInit = {
     headers: {
@@ -112,7 +112,7 @@ export async function getStatisticsClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {

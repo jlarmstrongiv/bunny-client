@@ -46,7 +46,7 @@ export const replyTicketEndpoints = {
 
 export async function replyTicketClient(
   defaultRequestInit: RequestInit,
-  { apiKey, id, ...input }: ReplyTicketRequest
+  { apiKey, id, ...input }: ReplyTicketRequest,
 ): Promise<ReplyTicketResponse> {
   const overrideOptions: RequestInit = {
     body: JSON.stringify(input),
@@ -59,7 +59,7 @@ export async function replyTicketClient(
 
   const response = await fetch(
     overrideUrl,
-    deepmerge(defaultRequestInit, options, overrideOptions)
+    deepmerge(defaultRequestInit, options, overrideOptions),
   );
 
   if (!response.ok) {
