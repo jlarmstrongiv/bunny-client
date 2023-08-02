@@ -1,6 +1,6 @@
 {
   "name": "bunny-client",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "private": false,
   "description": "TypeScript API Client for BunnyCDN 🐰",
   "keywords": [
@@ -59,7 +59,7 @@
     "esno": "^0.17.0",
     "prettier": "^3.0.0",
     "surge": "^0.23.1",
-    "tsup": "7.1.0",
+    "tsup": "7.2.0",
     "typedoc": "^0.24.8",
     "typescript": "^5.1.6",
     "xo": "^0.55.0"
