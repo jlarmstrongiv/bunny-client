@@ -1,6 +1,6 @@
 {
   "name": "bunny-client",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "private": false,
   "description": "TypeScript API Client for BunnyCDN 🐰",
   "keywords": [
@@ -52,7 +52,7 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.45.0",
-    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-xo": "^0.45.0",
     "eslint-config-xo-typescript": "^1.0.0",
     "eslint-plugin-sort": "^2.10.0",
