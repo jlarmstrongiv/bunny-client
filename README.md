@@ -1,5 +1,8 @@
 # `bunny-client` The TypeScript API Client for BunnyCDN 🐰
 
+> [!IMPORTANT]  
+> Please use [`bunny-sdk-typescript`](https://github.com/jlarmstrongiv/bunny-sdk-typescript) instead. This repository is now in maintenance mode.
+
 ## Motivation
 
 Provide an unofficial TypeScript API Client for BunnyCDN with few dependencies.
